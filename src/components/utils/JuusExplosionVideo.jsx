@@ -1,13 +1,10 @@
-import { motion } from "framer-motion";
 import React, { memo } from "react";
+import { Fade } from "react-awesome-reveal";
 
 const JuusExplosionVideo = memo(() => {
   return (
-    <motion.video
-      initial={{ y: 100 }}
-      whileInView={{ y: 0 }}
-      transition={{ type: "tween", duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      viewport={{ once: true }}
+    <Fade direction="up" delay={200} triggerOnce={true}>
+    <video
       autoPlay
       loop
       muted
@@ -23,7 +20,8 @@ const JuusExplosionVideo = memo(() => {
         type="video/mp4"
       />
       Your browser does not support the video tag.
-    </motion.video>
+    </video>
+    </Fade>
   );
 }, []);
 

@@ -13,7 +13,7 @@ function SlidingMenu({ theme, isOpen }) {
         animate={{
           x: isOpen ? 0 : "-100%",
           transition: {
-            duration: 0.25,
+            duration: 0.3,
             ease: [0.22, 1, 0.36, 1],
           },
         }}

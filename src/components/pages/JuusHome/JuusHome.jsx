@@ -34,18 +34,11 @@ const JuusHome = memo(() => {
       >
         <div className="">
           {showVideos && <JuusVideo />}
-          <div className="flex flex-col 2xl:flex-row text-white lg:justify-between xl:mt-5">
+          <div className="flex flex-col 2xl:flex-row 2xl:mt-10 text-white lg:justify-between xl:mt-5">
             <div className="flex flex-col">
+              <Fade direction="left" cascade triggerOnce={true}>
               <motion.div
-                viewport={{ once: true }}
-                transition={{
-                  type: "tween",
-                  duration: 0.8,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                initial={{ x: "-100%", opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                className="flex font-anton justify-start items-center ml-3 lg:ml-8 3xl:mb-0.5"
+                className="flex font-anton justify-start items-center ml-3 lg:ml-8 3xl:mb-0.5 6xl:mt-20"
               >
                 <h1 className="text-[60px] lg:text-8xl 2xl:text-[120px] 4xl:text-9xl 6xl:text-[144px] mr-0.5 lg:mr-1.5">
                   FUTURE
@@ -60,26 +53,18 @@ const JuusHome = memo(() => {
                 </div>
               </motion.div>
               <motion.div
-                viewport={{ once: true }}
-                transition={{
-                  delay: 0.4,
-                  type: "tween",
-                  duration: 0.8,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                initial={{ x: "-100%", opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
                 className="flex justify-start items-center ml-3 lg:ml-8 -mt-5 lg:-mt-0 3xl:mt-0.5"
               >
                 <h1 className="text-[47px] lg:text-7xl 2xl:text-[108px] 4xl:text-8xl 6xl:text-9xl font-anton mr-0.5 lg:mr-1.5">
                   FREE
                 </h1>
-                <div className="flex flex-col text-[8px] xxxxs:text-[9px] lg:text-sm 4xl:text-base h-[80%] lg:h-full 2xl:h-[94%] items-start justify-evenly lg:justify-between">
+                <div className="flex flex-col text-[8px] xxxxs:text-[9px] lg:text-sm 4xl:text-base h-[80%] lg:h-full 2xl:h-[120px] items-start justify-evenly lg:justify-between">
                   <h3>PRESENTING PAKISTAN'S</h3>
                   <h3>FIRST EVER ZERO SUGAR ZERO CALORIES LIQUID ENHANCER.</h3>
                   <h3>WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING</h3>
                 </div>
               </motion.div>
+              </Fade>
             </div>
 
             <div className="self-center relative">
