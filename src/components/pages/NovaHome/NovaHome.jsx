@@ -18,7 +18,12 @@ const NovaHome = memo(() => {
       <div>
         <NovaHeader isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
-      <main className={`my-[72px] relative flex flex-col w-full ${isOpen && "brightness-95"}`} onClick={() => setIsOpen(false)}>
+      <main
+        className={`my-[72px] relative flex flex-col w-full ${
+          isOpen && "brightness-95"
+        }`}
+        onClick={() => setIsOpen(false)}
+      >
         <div className="">
           <img
             className="6xl:w-full"
@@ -26,41 +31,74 @@ const NovaHome = memo(() => {
             alt=""
           />
         </div>
-        <Fade
-          triggerOnce={true}
-          className=""
-          direction="left"
-          cascade
-          damping={0.5}
-        >
-          <img
-            className="mt-3 xl:mt-0 6xl:-mt-16 lg:-ml-20 xl:-ml-40 3xl:-ml-[282px] 4xl:-ml-80 6xl:-ml-[500px] lg:scale-75 xl:scale-[.65] 3xl:scale-[.55] 6xl:scale-[.45]"
-            src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/Future is Sugar (typography).png"
-            alt=""
-          />
-          <img
-            className="-ml-1.5 xxs:-ml-2 lg:-ml-10 xl:-ml-28 3xl:-ml-60 4xl:-ml-[272px] 6xl:-ml-[432px] -mt-0.5 lg:-mt-9 xl:-mt-16 3xl:-mt-28 4xl:-mt-32 5xl:-mt-36 6xl:-mt-52 xxs:-mt-1 lg:scale-90 xl:scale-[.8] 3xl:scale-[.65] 6xl:scale-[.55]"
-            src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Free%20Paragraph%20(typography).png"
-            alt=""
-          />
-        </Fade>
+        <div className="flex text-white xl:mt-5">
+          <div className="flex flex-col">
+            <motion.div
+              viewport={{ once: true }}
+              transition={{
+                type: "tween",
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              initial={{ x: "-100%", opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              className="flex font-anton justify-start items-center ml-3 lg:ml-8 3xl:mb-0.5 text-[#f9a63c]"
+            >
+              <h1 className="text-[60px] lg:text-8xl 2xl:text-[120px] 4xl:text-9xl 6xl:text-[144px] mr-0.5 lg:mr-1.5">
+                FUTURE
+              </h1>
+              <div className="flex flex-col justify-start lg:justify-center -mt-0.5">
+                <h2 className="text-[28px] lg:text-[42px] 2xl:text-[50px] 4xl:text-[56px] 6xl:text-[62px]">
+                  IS
+                </h2>
+                <h2 className="text-[28px] lg:text-[42px] 2xl:text-[50px] 4xl:text-[56px] 6xl:text-[62px] -mt-3.5 lg:-mt-4 4xl:-mt-6">
+                  SUGAR
+                </h2>
+              </div>
+            </motion.div>
+            <motion.div
+              viewport={{ once: true }}
+              transition={{
+                delay: 0.4,
+                type: "tween",
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              initial={{ x: "-100%", opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              className="flex justify-start items-center ml-3 lg:ml-8 -mt-5 lg:-mt-0 3xl:mt-0.5"
+            >
+              <h1 className="text-[47px] lg:text-7xl 2xl:text-[108px] 4xl:text-8xl 6xl:text-9xl font-anton mr-0.5 lg:mr-1.5">
+                FREE
+              </h1>
+              <div className="flex flex-col text-[8px] xxxxs:text-[9px] lg:text-sm 4xl:text-base h-[80%] lg:h-full 2xl:h-[94%] items-start justify-evenly lg:justify-between">
+                <h3>PRESENTING PAKISTAN'S</h3>
+                <h3>FIRST EVER ZERO SUGAR ZERO CALORIES LIQUID ENHANCER.</h3>
+                <h3>WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING</h3>
+              </div>
+            </motion.div>
+          </div>
+        </div>
         {/* <Fade direction="up" delay={1000} triggerOnce={true}> */}
         <motion.div
-          initial={{ y: 300, opacity: 0 }}
+          initial={{ y: 200, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 70, damping: 8 }}
+          transition={{ type: "spring", stiffness: 33, damping: 6 }}
           viewport={{ once: true }}
         >
           <img
-            className="mt-10 3xl:mt-0 6xl:-mt-10 xl:scale-[.85] 3xl:scale-75 6xl:scale-[.65]"
+            className="mt-10 3xl:mt-0 6xl:-mt-10 xl:scale-[.85] 3xl:scale-75 4xl:scale-[.7] 6xl:scale-[.6]"
             src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Tags.png"
             alt=""
           />
         </motion.div>
         {/* </Fade> */}
-        <Link className="self-center mt-36 lg:mt-60" to={"https://juus.pk/pages/shop"}>
+        <Link
+          className="self-center mt-36 lg:mt-60"
+          to={"https://juus.pk/pages/shop"}
+        >
           <Fade direction="down" duration={1000} delay={500}>
-            <button className="select-none cursor-pointer flex items-center justify-between p-2 w-40 lg:w-56 xl:w-72 h-7 lg:h-11 text-snow text-sm lg border-2 rounded-xl hover:bg-snow hover:text-rich-black hover:shadow-primary-shadow hover:shadow-snow transition">
+            <button className="select-none cursor-pointer flex items-center justify-between p-2 w-40 lg:w-56 xl:w-72 h-7 lg:h-11 text-snow text-sm lg border-2 rounded-xl hover:bg-snow hover:text-rich-black hover:shadow-primary-shadow hover:shadow-snow transition shadow-primary-shadow">
               <span className="mx-auto">DISCOVER FLAVORS</span>
             </button>
           </Fade>
