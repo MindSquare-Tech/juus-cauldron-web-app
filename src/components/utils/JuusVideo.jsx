@@ -50,8 +50,8 @@ const JuusVideo = memo(() => {
         <source
           src={
             isMobile
-              ? "https://juusstorage.blob.core.windows.net/website/videos/home/juus-fit-ad-mobile.mp4"
-              : "https://juusstorage.blob.core.windows.net/website/videos/home/juus-fit-ad-desktop.mp4"
+              ? "https://juusstorage.blob.core.windows.net/website/videos/home/juus-fit-ad-mobile-compressed.mp4"
+              : "https://juusstorage.blob.core.windows.net/website/videos/home/juus-fit-ad-desktop-compressed.mp4"
           }
           type="video/mp4"
         />
