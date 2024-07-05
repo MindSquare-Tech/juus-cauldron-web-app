@@ -60,7 +60,7 @@ const JuusVideo = memo(() => {
       {isMuted ? (
         <svg
           onClick={handleMuteIconClick}
-          className="absolute bottom-2 3xl:bottom-40 right-2  w-5 h-5 lg:w-7 lg:h-7 cursor-pointer fill-current text-white"
+          className="absolute bottom-2 3xl:bottom-40 6xl:bottom-32 right-2 6xl:right-9 w-5 h-5 lg:w-7 lg:h-7 cursor-pointer fill-current text-white"
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
           height="1em"
@@ -74,7 +74,7 @@ const JuusVideo = memo(() => {
       ) : (
         <svg
           onClick={handleMuteIconClick}
-          className="absolute bottom-2 3xl:bottom-40 right-2 42 w-5 h-5 lg:w-7 lg:h-7 cursor-pointer fill-current text-white"
+          className="absolute bottom-2 3xl:bottom-40 6xl:bottom-32 right-2 6xl:right-9 w-5 h-5 lg:w-7 lg:h-7 cursor-pointer fill-current text-white"
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
           height="1em"

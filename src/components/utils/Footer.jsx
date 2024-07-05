@@ -65,27 +65,27 @@ function Footer({ theme }) {
             </svg>
           </div>
           <div className="flex items-center justify-center h-5">
-            <Link to={"https://www.facebook.com/profile.php?id=61550934897741"}>
+            <a target="_blank" href={"https://www.facebook.com/profile.php?id=61550934897741"}>
               <img
                 className="h-5"
                 src="https://juusstorage.blob.core.windows.net/website/images/general/facebook-white.png"
                 alt="facebook logo"
               />
-            </Link>
-            <Link to={"https://www.instagram.com/official.juus"}>
+            </a>
+            <a target="_blank" href={"https://www.instagram.com/official.juus"}>
               <img
                 className="h-5 mx-10"
                 src="https://juusstorage.blob.core.windows.net/website/images/general/insta-white.png"
                 alt="instagram logo"
               />
-            </Link>
-            <Link to={"https://www.youtube.com/@JuusPakistan"}>
+            </a>
+            <a target="_blank" href="https://www.youtube.com/@JuusPakistan">
               <img
-                className="h-5"
-                src="https://juusstorage.blob.core.windows.net/website/images/general/linkedin-white.png"
-                alt="linkedin logo"
+                className="h-5 scale-150"
+                src="https://juusstorage.blob.core.windows.net/website/images/general/mdi--youtube.png"
+                alt="youtube logo"
               />
-            </Link>
+            </a>
           </div>
         </Fade>
       </div>
@@ -104,13 +104,13 @@ function Footer({ theme }) {
             Juus.pk{" "}
           </Link>
           Powered by <small> </small>
-          <Link
+          <a
             className="hover:text-snow hover:underline-offset-4 hover:underline active:underline"
             target="_blank"
-            to={"https://vitejs.dev/"}
+            href={"https://www.mindsquare.dev/"}
           >
-            Vite/React
-          </Link>
+            Mindsquare
+          </a>
         </p>
       </div>
     </footer>
