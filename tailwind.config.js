@@ -12,7 +12,7 @@ export default {
         "faq-orange": "#FF7F01",
         "spring-green": "#84f80a",
         aqua: "#05e2fc",
-        "slider": "#D9BC20",
+        slider: "#D9BC20",
       },
       boxShadow: {
         "primary-shadow": "rgba(0, 0, 0, 0.24) 0px 3px 8px",
@@ -37,10 +37,11 @@ export default {
         pulse: "pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
       fontFamily: {
-        anton: ['Anton', "sans-serif"],
+        anton: ["Anton", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       transitionTimingFunction: {
-        'custom-ease': 'cubic-bezier(0.22, 1, 0.36, 1)',
+        "custom-ease": "cubic-bezier(0.22, 1, 0.36, 1)",
       },
     },
   },

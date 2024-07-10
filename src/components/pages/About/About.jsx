@@ -23,6 +23,7 @@ const About = memo(() => {
         <div>
           <AboutVideo />
           <article className="px-5 lg:px-24 3xl:px-28 4xl:px-48 6xl:px-64 font-light lg:font-normal lg:text-xl 3xl:text-3xl text-about">
+            <Fade cascade triggerOnce={true}>
             <p className="my-4 3xl:my-9 4xl:my-16">
               Our journey started in the research facilities of New Zealand. It
               was a never-ending storm of difficulties.
@@ -40,6 +41,7 @@ const About = memo(() => {
               Finally we came home with the best there can be offered, flavours
               custom made for you.
             </p>
+            </Fade>
           </article>
         </div>
         <div className="6xl:flex 6xl:flex-col">
