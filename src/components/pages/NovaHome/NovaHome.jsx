@@ -19,7 +19,7 @@ const NovaHome = memo(() => {
         <NovaHeader isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
       <main
-        className={`my-[72px] relative flex flex-col w-full ${
+        className={`my-[66px] relative flex flex-col w-full ${
           isOpen && "brightness-95"
         }`}
         onClick={() => setIsOpen(false)}
@@ -42,7 +42,7 @@ const NovaHome = memo(() => {
               }}
               initial={{ x: "-100%", opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              className="flex font-anton justify-start items-center ml-3 lg:ml-8 3xl:mb-0.5 text-[#f9a63c]"
+              className="flex font-anton justify-start items-center ml-3 lg:ml-8 3xl:mb-0.5"
             >
               <h1 className="text-[60px] lg:text-8xl 2xl:text-[120px] 4xl:text-9xl 6xl:text-[144px] mr-0.5 lg:mr-1.5">
                 FUTURE
@@ -77,7 +77,50 @@ const NovaHome = memo(() => {
                 <h3>WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING</h3>
               </div>
             </motion.div>
+            <div>
+              <img
+                className="-mt-4 scale-x-105"
+                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/center%20color.png"
+                alt=""
+              />
+            </div>
           </div>
+        </div>
+        {/* Product images and the text */}
+        <div className="h-[66vh] flex flex-col justify-between">
+        <div className="flex">
+            <div>
+              <img className="flex-1 h-40" src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Cardamom%20bottle.png" alt="Cardamom Bottle" />
+            </div>
+            <div className="text-white pr-3 flex-1 flex flex-col text-right justify-start">
+              <h1 className="font-anton text-[30px]">CARDAMOM</h1>
+              <h2 className="text-[12.5px]">GOES BEST WITH TEA</h2>
+              <p className="text-[7.25px] xsm:text-[8px]">A MATCH MADE IN HEAVEN, A FLAVOR FUSION THAT'S SIMPLY DIVINE TO TASTE.</p>
+              <p className="text-[7.25px] xsm:text-[8px]">THE AROMATIC ZEST OF CARDAMOM ELEVATES TEA TO NEW HEIGHTS, TOGETHER, THEY CREATES A DELIGHTFUL BREW THAT'S A TRUE CULINARY DELIGHT."</p>
+            </div>
+        </div>
+        <div className="flex">
+            <div className="text-white pl-3 flex-1 flex flex-col text-left justify-start">
+              <h1 className="font-anton text-[30px]">VANILLA</h1>
+              <h2 className="text-[12.5px]">GOES BEST WITH COFFEE</h2>
+              <p className="text-[7.25px] xsm:text-[8px]">VANILLA'S SWEET, VELVETY SOFTNESS COMPLEMENTS COFFEE'S RICH, BOLD FLAIR, A PERFECT PAIRING THAT AWAKENS SENSES AND BANISHES ALL CARE.</p>
+              <p className="text-[7.25px] xsm:text-[8px]">THE CREAMY ESSENCE OF VANILLA HARMONIZES WITH COFFEE'S DEEP, DARK TONE, TOGETHER, THEY CREATE A DELIGHTFUL BLEND THAT'S A TRUE FLAVOR THRONE."</p>
+            </div>
+            <div>
+              <img className="flex-1 h-40" src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/vanilla%20bottle.png" alt="Vanilla Bottle" />
+            </div>
+        </div>
+        <div className="flex">
+            <div>
+              <img className="flex-1 h-40" src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/orignal%20bottle.png" alt="Original Bottle" />
+            </div>
+            <div className="text-white pr-3 flex-1 flex flex-col text-right justify-end">
+              <h1 className="font-anton text-[30px]">ORIGINAL</h1>
+              <h2 className="text-[12.5px]">SWEETENS EVERYTHING</h2>
+              <p className="text-[7.25px] xsm:text-[8px]">SWEETNESS WITHOUT THE GUILT, ZERO SUGAR, ZERO CALORIES, A HEALTHY SIGN.</p>
+              <p className="text-[7.25px] xsm:text-[8px]">INDULGE IN THE SWEETNESS, WITHOUT ANY FLAVOR THE WEIGHT, A SWEET DELIGHT, THAT'S HEALTHY AND GREAT!"</p>
+            </div>
+        </div>
         </div>
         {/* <Fade direction="up" delay={1000} triggerOnce={true}> */}
         <motion.div
@@ -88,7 +131,7 @@ const NovaHome = memo(() => {
         >
           <img
             className="mt-10 3xl:mt-0 6xl:-mt-10 xl:scale-[.85] 3xl:scale-75 4xl:scale-[.7] 6xl:scale-[.6]"
-            src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Tags.png"
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/calories.png"
             alt=""
           />
         </motion.div>
@@ -103,7 +146,7 @@ const NovaHome = memo(() => {
             </button>
           </Fade>
         </Link>
-        <div
+        {/* <div
           className={`${
             isOpen ? "hidden" : "absolute"
           } pointer-events-none -bottom-5 xxxxs:-bottom-10 xxs:-bottom-16 lg:-bottom-40 xl:-bottom-56 3xl:-bottom-72 4xl:-bottom-64 6xl:-bottom-72 3xl:right-0 6xl:right-40`}
@@ -113,7 +156,7 @@ const NovaHome = memo(() => {
             src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Doodle%20art.png"
             alt=""
           />
-        </div>
+        </div> */}
       </main>
       <div>
         <Footer theme="nova" />

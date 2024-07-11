@@ -51,11 +51,11 @@ function NovaHeader({ isOpen, setIsOpen }) {
     <>
       <header
         style={{
-          backgroundImage: `url(${"https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Top%20header%20design.png"})`,
+          backgroundImage: `url(${"https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/headerGreen.png"})`,
         }}
         className={`${
           showHeader ? "translate-y-0" : "-translate-y-full"
-        } fixed bg-nova-primary z-40 w-full h-[72px] flex justify-between 6xl:justify-evenly items-center p-4 lg:px-12 3xl:px-24 4xl:px-32 5xl:px-36 border-b bg-center bg-cover transition-transform duration-300 ease-in-out`}
+        } fixed bg-nova-primary z-40 w-full h-[72px] -mt-1.5 flex justify-between 6xl:justify-evenly items-center p-4 lg:px-12 3xl:px-24 4xl:px-32 5xl:px-36 border-b bg-center bg-cover transition-transform duration-300 ease-in-out`}
       >
         {isOpen ? (
           <svg

@@ -8,7 +8,7 @@ function App() {
 
   return (
     <Provider store={store}>
-    <div className="relative font-poppins">
+    <div className="relative font-jost">
         <ScrollToTop />
         <AnimatedRoutes />
     </div>

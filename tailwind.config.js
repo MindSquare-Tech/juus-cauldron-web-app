@@ -6,8 +6,8 @@ export default {
       colors: {
         snow: "#FDF7FA",
         "rich-black": "#000411",
-        "nova-primary": "#FED381",
-        "nova-secondary": "#FCB462",
+        "nova-primary": "#B6AA43",
+        "nova-secondary": "#A4D464",
         about: "#6E6E6E",
         "faq-orange": "#FF7F01",
         "spring-green": "#84f80a",
@@ -38,7 +38,7 @@ export default {
       },
       fontFamily: {
         anton: ["Anton", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"],
+        jost: ["Jost", "sans-serif"],
       },
       transitionTimingFunction: {
         "custom-ease": "cubic-bezier(0.22, 1, 0.36, 1)",
