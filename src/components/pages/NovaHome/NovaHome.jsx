@@ -147,8 +147,8 @@ const NovaHome = memo(() => {
             </div>
             <div>
               <img
-                className="flex-1 w-44 h-40 scale-[1.4]"
-                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/vanilla%20bottle%20(1).png"
+                className="flex-1 w-44 h-[152px] scale-125 pr-3"
+                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/final%20vnl.png"
                 alt="Vanilla Bottle"
               />
             </div>
@@ -156,8 +156,8 @@ const NovaHome = memo(() => {
           <div className="flex">
             <div>
               <img
-                className="flex-1 w-[170px] h-40 scale-[1.4]"
-                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/orignal%20bottle%20f.png"
+                className="flex-1 w-[170px] h-40 scale-125 pl-3"
+                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/final%20org.png"
                 alt="Original Bottle"
               />
             </div>
