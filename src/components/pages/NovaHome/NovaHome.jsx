@@ -79,7 +79,7 @@ const NovaHome = memo(() => {
             </motion.div>
             <div>
               <img
-                className="-mt-4 scale-x-105"
+                className="-mt-4 scale-x-105 relative z-20"
                 src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/center%20color.png"
                 alt=""
               />
@@ -87,40 +87,114 @@ const NovaHome = memo(() => {
           </div>
         </div>
         {/* Product images and the text */}
-        <div className="h-[66vh] flex flex-col justify-between">
-        <div className="flex">
+        <div className="h-[66vh] flex flex-col justify-between mb-16 relative -mt-5 z-10">
+          <div className="flex">
             <div>
-              <img className="flex-1 w-40 h-40" src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Cardamom%20bottle.png" alt="Cardamom Bottle" />
+              <img
+                className="flex-1 h-40 w-[152px] scale-[1.4]"
+                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Cardamom%20bottle.png"
+                alt="Cardamom Bottle"
+              />
             </div>
             <div className="text-white pr-3 flex-1 flex flex-col text-right justify-start">
-              <h1 className="font-anton text-[30px]">CARDAMOM</h1>
-              <h2 className="text-[12.5px]">GOES BEST WITH TEA</h2>
-              <p className="text-[7.25px] xsm:text-[8px]">A MATCH MADE IN HEAVEN, A FLAVOR FUSION THAT'S SIMPLY DIVINE TO TASTE.</p>
-              <p className="text-[7.25px] xsm:text-[8px]">THE AROMATIC ZEST OF CARDAMOM ELEVATES TEA TO NEW HEIGHTS, TOGETHER, THEY CREATES A DELIGHTFUL BREW THAT'S A TRUE CULINARY DELIGHT."</p>
+              <motion.h1
+                viewport={{ once: true }}
+                initial={{ x: "100%", opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ type: "tween", delay: 0.1, duration: 0.5 }}
+                className="font-anton text-[30px]"
+              >
+                CARDAMOM
+              </motion.h1>
+              <Fade delay={600} triggerOnce={true}>
+                <h2 className="text-[12.5px]">GOES BEST WITH TEA</h2>
+                <p className="text-[7.25px] xsm:text-[8px]">
+                  A MATCH MADE IN HEAVEN, A FLAVOR FUSION THAT'S SIMPLY DIVINE
+                  TO TASTE.
+                </p>
+                <p className="text-[7.25px] xsm:text-[8px]">
+                  THE AROMATIC ZEST OF CARDAMOM ELEVATES TEA TO NEW HEIGHTS,
+                  TOGETHER, THEY CREATES A DELIGHTFUL BREW THAT'S A TRUE
+                  CULINARY DELIGHT."
+                </p>
+              </Fade>
             </div>
-        </div>
-        <div className="flex">
+          </div>
+          <div className="flex">
             <div className="text-white pl-3 flex-1 flex flex-col text-left justify-start">
-              <h1 className="font-anton text-[30px]">VANILLA</h1>
-              <h2 className="text-[12.5px]">GOES BEST WITH COFFEE</h2>
-              <p className="text-[7.25px] xsm:text-[8px]">VANILLA'S SWEET, VELVETY SOFTNESS COMPLEMENTS COFFEE'S RICH, BOLD FLAIR, A PERFECT PAIRING THAT AWAKENS SENSES AND BANISHES ALL CARE.</p>
-              <p className="text-[7.25px] xsm:text-[8px]">THE CREAMY ESSENCE OF VANILLA HARMONIZES WITH COFFEE'S DEEP, DARK TONE, TOGETHER, THEY CREATE A DELIGHTFUL BLEND THAT'S A TRUE FLAVOR THRONE."</p>
+              <motion.h1
+                viewport={{ once: true }}
+                initial={{ x: "-100%", opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ type: "tween", delay: 0.1, duration: 0.5 }}
+                className="font-anton text-[30px]"
+              >
+                VANILLA
+              </motion.h1>
+              <Fade delay={600} triggerOnce={true}>
+                <h2 className="text-[12.5px]">GOES BEST WITH COFFEE</h2>
+                <p className="text-[7.25px] xsm:text-[8px]">
+                  VANILLA'S SWEET, VELVETY SOFTNESS COMPLEMENTS COFFEE'S RICH,
+                  BOLD FLAIR, A PERFECT PAIRING THAT AWAKENS SENSES AND BANISHES
+                  ALL CARE.
+                </p>
+                <p className="text-[7.25px] xsm:text-[8px]">
+                  THE CREAMY ESSENCE OF VANILLA HARMONIZES WITH COFFEE'S DEEP,
+                  DARK TONE, TOGETHER, THEY CREATE A DELIGHTFUL BLEND THAT'S A
+                  TRUE FLAVOR THRONE."
+                </p>
+              </Fade>
             </div>
             <div>
-              <img className="flex-1 w-40 h-40" src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/vanilla%20bottle.png" alt="Vanilla Bottle" />
+              <img
+                className="flex-1 w-44 h-40 scale-[1.4]"
+                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/vanilla%20bottle%20(1).png"
+                alt="Vanilla Bottle"
+              />
             </div>
-        </div>
-        <div className="flex">
+          </div>
+          <div className="flex">
             <div>
-              <img className="flex-1 w-40  h-40" src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/orignal-bottle.png" alt="Original Bottle" />
+              <img
+                className="flex-1 w-[170px] h-40 scale-[1.4]"
+                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/orignal%20bottle%20f.png"
+                alt="Original Bottle"
+              />
             </div>
             <div className="text-white pr-3 flex-1 flex flex-col text-right justify-end">
-              <h1 className="font-anton text-[30px]">ORIGINAL</h1>
-              <h2 className="text-[12.5px]">SWEETENS EVERYTHING</h2>
-              <p className="text-[7.25px] xsm:text-[8px]">SWEETNESS WITHOUT THE GUILT, ZERO SUGAR, ZERO CALORIES, A HEALTHY SIGN.</p>
-              <p className="text-[7.25px] xsm:text-[8px]">INDULGE IN THE SWEETNESS, WITHOUT ANY FLAVOR THE WEIGHT, A SWEET DELIGHT, THAT'S HEALTHY AND GREAT!"</p>
+              <motion.h1
+                viewport={{ once: true }}
+                initial={{ x: "100%", opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ type: "tween", delay: 0.1, duration: 0.5 }}
+                className="font-anton text-[30px]"
+              >
+                ORIGINAL
+              </motion.h1>
+              <Fade delay={600} triggerOnce={true}>
+                <h2 className="text-[12.5px]">SWEETENS EVERYTHING</h2>
+                <p className="text-[7.25px] xsm:text-[8px]">
+                  SWEETNESS WITHOUT THE GUILT, ZERO SUGAR, ZERO CALORIES, A
+                  HEALTHY SIGN.
+                </p>
+                <p className="text-[7.25px] xsm:text-[8px]">
+                  INDULGE IN THE SWEETNESS, WITHOUT ANY FLAVOR THE WEIGHT, A
+                  SWEET DELIGHT, THAT'S HEALTHY AND GREAT!"
+                </p>
+              </Fade>
             </div>
-        </div>
+          </div>
+          {/* left and right placed wave */}
+          <img
+            className="absolute rotate-[88deg] scale-y-125 translate-x-1/2 -right-2"
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/center%20color.png"
+            alt=""
+          />
+          <img
+            className="absolute -rotate-[95deg] scale-y-150 top-[40%] -translate-x-1/2 -left-3.5"
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/center%20color.png"
+            alt=""
+          />
         </div>
         {/* <Fade direction="up" delay={1000} triggerOnce={true}> */}
         <motion.div
@@ -130,33 +204,33 @@ const NovaHome = memo(() => {
           viewport={{ once: true }}
         >
           <img
-            className="mt-10 3xl:mt-0 6xl:-mt-10 xl:scale-[.85] 3xl:scale-75 4xl:scale-[.7] 6xl:scale-[.6]"
+            className="relative z-50 mt-10 3xl:mt-0 6xl:-mt-10 xl:scale-[.85] 3xl:scale-75 4xl:scale-[.7] 6xl:scale-[.6]"
             src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/calories.png"
             alt=""
           />
         </motion.div>
         {/* </Fade> */}
+        <div
+          className={`${
+            isOpen ? "hidden" : "absolute"
+          } pointer-events-none rotate-90 bottom-16 -right-32`}
+        >
+          <img
+            className={`-z-50 scale-x-75 scale-y-90 opacity-40`}
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Doodle%20art.png"
+            alt=""
+          />
+        </div>
         <Link
           className="self-center mt-36 lg:mt-60"
           to={"https://juus.pk/pages/shop"}
         >
           <Fade direction="down" duration={1000} delay={500}>
-            <button className="select-none cursor-pointer flex items-center justify-between p-2 w-40 lg:w-56 xl:w-72 h-7 lg:h-11 text-snow text-sm lg border-2 rounded-xl hover:bg-snow hover:text-rich-black hover:shadow-primary-shadow hover:shadow-snow transition shadow-primary-shadow">
+            <button className="select-none cursor-pointer flex items-center justify-between p-2 w-40 lg:w-56 xl:w-72 h-7 lg:h-11 text-white text-sm lg border-2 rounded-xl hover:bg-snow hover:text-rich-black hover:shadow-primary-shadow hover:shadow-snow transition shadow-primary-shadow">
               <span className="mx-auto">DISCOVER FLAVORS</span>
             </button>
           </Fade>
         </Link>
-        {/* <div
-          className={`${
-            isOpen ? "hidden" : "absolute"
-          } pointer-events-none -bottom-5 xxxxs:-bottom-10 xxs:-bottom-16 lg:-bottom-40 xl:-bottom-56 3xl:-bottom-72 4xl:-bottom-64 6xl:-bottom-72 3xl:right-0 6xl:right-40`}
-        >
-          <img
-            className={`-z-50 opacity-50 xl:scale-y-[.8] 3xl:scale-x-95 6xl:scale-x-125 6xl:scale-y-[1.05]`}
-            src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Doodle%20art.png"
-            alt=""
-          />
-        </div> */}
       </main>
       <div>
         <Footer theme="nova" />
