@@ -90,7 +90,7 @@ const NovaHome = memo(() => {
         <div className="h-[66vh] flex flex-col justify-between">
         <div className="flex">
             <div>
-              <img className="flex-1 h-40" src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Cardamom%20bottle.png" alt="Cardamom Bottle" />
+              <img className="flex-1 w-40 h-40" src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Cardamom%20bottle.png" alt="Cardamom Bottle" />
             </div>
             <div className="text-white pr-3 flex-1 flex flex-col text-right justify-start">
               <h1 className="font-anton text-[30px]">CARDAMOM</h1>
@@ -107,12 +107,12 @@ const NovaHome = memo(() => {
               <p className="text-[7.25px] xsm:text-[8px]">THE CREAMY ESSENCE OF VANILLA HARMONIZES WITH COFFEE'S DEEP, DARK TONE, TOGETHER, THEY CREATE A DELIGHTFUL BLEND THAT'S A TRUE FLAVOR THRONE."</p>
             </div>
             <div>
-              <img className="flex-1 h-40" src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/vanilla%20bottle.png" alt="Vanilla Bottle" />
+              <img className="flex-1 w-40 h-40" src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/vanilla%20bottle.png" alt="Vanilla Bottle" />
             </div>
         </div>
         <div className="flex">
             <div>
-              <img className="flex-1 h-40" src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/orignal%20bottle.png" alt="Original Bottle" />
+              <img className="flex-1 w-40  h-40" src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/orignal-bottle.png" alt="Original Bottle" />
             </div>
             <div className="text-white pr-3 flex-1 flex flex-col text-right justify-end">
               <h1 className="font-anton text-[30px]">ORIGINAL</h1>
