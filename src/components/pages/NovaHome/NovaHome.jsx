@@ -213,10 +213,10 @@ const NovaHome = memo(() => {
         <div
           className={`${
             isOpen ? "hidden" : "absolute"
-          } pointer-events-none rotate-90 bottom-16 -right-32`}
+          } pointer-events-none rotate-90 -bottom-5 -right-32`}
         >
           <img
-            className={`-z-50 scale-x-75 scale-y-90 opacity-40`}
+            className={`-z-50 opacity-40`}
             src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Doodle%20art.png"
             alt=""
           />
