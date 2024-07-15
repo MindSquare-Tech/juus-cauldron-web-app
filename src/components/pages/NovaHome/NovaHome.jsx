@@ -31,12 +31,13 @@ const NovaHome = memo(() => {
             alt=""
           />
         </div>
-        <div className="flex text-white xl:mt-5">
+        <div className="flex mb-12 xxs:mb-16 text-white xl:mt-5">
           <div className="flex flex-col">
             <motion.div
               viewport={{ once: true }}
               transition={{
                 type: "tween",
+                delay: 0.3,
                 duration: 0.8,
                 ease: [0.22, 1, 0.36, 1],
               }}
@@ -59,7 +60,7 @@ const NovaHome = memo(() => {
             <motion.div
               viewport={{ once: true }}
               transition={{
-                delay: 0.4,
+                delay: 0.8,
                 type: "tween",
                 duration: 0.8,
                 ease: [0.22, 1, 0.36, 1],
@@ -71,37 +72,34 @@ const NovaHome = memo(() => {
               <h1 className="text-[47px] lg:text-7xl 2xl:text-[108px] 4xl:text-8xl 6xl:text-9xl font-anton mr-0.5 lg:mr-1.5">
                 FREE
               </h1>
-              <div className="flex flex-col text-[8px] xxxxs:text-[9px] lg:text-sm 4xl:text-base h-[80%] lg:h-full 2xl:h-[94%] items-start justify-evenly lg:justify-between">
+              <div className="flex flex-col text-[8px] xxxxs:text-[9px] lg:text-sm 4xl:text-base h-[75%] lg:h-full 2xl:h-[94%] items-start justify-evenly lg:justify-between">
                 <h3>PRESENTING PAKISTAN'S</h3>
                 <h3>FIRST EVER ZERO SUGAR ZERO CALORIES LIQUID ENHANCER.</h3>
                 <h3>WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING</h3>
               </div>
             </motion.div>
-            <div>
-              <img
-                className="-mt-4 scale-x-105 relative z-20"
-                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/center%20color.png"
-                alt=""
-              />
-            </div>
           </div>
         </div>
         {/* Product images and the text */}
-        <div className="h-[66vh] flex flex-col justify-between mb-16 relative -mt-5 z-10">
+        <div className="flex flex-col justify-between mb-16 relative -mt-5 z-10">
           <div className="flex">
-            <div>
-              <img
-                className="flex-1 h-40 w-[152px] scale-[1.4]"
+            <div className="relative z-50">
+              <motion.img
+                viewport={{ once: true }}
+                initial={{ opacity: 0, x: "-100%" }}
+                whileInView={{ opacity: 1, x: 0}}
+                transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
+                className="flex-1 h-40 w-36 scale-[1.65] z-50 relative"
                 src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Cardamom%20bottle.png"
                 alt="Cardamom Bottle"
               />
             </div>
-            <div className="text-white pr-3 flex-1 flex flex-col text-right justify-start">
+            <div className="text-white pr-4 xxxxs:pr-5 xxs:pr-6 xsm:pr-7 flex-1 flex flex-col text-right justify-start">
               <motion.h1
                 viewport={{ once: true }}
                 initial={{ x: "100%", opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ type: "tween", delay: 0.1, duration: 0.5 }}
+                transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
                 className="font-anton text-[30px]"
               >
                 CARDAMOM
@@ -120,13 +118,13 @@ const NovaHome = memo(() => {
               </Fade>
             </div>
           </div>
-          <div className="flex">
-            <div className="text-white pl-3 flex-1 flex flex-col text-left justify-start">
+          <div className="flex my-20">
+            <div className="text-white pl-4 xxxxs:pl-5 xxs:pl-6 xsm:pl-7 flex-1 flex flex-col text-left justify-start">
               <motion.h1
                 viewport={{ once: true }}
                 initial={{ x: "-100%", opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ type: "tween", delay: 0.1, duration: 0.5 }}
+                transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
                 className="font-anton text-[30px]"
               >
                 VANILLA
@@ -146,8 +144,12 @@ const NovaHome = memo(() => {
               </Fade>
             </div>
             <div>
-              <img
-                className="flex-1 w-44 h-[152px] scale-125 pr-3"
+              <motion.img
+                viewport={{ once: true }}
+                initial={{ opacity: 0, x: "100%"}}
+                whileInView={{ opacity: 1, x: 0}}
+                transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
+                className="flex-1 h-40 w-[184px] scale-110 pr-3"
                 src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/final%20vnl%20(1).png"
                 alt="Vanilla Bottle"
               />
@@ -155,8 +157,12 @@ const NovaHome = memo(() => {
           </div>
           <div className="flex">
             <div>
-              <img
-                className="flex-1 w-[170px] h-40 scale-125 pl-3"
+              <motion.img
+                viewport={{ once: true }}
+                initial={{ opacity: 0, x: "-100%"}}
+                whileInView={{ opacity: 1, x: 0}}
+                transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
+                className="flex-1 h-40 w-40 scale-125 pl-3 xxxxs:pl-4"
                 src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/final%20org.png"
                 alt="Original Bottle"
               />
@@ -166,7 +172,7 @@ const NovaHome = memo(() => {
                 viewport={{ once: true }}
                 initial={{ x: "100%", opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ type: "tween", delay: 0.1, duration: 0.5 }}
+                transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
                 className="font-anton text-[30px]"
               >
                 ORIGINAL
@@ -184,7 +190,19 @@ const NovaHome = memo(() => {
               </Fade>
             </div>
           </div>
-          {/* left and right placed wave */}
+          {/* upper doodle and right and left placed wave */}
+
+          <img
+            className="absolute top-0 -translate-y-2/3 scale-x-105 z-20"
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/center%20color.png"
+            alt=""
+          />
+
+          <img
+            className="absolute z-0 opacity-40 -rotate-90 top-0 left-0 -translate-x-[40%]"
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Doodle%20art.png"
+            alt="Upper doodle"
+          />
           <img
             className="absolute rotate-[88deg] scale-y-125 translate-x-1/2 -right-2"
             src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/center%20color.png"
