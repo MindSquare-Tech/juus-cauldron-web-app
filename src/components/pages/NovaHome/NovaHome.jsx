@@ -31,7 +31,7 @@ const NovaHome = memo(() => {
             alt=""
           />
         </div>
-        <div className="flex mb-12 xxs:mb-16 text-white xl:mt-5">
+        <div className="flex mb-12 xxs:mb-16 lg:mb-32 3xl:mb-44 5xl:mb-52 6xl:mb-60 text-white xl:mt-5">
           <div className="flex flex-col">
             <motion.div
               viewport={{ once: true }}
@@ -43,7 +43,7 @@ const NovaHome = memo(() => {
               }}
               initial={{ x: "-100%", opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              className="flex font-anton justify-start items-center ml-3 lg:ml-8 3xl:mb-0.5"
+              className="flex font-anton justify-start items-center ml-3 lg:ml-8 3xl:ml-16 4xl:ml-24 5xl:ml-28 lg:mt-5 3xl:mb-0.5"
             >
               <h1 className="text-[60px] lg:text-8xl 2xl:text-[120px] 4xl:text-9xl 6xl:text-[144px] mr-0.5 lg:mr-1.5">
                 FUTURE
@@ -67,7 +67,7 @@ const NovaHome = memo(() => {
               }}
               initial={{ x: "-100%", opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              className="flex justify-start items-center ml-3 lg:ml-8 -mt-5 lg:-mt-0 3xl:mt-0.5"
+              className="flex justify-start items-center ml-3 lg:ml-8 3xl:ml-16 4xl:ml-24 5xl:ml-28 -mt-5 lg:-mt-0 3xl:mt-0.5"
             >
               <h1 className="text-[47px] lg:text-7xl 2xl:text-[108px] 4xl:text-8xl 6xl:text-9xl font-anton mr-0.5 lg:mr-1.5">
                 FREE
@@ -83,34 +83,34 @@ const NovaHome = memo(() => {
         {/* Product images and the text */}
         <div className="flex flex-col justify-between mb-16 relative -mt-5 z-10">
           <div className="flex">
-            <div className="relative z-50">
+            <div className="relative z-50 lg:w-1/2">
               <motion.img
                 viewport={{ once: true }}
-                initial={{ opacity: 0, x: "-100%" }}
-                whileInView={{ opacity: 1, x: 0}}
+                initial={{ opacity: 0, x: "-100%"}}
+                whileInView={{ opacity: 1, x: 0, scale: (window.innerWidth > 1919) && 0.7 || (window.innerWidth > 1535) && 0.8 || (window.innerWidth > 1279) && 0.85 || (window.innerWidth > 767) && 0.95 || (window.innerWidth > 429) && 0.95 || (window.innerWidth > 409) && 1 || 1.05 }}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
-                className="flex-1 h-40 w-36 scale-[1.65] z-50 relative"
+                className="flex-1 z-50 relative"
                 src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Cardamom%20bottle.png"
                 alt="Cardamom Bottle"
               />
             </div>
-            <div className="text-white pr-4 xxxxs:pr-5 xxs:pr-6 xsm:pr-7 flex-1 flex flex-col text-right justify-start">
+            <div className="text-white pr-4 xxxxs:pr-5 xxs:pr-6 xsm:pr-7 lg:pr-14 3xl:pr-24 4xl:pr-28 6xl:pr-36 flex-1 flex flex-col text-right justify-start">
               <motion.h1
                 viewport={{ once: true }}
                 initial={{ x: "100%", opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
-                className="font-anton text-[30px]"
+                className="font-anton text-[30px] lg:text-[60px] 3xl:text-[100px] 6xl:text-[128px]"
               >
                 CARDAMOM
               </motion.h1>
               <Fade delay={600} triggerOnce={true}>
-                <h2 className="text-[12.5px]">GOES BEST WITH TEA</h2>
-                <p className="text-[7.25px] xsm:text-[8px]">
+                <h2 className="text-[12.5px] lg:text-[24px] 3xl:text-[36px] 6xl:text-[48px]">GOES BEST WITH TEA</h2>
+                <p className="text-[7.25px] xsm:text-[8px] lg:text-[14px] 3xl:text-[24px] 6xl:text-[36px]">
                   A MATCH MADE IN HEAVEN, A FLAVOR FUSION THAT'S SIMPLY DIVINE
                   TO TASTE.
                 </p>
-                <p className="text-[7.25px] xsm:text-[8px]">
+                <p className="text-[7.25px] xsm:text-[8px] lg:text-[14px] 3xl:text-[24px] 6xl:text-[36px]">
                   THE AROMATIC ZEST OF CARDAMOM ELEVATES TEA TO NEW HEIGHTS,
                   TOGETHER, THEY CREATES A DELIGHTFUL BREW THAT'S A TRUE
                   CULINARY DELIGHT."
@@ -118,72 +118,72 @@ const NovaHome = memo(() => {
               </Fade>
             </div>
           </div>
-          <div className="flex my-20">
-            <div className="text-white pl-4 xxxxs:pl-5 xxs:pl-6 xsm:pl-7 flex-1 flex flex-col text-left justify-start">
+          <div className="flex my-20 lg:my-10">
+            <div className="text-white pl-4 xxxxs:pl-5 xxs:pl-6 xsm:pl-7 lg:pl-16 3xl:pl-28 4xl:pl-32 6xl:pl-40 flex-1 flex flex-col text-left justify-start">
               <motion.h1
                 viewport={{ once: true }}
                 initial={{ x: "-100%", opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
-                className="font-anton text-[30px]"
+                className="font-anton text-[30px] lg:text-[60px] 3xl:text-[100px] 6xl:text-[128px]"
               >
                 VANILLA
               </motion.h1>
               <Fade delay={600} triggerOnce={true}>
-                <h2 className="text-[12.5px]">GOES BEST WITH COFFEE</h2>
-                <p className="text-[7.25px] xsm:text-[8px]">
+                <h2 className="text-[12.5px] lg:text-[24px] 3xl:text-[36px] 6xl:text-[48px]">GOES BEST WITH COFFEE</h2>
+                <p className="text-[7.25px] xsm:text-[8px] lg:text-[14px] 3xl:text-[24px] 6xl:text-[36px]">
                   VANILLA'S SWEET, VELVETY SOFTNESS COMPLEMENTS COFFEE'S RICH,
                   BOLD FLAIR, A PERFECT PAIRING THAT AWAKENS SENSES AND BANISHES
                   ALL CARE.
                 </p>
-                <p className="text-[7.25px] xsm:text-[8px]">
+                <p className="text-[7.25px] xsm:text-[8px] lg:text-[14px] 3xl:text-[24px] 6xl:text-[36px]">
                   THE CREAMY ESSENCE OF VANILLA HARMONIZES WITH COFFEE'S DEEP,
                   DARK TONE, TOGETHER, THEY CREATE A DELIGHTFUL BLEND THAT'S A
                   TRUE FLAVOR THRONE."
                 </p>
               </Fade>
             </div>
-            <div>
+            <div className="lg:w-1/2">
               <motion.img
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: "100%"}}
-                whileInView={{ opacity: 1, x: 0}}
+                whileInView={{ opacity: 1, x: 0, scale: (window.innerWidth > 1919) && 0.65 || (window.innerWidth > 1535) && 0.75 || (window.innerWidth > 1279) && 0.8 || (window.innerWidth > 767) && 0.95 || (window.innerWidth > 429) && 0.85 || (window.innerWidth > 389) && 0.9 || 0.95}}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
-                className="flex-1 h-40 w-[184px] scale-110 pr-3"
+                className="flex-1 pr-3"
                 src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/final%20vnl%20(1).png"
                 alt="Vanilla Bottle"
               />
             </div>
           </div>
           <div className="flex">
-            <div>
+            <div className="lg:w-1/2">
               <motion.img
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: "-100%"}}
-                whileInView={{ opacity: 1, x: 0}}
+                whileInView={{ opacity: 1, x: 0, scale: (window.innerWidth > 1919) && 0.65 || (window.innerWidth > 1535) && 0.75 || (window.innerWidth > 1279) && 0.8 || (window.innerWidth > 767) && 0.95 || (window.innerWidth > 429) && 0.85 || (window.innerWidth > 389) && 0.9 || 0.95}}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
-                className="flex-1 h-40 w-40 scale-125 pl-3 xxxxs:pl-4"
+                className="flex-1 pl-3 xxxxs:pl-4"
                 src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/final%20org.png"
                 alt="Original Bottle"
               />
             </div>
-            <div className="text-white pr-3 flex-1 flex flex-col text-right justify-end">
+            <div className="text-white pr-3 lg:pr-8 3xl:pr-16 4xl:pr-24 5xl:pr-28 6xl:pr-32 flex-1 flex flex-col text-right justify-end lg:justify-center">
               <motion.h1
                 viewport={{ once: true }}
                 initial={{ x: "100%", opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
-                className="font-anton text-[30px]"
+                className="font-anton text-[30px] lg:text-[60px] 3xl:text-[100px] 6xl:text-[128px]"
               >
                 ORIGINAL
               </motion.h1>
               <Fade delay={600} triggerOnce={true}>
-                <h2 className="text-[12.5px]">SWEETENS EVERYTHING</h2>
-                <p className="text-[7.25px] xsm:text-[8px]">
+                <h2 className="text-[12.5px] lg:text-[24px] 3xl:text-[36px] 6xl:text-[48px]">SWEETENS EVERYTHING</h2>
+                <p className="text-[7.25px] xsm:text-[8px] lg:text-[14px] 3xl:text-[24px] 6xl:text-[36px]">
                   SWEETNESS WITHOUT THE GUILT, ZERO SUGAR, ZERO CALORIES, A
                   HEALTHY SIGN.
                 </p>
-                <p className="text-[7.25px] xsm:text-[8px]">
+                <p className="text-[7.25px] xsm:text-[8px] lg:text-[14px] 3xl:text-[24px] 6xl:text-[36px]">
                   INDULGE IN THE SWEETNESS, WITHOUT ANY FLAVOR THE WEIGHT, A
                   SWEET DELIGHT, THAT'S HEALTHY AND GREAT!"
                 </p>
