@@ -129,7 +129,7 @@ const FAQs = memo(() => {
         />
       </section>
       <main className="flex lg:grid lg:grid-rows-1 lg:grid-cols-7 2xl:grid-cols-9 flex-col lg:flex-row items-center lg:items-start lg:mb-8 lg:gap-5 5xl:gap-20">
-        <div className="lg:col-span-4 2xl:col-span-6">
+        <div className="lg:col-span-4 2xl:col-span-6 lg:pl-3 3xl:pl-16 4xl:pl-24 5xl:pl-28 6xl:pl-40">
           <Fade
             className="self-stretch"
             triggerOnce={true}
