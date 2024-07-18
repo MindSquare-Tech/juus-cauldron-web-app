@@ -213,6 +213,7 @@ const NovaHome = memo(() => {
             src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/center%20color.png"
             alt=""
           />
+          <img className="pointer-events-none absolute -bottom-60 translate-y-3/4 xxxxs:translate-y-[70.5%] xxxs:translate-y-[69%] xxs:translate-y-[67.5%] xsm:translate-y-[65.3%] lg:translate-y-[69.7%] xl:translate-y-[63.75%] 3xl:translate-y-[51%] 4xl:translate-y-[50.25%] 5xl:translate-y-[49.1%] 6xl:translate-y-[44%]" src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/brush.png" alt="ending gradient" />
         </div>
         {/* <Fade direction="up" delay={1000} triggerOnce={true}> */}
         <motion.div

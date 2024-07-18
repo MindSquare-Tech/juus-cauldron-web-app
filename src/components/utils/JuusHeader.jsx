@@ -102,7 +102,7 @@ function JuusHeader() {
           </Link>
           {!isMobile && <NavLinks />}
         </div>
-        <div className="flex">
+        <div className="flex lg:w-36 lg:justify-between">
         {isMobile ? (<svg
             className={`hover:scale-105 cursor-pointer transition-transform ${scoialsBtnClicked && "rotate-180"}`}
             onClick={() => setScoialsBtnClicked(!scoialsBtnClicked)}
@@ -135,7 +135,7 @@ function JuusHeader() {
                 href={"https://www.instagram.com/official.juus"}
               >
                 <img
-                  className="mx-10 h-5"
+                  className="h-5"
                   src="https://juusstorage.blob.core.windows.net/website/images/general/insta-white.png"
                   alt="instagram logo"
                 />
