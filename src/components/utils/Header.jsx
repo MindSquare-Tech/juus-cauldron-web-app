@@ -81,7 +81,7 @@ function Header({ isOpen, setIsOpen }) {
             ></path>
           </svg>
         )}
-        <div className="lg:flex lg:w-5/6">
+        <div className="lg:flex lg:w-5/6 lg:items-center">
           <Link
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:static lg:top-0 lg:left-0 lg:translate-x-0 lg:translate-y-0"
             to={"/"}
@@ -94,7 +94,7 @@ function Header({ isOpen, setIsOpen }) {
           </Link>
           {!isMobile && <NavLinks />}
         </div>
-        <div className="flex">
+        <div className="flex lg:w-36 lg:justify-between">
           {isMobile ? (<svg
             className={`hover:scale-105 cursor-pointer transition-transform ${scoialsBtnClicked && "rotate-180"}`}
             onClick={() => setScoialsBtnClicked(!scoialsBtnClicked)}
@@ -127,7 +127,7 @@ function Header({ isOpen, setIsOpen }) {
                 href={"https://www.instagram.com/official.juus"}
               >
                 <img
-                  className="mx-10 h-5"
+                  className="h-5"
                   src="https://juusstorage.blob.core.windows.net/website/images/general/insta-white.png"
                   alt="instagram logo"
                 />

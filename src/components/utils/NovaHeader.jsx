@@ -90,7 +90,7 @@ function NovaHeader({ isOpen, setIsOpen }) {
             ></path>
           </svg>
         )}
-        <div className="lg:flex lg:w-5/6">
+        <div className="lg:flex lg:w-5/6 lg:items-center">
           <Link
             to={"/"}
             className="lg:pt-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:static lg:top-0 lg:left-0 lg:translate-x-0 lg:translate-y-0"
