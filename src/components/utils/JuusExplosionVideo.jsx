@@ -10,7 +10,7 @@ const JuusExplosionVideo = memo(() => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative 3xl:pr-16">
     <Fade  direction="up" delay={200} triggerOnce={true}>
       <video
         onLoadedData={handleVideoLoading}
