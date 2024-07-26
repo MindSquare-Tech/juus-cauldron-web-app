@@ -11,6 +11,14 @@ function Header({ isOpen, setIsOpen }) {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [scoialsBtnClicked, setScoialsBtnClicked] = useState(false);
 
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", () => setIsMobile(window.innerWidth < 768));
+    return () => {
+      window.removeEventListener("resize", () => setIsMobile(window.innerWidth < 768));
+    };
+  }, [window.innerWidth, window.innerHeight])
+
   const handleScroll = () => {
     if (window.scrollY <= 72) {
       setShowHeader(true);
@@ -51,7 +59,7 @@ function Header({ isOpen, setIsOpen }) {
         {isOpen ? (
           <svg
             onClick={handleHamburgerClick}
-            className="hover:scale-105 transform scale-y-[-1] lg:hidden cursor-pointer"
+            className="hover:scale-105 transform lg:hidden cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
             width="1.5em"
             height="2em"
@@ -65,7 +73,7 @@ function Header({ isOpen, setIsOpen }) {
         ) : (
           <svg
             onClick={handleHamburgerClick}
-            className="hover:scale-105 transform scale-y-[-1] lg:hidden cursor-pointer"
+            className="hover:scale-105 transform lg:hidden cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
             width="1.5em"
             height="2em"

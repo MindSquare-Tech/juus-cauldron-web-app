@@ -16,6 +16,13 @@ function JuusHeader() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [scoialsBtnClicked, setScoialsBtnClicked] = useState(false);
 
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", () => setIsMobile(window.innerWidth < 768));
+    return () => {
+      window.removeEventListener("resize", () => setIsMobile(window.innerWidth < 768));
+    };
+  }, [window.innerWidth, window.innerHeight])
 
   const handleHamburgerClick = () => {
     dispatch(toggleIsOpen());
@@ -59,7 +66,7 @@ function JuusHeader() {
         {isOpen ? (
           <svg
             onClick={handleHamburgerClick}
-            className="transform scale-y-[-1] lg:hidden"
+            className="transform lg:hidden"
             xmlns="http://www.w3.org/2000/svg"
             width="1.5em"
             height="2em"
@@ -73,7 +80,7 @@ function JuusHeader() {
         ) : (
           <svg
             onClick={handleHamburgerClick}
-            className="transform scale-y-[-1] lg:hidden"
+            className="transform lg:hidden"
             xmlns="http://www.w3.org/2000/svg"
             width="1.5em"
             height="2em"
@@ -95,7 +102,7 @@ function JuusHeader() {
             className="lg:pt-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:static lg:top-0 lg:left-0 lg:translate-x-0 lg:translate-y-0"
           >
             <img
-              className="lg:mt-1 h-10 scale-[.85] cursor-pointer select-none lg:mr-0.5 xl:mr-9"
+              className="lg:mt-0 h-10 scale-[.85] cursor-pointer select-none lg:mr-0.5 xl:mr-9"
               src="https://juusstorage.blob.core.windows.net/website/images/general/juus-logo-white-transparent-bg.png"
               alt=""
             />

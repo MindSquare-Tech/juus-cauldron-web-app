@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function NavLinks() {
   return (
-    <Fade direction="up" cascade damping={0.15}>
+    <Fade direction="up" className="" cascade damping={0.15}>
     <Link to={"/"}>
         <h1 className="my-4 lg:my-5 select-none text-snow text-lg lg:text-sm cursor-pointer lg:pt-1.5 lg:px-3.5 hover:underline-offset-4 active:underline hover:underline">Home</h1>
       </Link>

@@ -86,8 +86,19 @@ const NovaHome = memo(() => {
             <div className="relative z-50 lg:w-1/2">
               <motion.img
                 viewport={{ once: true }}
-                initial={{ opacity: 0, x: "-100%"}}
-                whileInView={{ opacity: 1, x: 0, scale: (window.innerWidth > 1919) && 0.7 || (window.innerWidth > 1535) && 0.8 || (window.innerWidth > 1279) && 0.85 || (window.innerWidth > 767) && 0.95 || (window.innerWidth > 429) && 0.95 || (window.innerWidth > 409) && 1 || 1.05 }}
+                initial={{ opacity: 0, x: "-100%" }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  scale:
+                    (window.innerWidth > 1919 && 0.7) ||
+                    (window.innerWidth > 1535 && 0.8) ||
+                    (window.innerWidth > 1279 && 0.85) ||
+                    (window.innerWidth > 767 && 0.95) ||
+                    (window.innerWidth > 429 && 0.95) ||
+                    (window.innerWidth > 409 && 1) ||
+                    1.05,
+                }}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
                 className="flex-1 z-50 relative"
                 src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Cardamom%20bottle.png"
@@ -105,7 +116,9 @@ const NovaHome = memo(() => {
                 CARDAMOM
               </motion.h1>
               <Fade delay={600} triggerOnce={true}>
-                <h2 className="text-[12.5px] lg:text-[24px] 3xl:text-[36px] 6xl:text-[48px]">GOES BEST WITH TEA</h2>
+                <h2 className="text-[12.5px] lg:text-[24px] 3xl:text-[36px] 6xl:text-[48px]">
+                  GOES BEST WITH TEA
+                </h2>
                 <p className="text-[7.25px] xsm:text-[8px] lg:text-[14px] 3xl:text-[24px] 6xl:text-[36px]">
                   A MATCH MADE IN HEAVEN, A FLAVOR FUSION THAT'S SIMPLY DIVINE
                   TO TASTE.
@@ -130,7 +143,9 @@ const NovaHome = memo(() => {
                 VANILLA
               </motion.h1>
               <Fade delay={600} triggerOnce={true}>
-                <h2 className="text-[12.5px] lg:text-[24px] 3xl:text-[36px] 6xl:text-[48px]">GOES BEST WITH COFFEE</h2>
+                <h2 className="text-[12.5px] lg:text-[24px] 3xl:text-[36px] 6xl:text-[48px]">
+                  GOES BEST WITH COFFEE
+                </h2>
                 <p className="text-[7.25px] xsm:text-[8px] lg:text-[14px] 3xl:text-[24px] 6xl:text-[36px]">
                   VANILLA'S SWEET, VELVETY SOFTNESS COMPLEMENTS COFFEE'S RICH,
                   BOLD FLAIR, A PERFECT PAIRING THAT AWAKENS SENSES AND BANISHES
@@ -146,8 +161,19 @@ const NovaHome = memo(() => {
             <div className="lg:w-1/2">
               <motion.img
                 viewport={{ once: true }}
-                initial={{ opacity: 0, x: "100%"}}
-                whileInView={{ opacity: 1, x: 0, scale: (window.innerWidth > 1919) && 0.65 || (window.innerWidth > 1535) && 0.75 || (window.innerWidth > 1279) && 0.8 || (window.innerWidth > 767) && 0.95 || (window.innerWidth > 429) && 0.85 || (window.innerWidth > 389) && 0.9 || 0.95}}
+                initial={{ opacity: 0, x: "100%" }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  scale:
+                    (window.innerWidth > 1919 && 0.65) ||
+                    (window.innerWidth > 1535 && 0.75) ||
+                    (window.innerWidth > 1279 && 0.8) ||
+                    (window.innerWidth > 767 && 0.95) ||
+                    (window.innerWidth > 429 && 0.85) ||
+                    (window.innerWidth > 389 && 0.9) ||
+                    0.95,
+                }}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
                 className="flex-1 pr-3"
                 src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/final%20vnl%20(1).png"
@@ -159,8 +185,19 @@ const NovaHome = memo(() => {
             <div className="lg:w-1/2">
               <motion.img
                 viewport={{ once: true }}
-                initial={{ opacity: 0, x: "-100%"}}
-                whileInView={{ opacity: 1, x: 0, scale: (window.innerWidth > 1919) && 0.65 || (window.innerWidth > 1535) && 0.75 || (window.innerWidth > 1279) && 0.8 || (window.innerWidth > 767) && 0.95 || (window.innerWidth > 429) && 0.85 || (window.innerWidth > 389) && 0.9 || 0.95}}
+                initial={{ opacity: 0, x: "-100%" }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  scale:
+                    (window.innerWidth > 1919 && 0.65) ||
+                    (window.innerWidth > 1535 && 0.75) ||
+                    (window.innerWidth > 1279 && 0.8) ||
+                    (window.innerWidth > 767 && 0.95) ||
+                    (window.innerWidth > 429 && 0.85) ||
+                    (window.innerWidth > 389 && 0.9) ||
+                    0.95,
+                }}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
                 className="flex-1 pl-3 xxxxs:pl-4"
                 src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/final%20org.png"
@@ -178,7 +215,9 @@ const NovaHome = memo(() => {
                 ORIGINAL
               </motion.h1>
               <Fade delay={600} triggerOnce={true}>
-                <h2 className="text-[12.5px] lg:text-[24px] 3xl:text-[36px] 6xl:text-[48px]">SWEETENS EVERYTHING</h2>
+                <h2 className="text-[12.5px] lg:text-[24px] 3xl:text-[36px] 6xl:text-[48px]">
+                  SWEETENS EVERYTHING
+                </h2>
                 <p className="text-[7.25px] xsm:text-[8px] lg:text-[14px] 3xl:text-[24px] 6xl:text-[36px]">
                   SWEETNESS WITHOUT THE GUILT, ZERO SUGAR, ZERO CALORIES, A
                   HEALTHY SIGN.
@@ -213,7 +252,11 @@ const NovaHome = memo(() => {
             src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/center%20color.png"
             alt=""
           />
-          <img className="pointer-events-none absolute -bottom-60 translate-y-3/4 xxxxs:translate-y-[70.5%] xxxs:translate-y-[69%] xxs:translate-y-[67.5%] xsm:translate-y-[65.3%] lg:translate-y-[69.7%] xl:translate-y-[63.75%] 3xl:translate-y-[51%] 4xl:translate-y-[50.25%] 5xl:translate-y-[49.1%] 6xl:translate-y-[44%]" src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/brush.png" alt="ending gradient" />
+          <img
+            className="pointer-events-none absolute -bottom-60 translate-y-3/4 xxxxs:translate-y-[70.5%] xxxs:translate-y-[69%] xxs:translate-y-[67.5%] xsm:translate-y-[65.3%] lg:translate-y-[69.7%] xl:translate-y-[63.75%] 3xl:translate-y-[51%] 4xl:translate-y-[50.25%] 5xl:translate-y-[49.1%] 6xl:translate-y-[44%]"
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/brush.png"
+            alt="ending gradient"
+          />
         </div>
         {/* <Fade direction="up" delay={1000} triggerOnce={true}> */}
         <motion.div

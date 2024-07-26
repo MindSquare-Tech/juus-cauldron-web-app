@@ -11,6 +11,14 @@ function NovaHeader({ isOpen, setIsOpen }) {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [scoialsBtnClicked, setScoialsBtnClicked] = useState(false);
 
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", () => setIsMobile(window.innerWidth < 768));
+    return () => {
+      window.removeEventListener("resize", () => setIsMobile(window.innerWidth < 768));
+    };
+  }, [window.innerWidth, window.innerHeight])
+  
   const handleScroll = () => {
     if (window.scrollY <= 72) {
       setShowHeader(true);
@@ -55,12 +63,12 @@ function NovaHeader({ isOpen, setIsOpen }) {
         }}
         className={`${
           showHeader ? "translate-y-0" : "-translate-y-full"
-        } fixed bg-nova-primary z-40 w-full h-[72px] -mt-1.5 flex justify-between 6xl:justify-evenly items-center p-4 lg:px-12 3xl:px-24 4xl:px-32 5xl:px-36 border-b bg-center bg-cover transition-transform duration-300 ease-in-out scale-x-105`}
+        } fixed bg-nova-primary z-40 w-full h-[72px] -mt-1.5 flex justify-between 6xl:justify-evenly items-center p-4 lg:px-12 3xl:px-24 4xl:px-32 5xl:px-36 border-b bg-center bg-cover transition-transform duration-300 ease-in-out bg-no-repeat bg-local`}
       >
         {isOpen ? (
           <svg
             onClick={handleHamburgerClick}
-            className="transform scale-y-[-1] lg:hidden"
+            className="transform lg:hidden"
             xmlns="http://www.w3.org/2000/svg"
             width="1.5em"
             height="2em"
@@ -74,7 +82,7 @@ function NovaHeader({ isOpen, setIsOpen }) {
         ) : (
           <svg
             onClick={handleHamburgerClick}
-            className="transform scale-y-[-1] lg:hidden"
+            className="transform lg:hidden"
             xmlns="http://www.w3.org/2000/svg"
             width="1.5em"
             height="2em"
@@ -93,7 +101,7 @@ function NovaHeader({ isOpen, setIsOpen }) {
         <div className="lg:flex lg:w-5/6 lg:items-center">
           <Link
             to={"/"}
-            className="lg:pt-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:static lg:top-0 lg:left-0 lg:translate-x-0 lg:translate-y-0"
+            className="lg:pt-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:static lg:top-0 lg:left-0 lg:translate-x-0 lg:translate-y-0"
           >
             <img
               className="lg:mt-0.5 h-10 scale-[.85] cursor-pointer select-none lg:mr-0.5 xl:mr-9"

@@ -80,7 +80,7 @@ function QueryForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="h-[480px] w-72 xxxxs:w-80 xxs:w-[360px] lg:w-72 xl:w-96 2xl:w-80 3xl:w-96 4xl:w-[420px] lg:relative lg:bottom-20 2xl:bottom-32 bg-faq-orange p-5 shadow-primary-shadow rounded-2xl my-10 mx-3 xxxxs:mx-6 xxs:mx-8 lg:mx-0 flex flex-col justify-center items-center"
+      className="h-[480px] w-72 xxxxs:w-80 xxs:w-[360px] lg:w-72 xl:w-96 2xl:w-80 3xl:w-96 4xl:w-[420px] lg:relative lg:bottom-20 2xl:bottom-32 bg-[#164344] p-5 shadow-primary-shadow rounded-2xl my-10 mx-3 xxxxs:mx-6 xxs:mx-8 lg:mx-0 flex flex-col justify-center items-center"
     >
       <div className="my-3 h-9 relative w-11/12">
         <input
@@ -96,7 +96,7 @@ function QueryForm() {
         />
         {!titleInputFocused && (
           <label
-            className="absolute top-0 left-0 translate-y-1/4 translate-x-1/4 text-faq-orange"
+            className="absolute top-0 left-0 translate-y-1/4 translate-x-1/4 text-[#ff3333]"
             htmlFor="query-subject"
           >
             Ask Away
@@ -112,7 +112,7 @@ function QueryForm() {
           ref={textareaRef}
           onClick={handleTextareaFocus}
           onBlur={handleTextareaBlur}
-          className="text-rich-black bg-faq-orange rounded-2xl w-full border-white border outline-none p-4 h-64 min-h-64 max-h-64"
+          className="text-white bg-[#164344] rounded-2xl w-full border-white border outline-none p-4 h-64 min-h-64 max-h-64"
           name="query-description"
           id="query-description"
           cols=""
@@ -120,11 +120,11 @@ function QueryForm() {
         ></textarea>
         {!textareaFocused && (
           <>
-            <div className="w-10/12 border-b border-spring-green h-px absolute top-0 translate-y-12"></div>
-            <div className="w-10/12 border-b border-spring-green h-px absolute top-0 translate-y-24"></div>
-            <div className="w-10/12 border-b border-spring-green h-px absolute top-0 translate-y-36"></div>
-            <div className="w-10/12 border-b border-spring-green h-px absolute top-0 translate-y-48"></div>
-            <div className="w-10/12 border-b border-spring-green h-px absolute top-0 translate-y-60"></div>
+            <div className="w-10/12 border-b border-white h-px absolute top-0 translate-y-12"></div>
+            <div className="w-10/12 border-b border-white h-px absolute top-0 translate-y-24"></div>
+            <div className="w-10/12 border-b border-white h-px absolute top-0 translate-y-36"></div>
+            <div className="w-10/12 border-b border-white h-px absolute top-0 translate-y-48"></div>
+            <div className="w-10/12 border-b border-white h-px absolute top-0 translate-y-60"></div>
           </>
         )}
       </div>
@@ -135,7 +135,7 @@ function QueryForm() {
           ref={emailInputRef}
           onClick={handleEmailInputFocus}
           onBlur={handleEmailInputBlur}
-          className="text-rich-black bg-faq-orange rounded-2xl h-full border-white border w-full outline-none p-4"
+          className="text-white bg-[#164344] rounded-2xl h-full border-white border w-full outline-none p-4"
           type="email"
           name="sender-email"
           id="sender-email"
@@ -149,10 +149,10 @@ function QueryForm() {
           </label>
         )}
       </div>
-      <div className="shadow-primary-shadow relative top-7 mt-4 bg-spring-green rounded-xl w-32 h-12 flex justify-center items-center">
+      <div className="shadow-primary-shadow relative top-7 mt-4 bg-[#ff3333] rounded-xl w-32 h-12 flex justify-center items-center">
         <button
           onClick={handleSubmit}
-          className="text-white text-3xl bg-spring-green w-full rounded-xl"
+          className="text-white text-3xl bg-[#ff3333] w-full rounded-xl"
         >
           SEND
         </button>

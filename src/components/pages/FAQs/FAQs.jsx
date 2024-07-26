@@ -105,7 +105,7 @@ const FAQs = memo(() => {
     <motion.div
       className="bg-cover bg-fixed 2xl:bg-scroll bg-no-repeat bg-center overflow-x-hidden"
       style={{
-        backgroundImage: `url(${"https://juusstorage.blob.core.windows.net/creatives/FAQs%20Page/output-onlinepngtools.png"})`,
+        backgroundImage: `url(${"https://juusstorage.blob.core.windows.net/creatives/FAQs%20Page/background%20(1).png"})`,
       }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -114,16 +114,18 @@ const FAQs = memo(() => {
       <div>
         <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
-      <section className="pt-20" onClick={() => setIsOpen(false)}>
+      <section style={{
+        backgroundImage: `url(${"https://juusstorage.blob.core.windows.net/creatives/FAQs%20Page/background%20(1).png"})`,
+      }} className="pt-20" onClick={() => setIsOpen(false)}>
         <img
-          className=""
+          className="-mt-5 lg:mb-3 xl:mb-5 3xl:mb-8 w-full lg:scale-y-105 3xl:scale-y-110 3xl:h-[480px] 4xl:h-[500px] 6xl:h-[540px]"
           rel="preload"
-          src="https://juusstorage.blob.core.windows.net/creatives/FAQs%20Page/faq%20bg.png"
+          src="https://juusstorage.blob.core.windows.net/creatives/FAQs%20Page/FAQ%20background.png"
           alt=""
         />
         <img
           rel="preload"
-          className="scale-75 2xl:scale-50 absolute top-0 left-0 translate-y-24 lg:translate-y-1/3 2xl:translate-y-[15%]"
+          className="scale-75 xl:scale-[.65] 3xl:scale-[.55] 6xl:scale-50 absolute top-0 left-0 translate-y-16 lg:translate-y-1/3 xl:translate-y-[15%] 3xl:translate-y-[8%] 5xl:translate-y-[0%] 6xl:translate-y-[-10%]"
           src="https://juusstorage.blob.core.windows.net/creatives/FAQs%20Page/faq%20vector.png"
           alt=""
         />
@@ -137,7 +139,7 @@ const FAQs = memo(() => {
             cascade
             damping={0.1}
           >
-            <div className="flex justify-center items-center h-12 mt-5 mx-3 xxxxs:mx-6 xxs:mx-8 bg-aqua border border-[#268c98] rounded-lg">
+            <div className="flex justify-center items-center h-12 mt-5 mx-3 xxxxs:mx-6 xxs:mx-8 bg-[#ff3333] border border-[#ff3333] rounded-lg">
               <span className="text-white font-bold text-sm xxxs:text-base xl:text-xl 3xl:text-2xl 5xl:text-3xl 6xl:text-4xl">
                 MOST FREQUENTLY ASKED QUESTIONS
               </span>
