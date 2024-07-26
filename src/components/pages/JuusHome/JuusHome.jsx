@@ -58,7 +58,7 @@ const JuusHome = memo(() => {
                 <h1 className="text-[47px] lg:text-7xl 2xl:text-[108px] 4xl:text-8xl 6xl:text-9xl font-anton mr-0.5 lg:mr-1.5">
                   FREE
                 </h1>
-                <div className="flex flex-col text-[8px] xxxxs:text-[9px] lg:text-sm 4xl:text-base h-[80%] lg:h-full 2xl:h-[120px] 3xl:h-[100px] items-start justify-evenly lg:justify-between">
+                <div className="flex flex-col text-[8px] xxxxs:text-[9px] lg:text-sm 4xl:text-base h-[60px] lg:h-[72px] 2xl:h-[100px] 4xl:h-24 5xl:h-[92px] 6xl:h-[120px] items-start justify-evenly lg:justify-between">
                   <h3>PRESENTING PAKISTAN'S</h3>
                   <h3>FIRST EVER ZERO SUGAR ZERO CALORIES LIQUID ENHANCER.</h3>
                   <h3>WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING</h3>
@@ -73,11 +73,11 @@ const JuusHome = memo(() => {
           </div>
         </div>
         <Link
-          className="my-28 sm:my-20 lg:my-24 xl:my-32 3xl:my-44 5xl:my-52 self-center"
+          className="my-20 sm:my-12 lg:my-16 xl:my-24 3xl:my-36 self-center"
           to={"https://juus.pk/pages/shop"}
         >
           <Fade direction="down" duration={1000} delay={500}>
-            <button className="select-none cursor-pointer flex items-center font-bold justify-between p-2 w-40 lg:w-56 xl:w-72 h-9 lg:h-11 text-snow text-sm lg border-2 rounded-3xl hover:bg-snow hover:text-rich-black hover:shadow-primary-shadow hover:shadow-snow transition">
+            <button className="select-none cursor-pointer flex items-center font-bold justify-between p-2 w-40 lg:w-56 xl:w-72 h-9 lg:h-11 text-snow text-[13px] border-2 rounded-3xl hover:bg-snow hover:text-rich-black hover:shadow-primary-shadow hover:shadow-snow transition">
               <span className="mx-auto">DISCOVER FLAVORS</span>
             </button>
           </Fade>

@@ -105,7 +105,7 @@ const FAQs = memo(() => {
     <motion.div
       className="bg-cover bg-fixed 2xl:bg-scroll bg-no-repeat bg-center overflow-x-hidden"
       style={{
-        backgroundImage: `url(${"https://juusstorage.blob.core.windows.net/creatives/FAQs%20Page/background%20(1).png"})`,
+        backgroundImage: `url(${"https://juusstorage.blob.core.windows.net/creatives/FAQs%20Page/background"})`,
       }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
