@@ -80,7 +80,7 @@ function QueryForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="h-[480px] w-72 xxxxs:w-80 xxs:w-[360px] lg:w-72 xl:w-96 2xl:w-80 3xl:w-96 4xl:w-[420px] lg:relative lg:bottom-20 2xl:bottom-32 bg-[#164344] p-5 shadow-primary-shadow rounded-2xl my-10 mx-3 xxxxs:mx-6 xxs:mx-8 lg:mx-0 flex flex-col justify-center items-center"
+      className="h-[30rem] w-72 xxxxs:w-80 xxs:w-[22.5rem] lg:w-72 xl:w-96 2xl:w-80 3xl:w-96 4xl:w-[26.25rem] lg:relative lg:bottom-20 2xl:bottom-32 bg-[#164344] p-5 shadow-primary-shadow rounded-2xl my-10 mx-3 xxxxs:mx-6 xxs:mx-8 lg:mx-0 flex flex-col justify-center items-center"
     >
       <div className="my-3 h-9 relative w-11/12">
         <input

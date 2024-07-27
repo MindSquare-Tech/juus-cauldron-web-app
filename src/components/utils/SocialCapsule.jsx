@@ -9,7 +9,7 @@ function SocialCapsule({ isSocialBtnClicked }) {
         y: isSocialBtnClicked ? 0 : "-150%",
         opacity: isSocialBtnClicked ? 1 : 0,
       }}
-      className="absolute right-0 top-[72px] flex flex-col justify-evenly items-center h-44 w-14 bg-slider rounded-b-full"
+      className="absolute right-0 top-[4.5rem] flex flex-col justify-evenly items-center h-44 w-14 bg-slider rounded-b-full"
     >
       <Fade direction="down" cascade damping={0.3}>
         <a

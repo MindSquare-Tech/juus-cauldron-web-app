@@ -15,7 +15,7 @@ function Footer({ theme }) {
 
   return (
     <footer
-      className={`w-full h-[280px] lg:h-72 ${
+      className={`w-full h-[17.5rem] lg:h-72 ${
         theme === "nova" ? "bg-nova-secondary" : "bg-black"
       }`}
     >
@@ -92,7 +92,7 @@ function Footer({ theme }) {
 
       <div className="flex justify-center items-center h-1/6">
         <p
-          className={`text-[11px]  ${
+          className={`text-[0.6875rem]  ${
             theme === "nova" ? "text-white" : "text-zinc-400"
           }`}
         >

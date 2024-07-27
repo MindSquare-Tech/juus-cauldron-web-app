@@ -52,7 +52,7 @@ const About = memo(() => {
           />
           <Fade triggerOnce={true} direction="left">
             <img
-              className="scale-75 lg:scale-[.65] xl:scale-[.55] 3xl:scale-[.55] 4xl:scale-50 6xl:scale-[.45] -ml-5 xxxxs:-ml-8 lg:-ml-24 xl:-ml-[168px] 3xl:-ml-[216px] 4xl:-ml-[268px] 5xl:-ml-72 6xl:-ml-[428px] -mb-3 lg:-mb-10 xl:-mb-16 3xl:-mb-24 4xl:-mb-32 6xl:-mb-16 3xl:-mt-20 6xl:-mt-40"
+              className="scale-75 lg:scale-[.65] xl:scale-[.55] 3xl:scale-[.55] 4xl:scale-50 6xl:scale-[.45] -ml-5 xxxxs:-ml-8 lg:-ml-24 xl:-ml-[10.5rem] 3xl:-ml-[13.5rem] 4xl:-ml-[16.75rem] 5xl:-ml-72 6xl:-ml-[26.75rem] -mb-3 lg:-mb-10 xl:-mb-16 3xl:-mb-24 4xl:-mb-32 6xl:-mb-16 3xl:-mt-20 6xl:-mt-40"
               src="https://juusstorage.blob.core.windows.net/creatives/About%20Us/made%20to%20international.png"
               alt=""
             />

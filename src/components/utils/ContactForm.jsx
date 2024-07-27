@@ -56,12 +56,12 @@ function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mt-16 lg:mx-24 3xl:mx-64 4xl:mx-80 5xl:mx-96 6xl:mx-[540px]"
+      className="mt-16 lg:mx-24 3xl:mx-64 4xl:mx-80 5xl:mx-96 6xl:mx-[33.75rem]"
     >
       <div className="my-4 3xl:my-6 flex justify-center items-center relative">
         <label
           className={`${
-            isNameInputFocused ? "-translate-y-3.5 text-[10px]" : ""
+            isNameInputFocused ? "-translate-y-3.5 text-[0.625rem]" : ""
           } transition-transform absolute left-7 lg:left-12 text-sm text-zinc-500`}
           htmlFor="name"
         >
@@ -75,7 +75,7 @@ function ContactForm() {
           }}
           className={`border outline-none appearance-none ${
             isNameInputFocused ? "outline-black" : "border-zinc-600"
-          } h-12 w-11/12 px-3.5 text-[15px]`}
+          } h-12 w-11/12 px-3.5 text-[0.9375rem]`}
           name="name"
           id="name"
           type="text"
@@ -84,7 +84,7 @@ function ContactForm() {
       <div className="my-4 3xl:my-6 flex justify-center items-center relative">
         <label
           className={`${
-            isEmailInputFocused ? "-translate-y-3.5 text-[10px]" : ""
+            isEmailInputFocused ? "-translate-y-3.5 text-[0.625rem]" : ""
           } transition-transform absolute left-7 lg:left-12 text-sm text-zinc-500`}
           htmlFor="email"
         >
@@ -98,7 +98,7 @@ function ContactForm() {
           }}
           className={`border outline-none appearance-none ${
             isEmailInputFocused ? "outline-black" : "border-zinc-600"
-          } h-12 w-11/12 px-3.5 text-[15px]`}
+          } h-12 w-11/12 px-3.5 text-[0.9375rem]`}
           name="email"
           id="email"
           type="text"
@@ -107,7 +107,7 @@ function ContactForm() {
       <div className="my-4 3xl:my-6 flex justify-center items-center relative">
         <label
           className={`${
-            isPhoneNumberInputFocused ? "-translate-y-3.5 text-[10px]" : ""
+            isPhoneNumberInputFocused ? "-translate-y-3.5 text-[0.625rem]" : ""
           } transition-transform absolute left-7 lg:left-12 text-sm text-zinc-500`}
           htmlFor="phone"
         >
@@ -121,7 +121,7 @@ function ContactForm() {
           }}
           className={`border outline-none appearance-none ${
             isPhoneNumberInputFocused ? "outline-black" : "border-zinc-600"
-          } h-12 w-11/12 px-3.5 text-[15px]`}
+          } h-12 w-11/12 px-3.5 text-[0.9375rem]`}
           name="phone"
           id="phone"
           type="text"
@@ -130,7 +130,7 @@ function ContactForm() {
       <div className="my-4 3xl:my-6 flex justify-center items-center relative">
         <label
           className={`${
-            isCommentInputFocused ? "-translate-y-3.5 text-[10px]" : ""
+            isCommentInputFocused ? "-translate-y-3.5 text-[0.625rem]" : ""
           } transition-transform absolute top-3 left-7 lg:left-12 text-sm text-zinc-500`}
           htmlFor="comment"
         >
@@ -146,7 +146,7 @@ function ContactForm() {
           rows="7"
           className={`border outline-none appearance-none ${
             isCommentInputFocused ? "outline-black" : "border-zinc-600"
-          } h-32 min-h-32 max-h-44 w-11/12 px-3.5 py-2.5 text-[15px]`}
+          } h-32 min-h-32 max-h-44 w-11/12 px-3.5 py-2.5 text-[0.9375rem]`}
           name="comment"
           id="comment"
           type="text"

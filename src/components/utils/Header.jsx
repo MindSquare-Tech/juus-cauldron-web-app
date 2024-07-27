@@ -54,7 +54,7 @@ function Header({ isOpen, setIsOpen }) {
       <header
         className={`${
           showHeader ? "translate-y-0" : "-translate-y-full"
-        } fixed z-40 w-full h-[72px] flex justify-between 6xl:justify-evenly items-center p-4 lg:px-12 3xl:px-24 4xl:px-32 5xl:px-36 border-b border-zinc-900 bg-black transition-transform duration-300 ease-in-out`}
+        } fixed z-40 w-full h-[4.5rem] flex justify-between 6xl:justify-evenly items-center p-4 lg:px-12 3xl:px-24 4xl:px-32 5xl:px-36 border-b border-zinc-900 bg-black transition-transform duration-300 ease-in-out`}
       >
         {isOpen ? (
           <svg
