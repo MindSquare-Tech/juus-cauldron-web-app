@@ -18,7 +18,7 @@ const JuusExplosionVideo = memo(() => {
         loop
         muted
         playsInline
-        className="h-72 lg:h-96 2xl:h-[30rem] 3xl:h-[33.75rem] 4xl:h-[40rem] 5xl:h-[45rem]"
+        className="3xl:relative 3xl:bottom-12 h-72 lg:h-96 2xl:h-[30rem] 3xl:h-[33.75rem] 4xl:h-[40rem] 5xl:h-[45rem]"
         rel="preload"
         preload="auto"
       >

@@ -29,7 +29,7 @@ const FullNovaSlide = memo(({isOpen, sliderValue, setSliderValue }) => {
             sliderValue <= 20 ? "xl:scale-x-[.45] xl:scale-y-[.4825]" : "xl:scale-x-[.4] xl:scale-y-[.4325]"
           } ${sliderValue <= 20 ? "4xl:scale-x-50 4xl:scale-y-[.525]" : "4xl:scale-x-[.45] 4xl:scale-y-[.475]"} ${
             sliderValue <= 20 ? " 6xl:scale-x-[.55]  6xl:scale-y-[.58]" : "6xl:scale-x-50 6xl:scale-y-[.53]"
-          } absolute top-[45.2225%] left-1/2 -translate-x-1/2 -translate-y-1/2 transform transition-transform ${sliderValue <= 20 && "-translate-x-[53%] -translate-y-[52%]"}`}
+          } absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 transform transition-transform ${sliderValue <= 20 && "-translate-x-[53%] -translate-y-[52%]"}`}
           src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/full%20bottle%20nova.png"
           alt="Nova Bottle"
         /></Fade>
@@ -73,12 +73,13 @@ const FullNovaSlide = memo(({isOpen, sliderValue, setSliderValue }) => {
             </div>
           </motion.div>
         ) : (
-          <Fade triggerOnce={true} delay={300}>
-            <div className="font-anton pointer-events-none select-none absolute flex flex-col justify-center items-start bottom-[12%] xxxs:bottom-[9.6%] xxs:bottom-[10.5%] lg:bottom-[6.67%] xl:bottom-[8%] 3xl:bottom-[4%] 6xl:bottom-0 right-[7%] xxxxs:right-[2.25%] xxxs:right-[13%] xxs:right-[5.25%] xsm:right-[9.67%] sm:right-[15%] lg:right-[19%] xl:right-[35%] 2xl:right-[36%] 3xl:right-[35%] 4xl:right-[35.75%] 5xl:right-[36.75%] 6xl:right-[35.67%] text-5xl xxxxs:text-6xl xxxs:text-5xl xxs:text-6xl lg:text-[5.25rem] xl:text-5xl 3xl:text-7xl 6xl:text-8xl text-snow font-extrabold tracking-wide">
-              <h1>INTO</h1>
-              <h1>FUTURE</h1>
-            </div>
-          </Fade>
+          <></>
+          // <Fade triggerOnce={true} delay={300}>
+          //   <div className="font-anton pointer-events-none select-none absolute flex flex-col justify-center items-start bottom-[12%] xxxs:bottom-[9.6%] xxs:bottom-[10.5%] lg:bottom-[6.67%] xl:bottom-[8%] 3xl:bottom-[4%] 6xl:bottom-0 right-[7%] xxxxs:right-[2.25%] xxxs:right-[13%] xxs:right-[5.25%] xsm:right-[9.67%] sm:right-[15%] lg:right-[19%] xl:right-[35%] 2xl:right-[36%] 3xl:right-[35%] 4xl:right-[35.75%] 5xl:right-[36.75%] 6xl:right-[35.67%] text-5xl xxxxs:text-6xl xxxs:text-5xl xxs:text-6xl lg:text-[5.25rem] xl:text-5xl 3xl:text-7xl 6xl:text-8xl text-snow font-extrabold tracking-wide">
+          //     <h1>INTO</h1>
+          //     <h1>FUTURE</h1>
+          //   </div>
+          // </Fade>
         )}
       </div>
     </div>

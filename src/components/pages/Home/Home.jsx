@@ -7,6 +7,7 @@ import "./Home.css";
 import "../../../index.css";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import HomePageText from "../../utils/HomePageText.jsx";
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,11 +40,11 @@ function Home() {
     let timer;
     if (showFullJuusSlide) {
       timer = setTimeout(() => {
-        navigator("/juus"); // Replace with the actual route for stateOne
+        navigator("/juus");
       }, 1000);
     } else if (showFullNovaSlide) {
       timer = setTimeout(() => {
-        navigator("/nova"); // Replace with the actual route for stateTwo
+        navigator("/nova");
       }, 1000);
     }
 
@@ -70,6 +71,7 @@ function Home() {
         <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
       <main className={`h-screen w-full relative overflow-hidden ${isOpen && "brightness-95"}`} onClick={() => setIsOpen(false)}>
+        {slideValue>20 && slideValue<80 && <HomePageText />}
         <div className="w-full h-full absolute">
           <FullNovaSlide isOpen={isOpen} sliderValue={slideValue} setSliderValue={setSlideValue} />
         </div>

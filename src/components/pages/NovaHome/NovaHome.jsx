@@ -67,23 +67,23 @@ const NovaHome = memo(() => {
               }}
               initial={{ x: "-100%", opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              className="flex justify-start items-center ml-3 lg:ml-8 3xl:ml-16 4xl:ml-24 5xl:ml-28 -mt-5 lg:-mt-0 3xl:mt-0.5"
+              className="flex justify-start items-center ml-3 lg:ml-8 3xl:ml-16 4xl:ml-24 5xl:ml-28 -mt-5 lg:-mt-0 3xl:mt-3"
             >
-              <h1 className="text-[2.9375rem] lg:text-7xl 2xl:text-[6.75rem] 4xl:text-8xl 6xl:text-9xl font-anton mr-0.5 lg:mr-1.5">
+              <h1 className="text-[3rem] xsm:text-[3.45rem] lg:text-[5.5rem] 2xl:text-[6.75rem] 3xl:text-[7rem] 4xl:text-[7.2rem] 6xl:text-9xl font-anton mr-0.5 lg:mr-1.5 lg:-mt-5">
                 FREE
               </h1>
-              <div className="flex flex-col text-[0.5rem] xxxxs:text-[0.5625rem] lg:text-sm 4xl:text-base h-[75%] lg:h-full 2xl:h-[94%] items-start justify-evenly lg:justify-between">
-                <h3>PRESENTING PAKISTAN'S</h3>
-                <h3>FIRST EVER ZERO SUGAR ZERO CALORIES LIQUID ENHANCER.</h3>
-                <h3>WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING</h3>
+              <div className="flex flex-col h-[75%] 2xl:h-[94%] 3xl:h-[90%] 4xl:h-full items-start justify-evenly lg:justify-between 3xl:justify-evenly lg:-mt-5">
+                <h3 className="text-[0.52rem] xxxxs:text-[0.59rem] xxxs:text-[0.62rem] xxs:text-[0.65rem] xsm:text-[0.71rem] lg:text-[1.25rem] 3xl:text-[1.45rem] 4xl:text-[1.5rem]">PRESENTING PAKISTAN'S</h3>
+                <h3 className="text-[0.52rem] xxxxs:text-[0.59rem] xxxs:text-[0.62rem] xxs:text-[0.65rem] xsm:text-[0.71rem] lg:text-[1.25rem] 3xl:text-[1.45rem] 4xl:text-[1.5rem]">FIRST EVER ZERO SUGAR ZERO CALORIES LIQUID ENHANCER.</h3>
+                <h3 className="text-[0.52rem] xxxxs:text-[0.59rem] xxxs:text-[0.62rem] xxs:text-[0.65rem] xsm:text-[0.71rem] lg:text-[1.25rem] 3xl:text-[1.45rem] 4xl:text-[1.5rem]">WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING</h3>
               </div>
             </motion.div>
           </div>
         </div>
         {/* Product images and the text */}
-        <div className="flex flex-col justify-between mb-16 relative -mt-5 z-10">
-          <div className="flex">
-            <div className="relative z-50 lg:w-1/2">
+        <div className="flex flex-col justify-between mb-16 relative -mt-5 3xl:mt-12 z-10">
+          <div className="flex w-full">
+            <div className="relative z-50 w-3/5 xsm:w-[45%] lg:w-1/2">
               <motion.img
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: "-100%" }}
@@ -93,10 +93,12 @@ const NovaHome = memo(() => {
                   scale:
                     (window.innerWidth > 1919 && 0.7) ||
                     (window.innerWidth > 1535 && 0.8) ||
+                    (window.innerWidth > 1439 && 0.85) ||
                     (window.innerWidth > 1279 && 0.85) ||
-                    (window.innerWidth > 767 && 0.95) ||
-                    (window.innerWidth > 429 && 0.95) ||
-                    (window.innerWidth > 409 && 1) ||
+                    (window.innerWidth > 899 && 0.95) ||
+                    (window.innerWidth > 767 && 1.05) ||
+                    (window.innerWidth > 429 && 1.25) ||
+                    (window.innerWidth > 409 && 1.25) ||
                     1.05,
                 }}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
@@ -105,7 +107,7 @@ const NovaHome = memo(() => {
                 alt="Cardamom Bottle"
               />
             </div>
-            <div className="text-white pr-4 xxxxs:pr-5 xxs:pr-6 xsm:pr-7 lg:pr-14 3xl:pr-24 4xl:pr-28 6xl:pr-36 flex-1 flex flex-col text-right justify-start">
+            <div className="text-white pr-4 xxxxs:pr-5 xxs:pr-6 xsm:pr-7 lg:pr-14 xl:pr-16 3xl:pr-24 4xl:pr-28 6xl:pr-36 flex-1 flex flex-col text-right justify-start w-1/2">
               <motion.h1
                 viewport={{ once: true }}
                 initial={{ x: "100%", opacity: 0 }}
@@ -116,14 +118,14 @@ const NovaHome = memo(() => {
                 CARDAMOM
               </motion.h1>
               <Fade delay={600} triggerOnce={true}>
-                <h2 className="text-[0.78125rem] lg:text-[1.5rem] 3xl:text-[2.25rem] 6xl:text-[3rem]">
+                <h2 className="text-[0.78125rem] lg:text-[1.5rem] 3xl:text-[2.23em]  4xl:text-[2.7rem] 6xl:text-[3.7em] ">
                   GOES BEST WITH TEA
                 </h2>
-                <p className="text-[0.453125rem] xsm:text-[0.5rem] lg:text-[0.875rem] 3xl:text-[1.5rem] 6xl:text-[2.25rem]">
+                <p className="text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
                   A MATCH MADE IN HEAVEN, A FLAVOR FUSION THAT'S SIMPLY DIVINE
                   TO TASTE.
                 </p>
-                <p className="text-[0.453125rem] xsm:text-[0.5rem] lg:text-[0.875rem] 3xl:text-[1.5rem] 6xl:text-[2.25rem]">
+                <p className="text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
                   THE AROMATIC ZEST OF CARDAMOM ELEVATES TEA TO NEW HEIGHTS,
                   TOGETHER, THEY CREATES A DELIGHTFUL BREW THAT'S A TRUE
                   CULINARY DELIGHT."
@@ -131,8 +133,8 @@ const NovaHome = memo(() => {
               </Fade>
             </div>
           </div>
-          <div className="flex my-20 lg:my-10">
-            <div className="text-white pl-4 xxxxs:pl-5 xxs:pl-6 xsm:pl-7 lg:pl-16 3xl:pl-28 4xl:pl-32 6xl:pl-40 flex-1 flex flex-col text-left justify-start">
+          <div className="flex my-20 lg:my-10 4xl:my-0 w-full">
+            <div className="text-white pl-4 xxxxs:pl-5 xxs:pl-6 xsm:pl-7 lg:pl-16 xl:pl-20 3xl:pl-28 4xl:pl-32 6xl:pl-40 flex-1 flex flex-col text-left justify-start">
               <motion.h1
                 viewport={{ once: true }}
                 initial={{ x: "-100%", opacity: 0 }}
@@ -143,22 +145,22 @@ const NovaHome = memo(() => {
                 VANILLA
               </motion.h1>
               <Fade delay={600} triggerOnce={true}>
-                <h2 className="text-[0.78125rem] lg:text-[1.5rem] 3xl:text-[2.25rem] 6xl:text-[3rem]">
+                <h2 className="text-[0.78125rem] lg:text-[1.5rem] 3xl:text-[2.3rem] 4xl:text-[2.7rem]  6xl:text-[3.7rem]">
                   GOES BEST WITH COFFEE
                 </h2>
-                <p className="text-[0.453125rem] xsm:text-[0.5rem] lg:text-[0.875rem] 3xl:text-[1.5rem] 6xl:text-[2.25rem]">
+                <p className="text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
                   VANILLA'S SWEET, VELVETY SOFTNESS COMPLEMENTS COFFEE'S RICH,
                   BOLD FLAIR, A PERFECT PAIRING THAT AWAKENS SENSES AND BANISHES
                   ALL CARE.
                 </p>
-                <p className="text-[0.453125rem] xsm:text-[0.5rem] lg:text-[0.875rem] 3xl:text-[1.5rem] 6xl:text-[2.25rem]">
+                <p className="text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
                   THE CREAMY ESSENCE OF VANILLA HARMONIZES WITH COFFEE'S DEEP,
                   DARK TONE, TOGETHER, THEY CREATE A DELIGHTFUL BLEND THAT'S A
                   TRUE FLAVOR THRONE."
                 </p>
               </Fade>
             </div>
-            <div className="lg:w-1/2">
+            <div className="w-3/5 xsm:w-[45%] lg:w-1/2">
               <motion.img
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: "100%" }}
@@ -168,10 +170,12 @@ const NovaHome = memo(() => {
                   scale:
                     (window.innerWidth > 1919 && 0.65) ||
                     (window.innerWidth > 1535 && 0.75) ||
+                    (window.innerWidth > 1439 && 0.8) ||
                     (window.innerWidth > 1279 && 0.8) ||
-                    (window.innerWidth > 767 && 0.95) ||
-                    (window.innerWidth > 429 && 0.85) ||
-                    (window.innerWidth > 389 && 0.9) ||
+                    (window.innerWidth > 899 && 0.9) ||
+                    (window.innerWidth > 767 && 1) ||
+                    (window.innerWidth > 429 && 1.15) ||
+                    (window.innerWidth > 389 && 1.05) ||
                     0.95,
                 }}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
@@ -181,8 +185,8 @@ const NovaHome = memo(() => {
               />
             </div>
           </div>
-          <div className="flex">
-            <div className="lg:w-1/2">
+          <div className="flex w-full">
+            <div className="w-3/5 xsm:w-[45%] lg:w-1/2">
               <motion.img
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: "-100%" }}
@@ -192,10 +196,12 @@ const NovaHome = memo(() => {
                   scale:
                     (window.innerWidth > 1919 && 0.65) ||
                     (window.innerWidth > 1535 && 0.75) ||
+                    (window.innerWidth > 1439 && 0.8) ||
                     (window.innerWidth > 1279 && 0.8) ||
-                    (window.innerWidth > 767 && 0.95) ||
-                    (window.innerWidth > 429 && 0.85) ||
-                    (window.innerWidth > 389 && 0.9) ||
+                    (window.innerWidth > 899 && 0.9) ||
+                    (window.innerWidth > 767 && 1) ||
+                    (window.innerWidth > 429 && 1.15) ||
+                    (window.innerWidth > 389 && 1.05) ||
                     0.95,
                 }}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
@@ -204,7 +210,7 @@ const NovaHome = memo(() => {
                 alt="Original Bottle"
               />
             </div>
-            <div className="text-white pr-3 lg:pr-8 3xl:pr-16 4xl:pr-24 5xl:pr-28 6xl:pr-32 flex-1 flex flex-col text-right justify-end lg:justify-center">
+            <div className="text-white pr-3 lg:pr-8 xl:pr-16 3xl:pr-16 4xl:pr-24 5xl:pr-28 6xl:pr-32 flex-1 flex flex-col text-right justify-end lg:justify-center">
               <motion.h1
                 viewport={{ once: true }}
                 initial={{ x: "100%", opacity: 0 }}
@@ -215,14 +221,14 @@ const NovaHome = memo(() => {
                 ORIGINAL
               </motion.h1>
               <Fade delay={600} triggerOnce={true}>
-                <h2 className="text-[0.78125rem] lg:text-[1.5rem] 3xl:text-[2.25rem] 6xl:text-[3rem]">
+                <h2 className="text-[0.78125rem] lg:text-[1.5rem] 3xl:text-[2.3rem] 4xl:text-[2.7rem]  6xl:text-[3.7rem]">
                   SWEETENS EVERYTHING
                 </h2>
-                <p className="text-[0.453125rem] xsm:text-[0.5rem] lg:text-[0.875rem] 3xl:text-[1.5rem] 6xl:text-[2.25rem]">
+                <p className="text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
                   SWEETNESS WITHOUT THE GUILT, ZERO SUGAR, ZERO CALORIES, A
                   HEALTHY SIGN.
                 </p>
-                <p className="text-[0.453125rem] xsm:text-[0.5rem] lg:text-[0.875rem] 3xl:text-[1.5rem] 6xl:text-[2.25rem]">
+                <p className="text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
                   INDULGE IN THE SWEETNESS, WITHOUT ANY FLAVOR THE WEIGHT, A
                   SWEET DELIGHT, THAT'S HEALTHY AND GREAT!"
                 </p>
@@ -287,7 +293,7 @@ const NovaHome = memo(() => {
           className="self-center mt-36 lg:mt-60"
           to={"https://juus.pk/pages/shop"}
         >
-          <Fade direction="down" duration={1000} delay={500}>
+          <Fade direction="down" duration={500} delay={150}>
             <button className="select-none cursor-pointer flex items-center justify-between p-2 w-40 lg:w-56 xl:w-72 h-7 lg:h-11 text-white text-sm lg border-2 rounded-xl hover:bg-snow hover:text-rich-black hover:shadow-primary-shadow hover:shadow-snow transition shadow-primary-shadow relative z-20">
               <span className="mx-auto">DISCOVER FLAVORS</span>
             </button>

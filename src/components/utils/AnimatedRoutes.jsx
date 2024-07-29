@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import PageFallback from "./PageFallback.jsx";
 import Homee from "../pages/Home/Homee.jsx";
 import Demo from "../pages/Demo/Demo.jsx";
+import HomePageText from "./HomePageText.jsx";
 const Home = lazy(() => import("../pages/Home/Home.jsx"));
 const About = lazy(() => import("../pages/About/About.jsx"));
 const Shop = lazy(() => import("../pages/Shop/Shop.jsx"));
@@ -28,7 +29,7 @@ function AnimatedRoutes() {
         <Route path="shop" element={<Suspense fallback={<PageFallback />}><Shop /></Suspense>} />
         <Route path="faqs" element={<Suspense fallback={<PageFallback />}><FAQs /></Suspense>} />
         <Route path="contact" element={<Suspense fallback={<PageFallback />}><Contact /></Suspense>} />
-        <Route path="test" element={<Demo />}/>
+        <Route path="test" element={<HomePageText />}/>
         <Route path="nova/shop" element={<NovaShop />} />
         <Route path="juus/shop" element={<JuusShop />} />
         <Route path="*" element={<NotFound />} />

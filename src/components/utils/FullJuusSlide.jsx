@@ -4,7 +4,6 @@ import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 import FullNovaSlide from "./FullNovaSlide";
 
-
 const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
   return (
     <div className="relative h-auto">
@@ -16,20 +15,46 @@ const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
         className={`flex flex-col justify-evenly sm:justify-evenly lg:justify-around 2xl:justify-evenly items-center relative overflow-hidden h-screen bg-cover bg-center xl:bg-bottom`}
       >
         <Fade triggerOnce={true}>
-        <img
-          loading="lazy"
-          className={`pointer-events-none select-none ${
-            sliderValue >= 80 ? "scale-[1.15]" : "scale-110"
-          } ${sliderValue >= 80 ? "xxs:scale-[1.2]" : "xxs:scale-[1.15]"} ${
-            sliderValue >= 80 ? "sm:scale-90" : "sm:scale-[.85]"
-          } ${sliderValue >= 80 ? "lg:scale-95" : "lg:scale-90"} ${
-            sliderValue >= 80 ? "xl:scale-[.45]" : "xl:scale-[.4]"
-          } ${sliderValue >= 80 ? "4xl:scale-50" : "4xl:scale-[.45]"} ${
-            sliderValue >= 80 ? "6xl:scale-[.55]" : "6xl:scale-50"
-          } absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 transform transition-transform ${sliderValue >= 80 && "-translate-x-[47%] -translate-y-[52%]"}`}
-          src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/Juus%20bottle%20green%20apple%20wbg.png"
-          alt="Juus Bottle"
-        /></Fade>
+          <img
+            loading="lazy"
+            className={`pointer-events-none select-none ${
+              sliderValue >= 60 ? "scale-[1.12]" : "scale-110"
+            } ${sliderValue >= 70 ? "scale-[1.14]" : "scale-110"} ${
+              sliderValue >= 80 ? "scale-[1.15]" : "scale-110"
+            }
+          ${sliderValue >= 60 ? "xxs:scale-[1.17]" : "xxs:scale-110"} 
+          ${sliderValue >= 70 ? "xxs:scale-[1.19]" : "xxs:scale-110"}
+          ${sliderValue >= 80 ? "xxs:scale-[1.2]" : "xxs:scale-[1.15]"}
+          ${sliderValue >= 60 ? "sm:scale-[.87]" : "sm:scale-[.85]"}
+          ${sliderValue >= 70 ? "sm:scale-[.89]" : "sm:scale-[.85]"} 
+            ${sliderValue >= 80 ? "sm:scale-90" : "sm:scale-[.85]"} 
+            ${sliderValue >= 60 ? "lg:scale-[.92]" : "lg:scale-90"}
+            ${sliderValue >= 70 ? "lg:scale-[.94]" : "lg:scale-90"}
+            ${sliderValue >= 80 ? "lg:scale-95" : "lg:scale-90"}
+            ${sliderValue >= 60 ? "xl:scale-[.42]" : "xl:scale-[.4]"}
+            ${sliderValue >= 70 ? "xl:scale-[.44]" : "xl:scale-[.4]"} 
+            ${sliderValue >= 80 ? "xl:scale-[.45]" : "xl:scale-[.4]"} 
+            ${sliderValue >= 60 ? "4xl:scale-[.47]" : "4xl:scale-[.45]"}
+            ${sliderValue >= 70 ? "4xl:scale-[.49]" : "4xl:scale-[.45]"}
+            ${sliderValue >= 80 ? "4xl:scale-50" : "4xl:scale-[.45]"} 
+            ${sliderValue >= 60 ? "6xl:scale-[.52]" : "6xl:scale-50"}
+            ${sliderValue >= 70 ? "6xl:scale-[.54]" : "6xl:scale-50"}
+            ${
+              sliderValue >= 80 ? "6xl:scale-[.55]" : "6xl:scale-50"
+            } absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 transform transition-transform 
+            ${
+              sliderValue >= 60 && "-translate-x-[49%] "
+            }
+            ${
+              sliderValue >= 70 && "-translate-x-[48%]"
+            }
+            ${
+              sliderValue >= 80 && "-translate-x-[47%] -translate-y-[52%]"
+            }`}
+            src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/Juus%20bottle%20green%20apple%20wbg.png"
+            alt="Juus Bottle"
+          />
+        </Fade>
         {sliderValue >= 80 ? (
           <motion.div
             initial={{ x: -200, opacity: 0 }}
@@ -70,12 +95,13 @@ const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
             </div>
           </motion.div>
         ) : (
-          <Fade triggerOnce={true} delay={300}>
-            <div className="font-anton pointer-events-none select-none absolute flex flex-col justify-center items-end bottom-[15%] xxxs:bottom-[12%] xxs:bottom-[14%] lg:bottom-[9.67%] xl:bottom-[11%] 3xl:bottom-[7%] 6xl:bottom-[3%] left-[13.5%] xxxxs:left-[10%] xxxs:left-[19%] xxs:left-[12.5%] xsm:left-[16%] sm:left-[21%] lg:left-[24%] xl:left-[37.5%] 2xl:left-[38%] 3xl:left-[37.5%] 4xl:left-[38.1%] 5xl:left-[39%] 6xl:left-[38%] text-5xl xxxxs:text-6xl xxxs:text-5xl xxs:text-6xl lg:text-[5.25rem] xl:text-5xl 3xl:text-7xl 6xl:text-8xl text-snow font-semibold tracking-wide">
-              <h1>DELVE</h1>
-              <h1>THE</h1>
-            </div>
-          </Fade>
+          <></>
+          // <Fade triggerOnce={true} delay={300}>
+          //   <div className="font-anton pointer-events-none select-none absolute flex flex-col justify-center items-end bottom-[15%] xxxs:bottom-[12%] xxs:bottom-[14%] lg:bottom-[9.67%] xl:bottom-[11%] 3xl:bottom-[7%] 6xl:bottom-[3%] left-[13.5%] xxxxs:left-[10%] xxxs:left-[19%] xxs:left-[12.5%] xsm:left-[16%] sm:left-[21%] lg:left-[24%] xl:left-[37.5%] 2xl:left-[38%] 3xl:left-[37.5%] 4xl:left-[38.1%] 5xl:left-[39%] 6xl:left-[38%] text-5xl xxxxs:text-6xl xxxs:text-5xl xxs:text-6xl lg:text-[5.25rem] xl:text-5xl 3xl:text-7xl 6xl:text-8xl text-snow font-semibold tracking-wide">
+          //     <h1>DELVE</h1>
+          //     <h1>THE</h1>
+          //   </div>
+          // </Fade>
         )}
       </div>
     </div>
