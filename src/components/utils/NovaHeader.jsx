@@ -59,7 +59,7 @@ function NovaHeader({ isOpen, setIsOpen }) {
     <>
       <header
         style={{
-          backgroundImage: `url(${"https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/headerGreen.png"})`,
+          backgroundImage: `url(${"https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/uper.png"})`,
         }}
         className={`${
           showHeader ? "translate-y-0" : "-translate-y-full"

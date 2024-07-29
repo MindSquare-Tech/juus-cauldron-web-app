@@ -10,7 +10,7 @@ function FaqAccordion({ question, answer }) {
     >
       <div
         onClick={() => setShowAnswer(!showAnswer)}
-        className="mt-4 xxs:mt-6 h-12 flex items-center cursor-pointer"
+        className="mt-4 xxs:mt-6 h-12 flex items-center cursor-pointer bg-white"
       >
         <li className="px-3 text-sm xxs:text-base select-text">{question}</li>
       </div>

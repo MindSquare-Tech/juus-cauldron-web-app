@@ -288,7 +288,7 @@ const NovaHome = memo(() => {
           to={"https://juus.pk/pages/shop"}
         >
           <Fade direction="down" duration={1000} delay={500}>
-            <button className="select-none cursor-pointer flex items-center justify-between p-2 w-40 lg:w-56 xl:w-72 h-7 lg:h-11 text-white text-sm lg border-2 rounded-xl hover:bg-snow hover:text-rich-black hover:shadow-primary-shadow hover:shadow-snow transition shadow-primary-shadow">
+            <button className="select-none cursor-pointer flex items-center justify-between p-2 w-40 lg:w-56 xl:w-72 h-7 lg:h-11 text-white text-sm lg border-2 rounded-xl hover:bg-snow hover:text-rich-black hover:shadow-primary-shadow hover:shadow-snow transition shadow-primary-shadow relative z-20">
               <span className="mx-auto">DISCOVER FLAVORS</span>
             </button>
           </Fade>
