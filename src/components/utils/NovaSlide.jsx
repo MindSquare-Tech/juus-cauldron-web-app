@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 
-const FullNovaSlide = memo(({ isOpen, sliderValue, setSliderValue }) => {
+const NovaSlide = memo(({isOpen, sliderValue, setSliderValue }) => {
   const handleRightHalfClick = () => {
     if (!isOpen) {
       setSliderValue(5);
     }
-  };
+  }
   return (
     <div className="relative h-auto">
       <div
@@ -19,13 +19,20 @@ const FullNovaSlide = memo(({ isOpen, sliderValue, setSliderValue }) => {
         className={`flex flex-col justify-evenly sm:justify-evenly lg:justify-around 2xl:justify-evenly items-center relative overflow-hidden h-screen bg-cover bg-center xl:bg-top`}
       >
         <Fade triggerOnce={true}>
-          <img
-            loading="lazy"
-            className={`pointer-events-none select-none absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 transform transition-transform scale-110 xxxs:scale-100 lg:scale-75 xl:scale-[.4] 3xl:scale-[.35] 6xl:scale-[.42]`}
-            src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/orignal%20bottle%20new%2014x14.png"
-            alt="Nova Bottle"
-          />
-        </Fade>
+        <img
+          loading="lazy"
+          className={`-rotate-[.4deg] pointer-events-none select-none ${
+            sliderValue <= 20 ? "scale-x-[1.15] scale-y-[1.24]" : "scale-x-110 scale-y-[1.19]"
+          } ${sliderValue <= 20 ? "xxs:scale-x-[1.2] xxs:scale-y-[1.3]" : "xxs:scale-x-[1.15] xxs:scale-y-[1.25]"} ${
+            sliderValue <= 20 ? "sm:scale-90" : "sm:scale-[.85]"
+          } ${sliderValue <= 20 ? "lg:scale-x-95 lg:scale-y-[1.03]" : "lg:scale-x-90 lg:scale-y-[.98]"} ${
+            sliderValue <= 20 ? "xl:scale-x-[.45] xl:scale-y-[.4825]" : "xl:scale-x-[.4] xl:scale-y-[.4325]"
+          } ${sliderValue <= 20 ? "4xl:scale-x-50 4xl:scale-y-[.525]" : "4xl:scale-x-[.45] 4xl:scale-y-[.475]"} ${
+            sliderValue <= 20 ? " 6xl:scale-x-[.55]  6xl:scale-y-[.58]" : "6xl:scale-x-50 6xl:scale-y-[.53]"
+          } absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 transform transition-transform ${sliderValue <= 20 && "-translate-x-[53%] -translate-y-[52%]"}`}
+          src="https://juusstorage.blob.core.windows.net/creatives/Homepage JC/Juus bottle green apple wbg.png"
+          alt="Nova Bottle"
+        /></Fade>
         {sliderValue <= 20 ? (
           <motion.div
             initial={{ x: 200, opacity: 0 }}
@@ -79,4 +86,4 @@ const FullNovaSlide = memo(({ isOpen, sliderValue, setSliderValue }) => {
   );
 });
 
-export default FullNovaSlide;
+export default NovaSlide;

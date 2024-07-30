@@ -17,41 +17,8 @@ const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
         <Fade triggerOnce={true}>
           <img
             loading="lazy"
-            className={`pointer-events-none select-none ${
-              sliderValue >= 60 ? "scale-[1.12]" : "scale-110"
-            } ${sliderValue >= 70 ? "scale-[1.14]" : "scale-110"} ${
-              sliderValue >= 80 ? "scale-[1.15]" : "scale-110"
-            }
-          ${sliderValue >= 60 ? "xxs:scale-[1.17]" : "xxs:scale-110"} 
-          ${sliderValue >= 70 ? "xxs:scale-[1.19]" : "xxs:scale-110"}
-          ${sliderValue >= 80 ? "xxs:scale-[1.2]" : "xxs:scale-[1.15]"}
-          ${sliderValue >= 60 ? "sm:scale-[.87]" : "sm:scale-[.85]"}
-          ${sliderValue >= 70 ? "sm:scale-[.89]" : "sm:scale-[.85]"} 
-            ${sliderValue >= 80 ? "sm:scale-90" : "sm:scale-[.85]"} 
-            ${sliderValue >= 60 ? "lg:scale-[.92]" : "lg:scale-90"}
-            ${sliderValue >= 70 ? "lg:scale-[.94]" : "lg:scale-90"}
-            ${sliderValue >= 80 ? "lg:scale-95" : "lg:scale-90"}
-            ${sliderValue >= 60 ? "xl:scale-[.42]" : "xl:scale-[.4]"}
-            ${sliderValue >= 70 ? "xl:scale-[.44]" : "xl:scale-[.4]"} 
-            ${sliderValue >= 80 ? "xl:scale-[.45]" : "xl:scale-[.4]"} 
-            ${sliderValue >= 60 ? "4xl:scale-[.47]" : "4xl:scale-[.45]"}
-            ${sliderValue >= 70 ? "4xl:scale-[.49]" : "4xl:scale-[.45]"}
-            ${sliderValue >= 80 ? "4xl:scale-50" : "4xl:scale-[.45]"} 
-            ${sliderValue >= 60 ? "6xl:scale-[.52]" : "6xl:scale-50"}
-            ${sliderValue >= 70 ? "6xl:scale-[.54]" : "6xl:scale-50"}
-            ${
-              sliderValue >= 80 ? "6xl:scale-[.55]" : "6xl:scale-50"
-            } absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 transform transition-transform 
-            ${
-              sliderValue >= 60 && "-translate-x-[49%] "
-            }
-            ${
-              sliderValue >= 70 && "-translate-x-[48%]"
-            }
-            ${
-              sliderValue >= 80 && "-translate-x-[47%] -translate-y-[52%]"
-            }`}
-            src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/Juus%20bottle%20green%20apple%20wbg.png"
+            className={`pointer-events-none select-none absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 transform transition-transform scale-110 xxxs:scale-100 lg:scale-75 xl:scale-[.4] 3xl:scale-[.35] 6xl:scale-[.42]`}
+            src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/green%20apple%20%20bottle%20new.png"
             alt="Juus Bottle"
           />
         </Fade>
