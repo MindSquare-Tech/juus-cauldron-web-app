@@ -22,22 +22,21 @@ const About = memo(() => {
       <main className={`pt-20`} onClick={() => setIsOpen(false)}>
         <div>
           <AboutVideo />
-          <article className="px-5 lg:px-24 3xl:px-28 4xl:px-48 6xl:px-64 font-light lg:font-normal lg:text-xl 3xl:text-3xl text-about">
-            <Fade cascade triggerOnce={true}>
-            <p className="my-4 3xl:my-9 4xl:my-16">
+          <article className="px-5 lg:px-24 xl:px-28 3xl:px-40 4xl:px-52 6xl:px-80 font-light lg:font-normal lg:text-xl 3xl:text-3xl text-about">
+            <Fade delay={500} cascade triggerOnce={true}>
+            <p className="select-text my-4 3xl:my-9 4xl:my-16 text-left xsm:leading-8 lg:leading-9 xl:leading-10 3xl:leading-[4.5rem] 6xl:leading-[5.5rem]">
               Our journey started in the research facilities of New Zealand. It
               was a never-ending storm of difficulties.
-            </p>
-            <p className="my-4 3xl:my-9 4xl:my-16">
+            
+          
               But in these difficult times, we were clear about the vision to
               bring the highest quality to our consumers.
-            </p>
-            <p className="my-4 3xl:my-9 4xl:my-16">
+          
+         
               We involved the best scientists from around the world, with the
               sole purpose of creating the best flavours, in accordance with
               Pakistan's audience.
-            </p>
-            <p className="my-4 3xl:my-9 4xl:my-16">
+           
               Finally we came home with the best there can be offered, flavours
               custom made for you.
             </p>
@@ -59,25 +58,25 @@ const About = memo(() => {
           </Fade>
           <article className="mb-4 lg:mb-20 3xl:mb-32 3xl:-mt-16 6xl:-mt-32 px-4 lg:px-10 3xl:px-24 font-light lg:font-normal lg:text-xl 3xl:text-3xl text-about">
             <Fade cascade triggerOnce={true}>
-              <h1 className="my-4 lg:mt-8 3xl:mt-20 font-bold lg:font-extrabold text-lg lg:text-2xl 3xl:text-4xl">
+              <h1 className="select-text my-4 lg:mt-8 3xl:mt-20 font-bold lg:font-extrabold text-lg lg:text-2xl 3xl:text-4xl">
                 INTERNATIONAL STANDARDS
               </h1>
-              <p className="6xl:mr-72">
+              <p className="select-text 6xl:mr-72">
                 Juus is Pakistans's first pocket-sized liquid enhancer,
                 developed with international standards.
               </p>
-              <h1 className="my-4 lg:mt-8 3xl:mt-20 font-bold lg:font-extrabold text-lg lg:text-2xl 3xl:text-4xl">
+              <h1 className="select-text my-4 lg:mt-8 3xl:mt-20 font-bold lg:font-extrabold text-lg lg:text-2xl 3xl:text-4xl">
                 MADE WITH YOU IN MIND
               </h1>
-              <p className="6xl:mr-72">
+              <p className="select-text 6xl:mr-72">
                 Juus creates one of a kind, new experience for its consumers.
                 Our Zero Sugar & Zero Calories principle sets you free of all
                 worries.
               </p>
-              <h1 className="my-4 lg:mt-8 3xl:mt-20 font-bold lg:font-extrabold text-lg lg:text-2xl 3xl:text-4xl">
+              <h1 className="select-text my-4 lg:mt-8 3xl:mt-20 font-bold lg:font-extrabold text-lg lg:text-2xl 3xl:text-4xl">
                 AFFORDABLE HIGH QUALITY
               </h1>
-              <p className="6xl:mr-72">
+              <p className="select-text 6xl:mr-72">
                 Our goal is to make people move on to something better and keep
                 the excitement coming, while keeping the costs low and
                 budget-friendly.
@@ -86,7 +85,7 @@ const About = memo(() => {
           </article>
         </div>
         <div className="mt-10 w-full flex flex-col items-center justify-center">
-          <h1 className="text-2xl lg:text-5xl 3xl:text-7xl font-bold text-about lg:mb-10">
+          <h1 className="select-text text-2xl lg:text-5xl 3xl:text-7xl font-bold text-about lg:mb-10">
             CERTIFICATION
           </h1>
           <div className="xl:flex xl:justify-center 3xl:px-20">
