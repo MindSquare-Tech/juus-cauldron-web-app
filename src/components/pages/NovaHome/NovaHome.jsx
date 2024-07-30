@@ -45,14 +45,14 @@ const NovaHome = memo(() => {
               whileInView={{ x: 0, opacity: 1 }}
               className="flex font-anton justify-start items-center ml-3 lg:ml-8 3xl:ml-16 4xl:ml-24 5xl:ml-28 lg:mt-5 3xl:mb-0.5"
             >
-              <h1 className="text-[3.75rem] lg:text-8xl 2xl:text-[7.5rem] 4xl:text-9xl 6xl:text-[9rem] mr-0.5 lg:mr-1.5">
+              <h1 className="select-text text-6xl lg:text-8xl xl:text-9xl mr-1 xxs:mr-1.5">
                 FUTURE
               </h1>
-              <div className="flex flex-col justify-start lg:justify-center -mt-0.5">
-                <h2 className="text-[1.75rem] lg:text-[2.626rem] 2xl:text-[3.125rem] 4xl:text-[3.5rem] 6xl:text-[3.875rem]">
+              <div className="flex flex-col justify-center">
+                <h2 className="select-text text-[1.75rem] lg:text-[2.5rem] xl:text-[3.4rem] -mb-1.5">
                   IS
                 </h2>
-                <h2 className="text-[1.75rem] lg:text-[2.626rem] 2xl:text-[3.125rem] 4xl:text-[3.5rem] 6xl:text-[3.875rem] -mt-3.5 lg:-mt-4 4xl:-mt-6">
+                <h2 className="select-text text-[1.75rem] lg:text-[2.5rem] xl:text-[3.4rem] -mt-1.5 xl:-mt-3">
                   SUGAR
                 </h2>
               </div>
@@ -67,15 +67,15 @@ const NovaHome = memo(() => {
               }}
               initial={{ x: "-100%", opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              className="flex justify-start items-center ml-3 lg:ml-8 3xl:ml-16 4xl:ml-24 5xl:ml-28 -mt-5 lg:-mt-0 3xl:mt-3"
+              className="flex justify-start items-center ml-3 lg:ml-8 3xl:ml-16 4xl:ml-24 5xl:ml-28 -mt-3 xl:-mt-5"
             >
-              <h1 className="text-[3rem] xsm:text-[3.45rem] lg:text-[5.5rem] 2xl:text-[6.75rem] 3xl:text-[7rem] 4xl:text-[7.2rem] 6xl:text-9xl font-anton mr-0.5 lg:mr-1.5 lg:-mt-5">
+              <h1 className="select-text text-[2.55rem] xxxxs:text-[2.75rem] xsm:text-[2.85rem] lg:text-[5rem] xl:text-[6.5rem] font-anton mr-1 xxs:mr-1.5 lg:mr-3">
                 FREE
               </h1>
-              <div className="flex flex-col h-[75%] 2xl:h-[94%] 3xl:h-[90%] 4xl:h-full items-start justify-evenly lg:justify-between 3xl:justify-evenly lg:-mt-5">
-                <h3 className="text-[0.52rem] xxxxs:text-[0.59rem] xxxs:text-[0.62rem] xxs:text-[0.65rem] xsm:text-[0.71rem] lg:text-[1.25rem] 3xl:text-[1.45rem] 4xl:text-[1.5rem]">PRESENTING PAKISTAN'S</h3>
-                <h3 className="text-[0.52rem] xxxxs:text-[0.59rem] xxxs:text-[0.62rem] xxs:text-[0.65rem] xsm:text-[0.71rem] lg:text-[1.25rem] 3xl:text-[1.45rem] 4xl:text-[1.5rem]">FIRST EVER ZERO SUGAR ZERO CALORIES LIQUID ENHANCER.</h3>
-                <h3 className="text-[0.52rem] xxxxs:text-[0.59rem] xxxs:text-[0.62rem] xxs:text-[0.65rem] xsm:text-[0.71rem] lg:text-[1.25rem] 3xl:text-[1.45rem] 4xl:text-[1.5rem]">WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING</h3>
+              <div className="flex flex-col justify-between xl:justify-center h-[2.65rem] xxxxs:h-[2.85rem] xxs:h-[2.9rem] xsm:h-[3rem] lg:h-[4.5rem] xl:h-20 text-[0.5rem] xxxxs:text-[0.55rem] xxxs:text-[0.59rem] xxs:text-[0.62rem] xsm:text-[0.65rem] lg:text-[1.125rem] xl:text-[1.4rem] 5xl:text-[1.5rem] lg:-mt-2 xl:-mt-0">
+                <h3 className="select-text">PRESENTING PAKISTAN'S</h3>
+                <h3 className="select-text">FIRST EVER ZERO SUGAR ZERO CALORIES LIQUID ENHANCER.</h3>
+                <h3 className="select-text">WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING</h3>
               </div>
             </motion.div>
           </div>
@@ -113,19 +113,19 @@ const NovaHome = memo(() => {
                 initial={{ x: "100%", opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
-                className="font-anton text-[1.875rem] lg:text-[3.75rem] 3xl:text-[6.25rem] 6xl:text-[8rem]"
+                className="select-text font-anton text-[1.875rem] lg:text-[3.75rem] 3xl:text-[6.25rem] 6xl:text-[8rem]"
               >
                 CARDAMOM
               </motion.h1>
               <Fade delay={600} triggerOnce={true}>
-                <h2 className="text-[0.78125rem] lg:text-[1.5rem] 3xl:text-[2.23em]  4xl:text-[2.7rem] 6xl:text-[3.7em] ">
+                <h2 className="select-text text-[0.78125rem] lg:text-[1.5rem] 3xl:text-[2.23em]  4xl:text-[2.7rem] 6xl:text-[3.7em] ">
                   GOES BEST WITH TEA
                 </h2>
-                <p className="text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
+                <p className="select-text text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
                   A MATCH MADE IN HEAVEN, A FLAVOR FUSION THAT'S SIMPLY DIVINE
                   TO TASTE.
                 </p>
-                <p className="text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
+                <p className="select-text text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
                   THE AROMATIC ZEST OF CARDAMOM ELEVATES TEA TO NEW HEIGHTS,
                   TOGETHER, THEY CREATES A DELIGHTFUL BREW THAT'S A TRUE
                   CULINARY DELIGHT."
@@ -140,20 +140,20 @@ const NovaHome = memo(() => {
                 initial={{ x: "-100%", opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
-                className="font-anton text-[1.875rem] lg:text-[3.75rem] 3xl:text-[6.25rem] 6xl:text-[8rem]"
+                className="select-text font-anton text-[1.875rem] lg:text-[3.75rem] 3xl:text-[6.25rem] 6xl:text-[8rem]"
               >
                 VANILLA
               </motion.h1>
               <Fade delay={600} triggerOnce={true}>
-                <h2 className="text-[0.78125rem] lg:text-[1.5rem] 3xl:text-[2.3rem] 4xl:text-[2.7rem]  6xl:text-[3.7rem]">
+                <h2 className="select-text text-[0.78125rem] lg:text-[1.5rem] 3xl:text-[2.3rem] 4xl:text-[2.7rem]  6xl:text-[3.7rem]">
                   GOES BEST WITH COFFEE
                 </h2>
-                <p className="text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
+                <p className="select-text text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
                   VANILLA'S SWEET, VELVETY SOFTNESS COMPLEMENTS COFFEE'S RICH,
                   BOLD FLAIR, A PERFECT PAIRING THAT AWAKENS SENSES AND BANISHES
                   ALL CARE.
                 </p>
-                <p className="text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
+                <p className="select-text text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
                   THE CREAMY ESSENCE OF VANILLA HARMONIZES WITH COFFEE'S DEEP,
                   DARK TONE, TOGETHER, THEY CREATE A DELIGHTFUL BLEND THAT'S A
                   TRUE FLAVOR THRONE."
@@ -216,19 +216,19 @@ const NovaHome = memo(() => {
                 initial={{ x: "100%", opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ type: "tween", delay: 0.2, duration: 0.5 }}
-                className="font-anton text-[1.875rem] lg:text-[3.75rem] 3xl:text-[6.25rem] 6xl:text-[8rem]"
+                className="select-text font-anton text-[1.875rem] lg:text-[3.75rem] 3xl:text-[6.25rem] 6xl:text-[8rem]"
               >
                 ORIGINAL
               </motion.h1>
               <Fade delay={600} triggerOnce={true}>
-                <h2 className="text-[0.78125rem] lg:text-[1.5rem] 3xl:text-[2.3rem] 4xl:text-[2.7rem]  6xl:text-[3.7rem]">
+                <h2 className="select-text text-[0.78125rem] lg:text-[1.5rem] 3xl:text-[2.3rem] 4xl:text-[2.7rem]  6xl:text-[3.7rem]">
                   SWEETENS EVERYTHING
                 </h2>
-                <p className="text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
+                <p className="select-text text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
                   SWEETNESS WITHOUT THE GUILT, ZERO SUGAR, ZERO CALORIES, A
                   HEALTHY SIGN.
                 </p>
-                <p className="text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
+                <p className="select-text text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
                   INDULGE IN THE SWEETNESS, WITHOUT ANY FLAVOR THE WEIGHT, A
                   SWEET DELIGHT, THAT'S HEALTHY AND GREAT!"
                 </p>

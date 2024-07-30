@@ -34,40 +34,40 @@ const JuusHome = memo(() => {
       >
         <div className="">
           {showVideos && <JuusVideo />}
-          <div className="flex flex-col 2xl:flex-row 2xl:mt-10 text-white lg:justify-between xl:mt-5">
-            <div className="flex flex-col">
+          <div className="flex flex-col 3xl:w-full 2xl:flex-row 2xl:mt-10 text-white lg:justify-between xl:mt-5">
+            <div className="flex flex-col 3xl:w-full">
               <Fade direction="left" cascade triggerOnce={true}>
               <motion.div
-                className="flex font-anton justify-start items-center ml-3 lg:ml-12 3xl:ml-24 4xl:ml-32 5xl:ml-36 6xl:ml-44 3xl:mb-0.5 6xl:mt-20"
+                className="flex font-anton justify-start items-center ml-3 lg:ml-12 3xl:ml-24 4xl:ml-32 5xl:ml-36 6xl:ml-44"
               >
-                <h1 className="text-[3.75rem] lg:text-8xl 2xl:text-[7.5rem] 4xl:text-9xl 6xl:text-[9rem] mr-0.5 lg:mr-1.5">
+                <h1 className="text-6xl lg:text-8xl xl:text-9xl mr-1 xxs:mr-1.5">
                   JUUST
                 </h1>
-                <div className="flex flex-col justify-start lg:justify-center -mt-0.5">
-                  <h2 className="text-[1.75rem] lg:text-[2.625rem] 2xl:text-[3.125rem] 4xl:text-[3.5rem] 6xl:text-[3.875rem]">
+                <div className="flex flex-col justify-center">
+                  <h2 className="text-[1.75rem] lg:text-[2.5rem] xl:text-[3.4rem] -mb-1.5">
                     YOUR
                   </h2>
-                  <h2 className="text-[1.75rem] lg:text-[2.625rem] 2xl:text-[3.125rem] 4xl:text-[3.5rem] 6xl:text-[3.875rem] -mt-3.5 lg:-mt-4 4xl:-mt-5">
+                  <h2 className="text-[1.75rem] lg:text-[2.5rem] xl:text-[3.4rem] -mt-1.5 xl:-mt-3">
                     ULTIMATE
                   </h2>
                 </div>
               </motion.div>
               <motion.div
-                className="flex justify-start items-center ml-3 lg:ml-12 3xl:ml-24 4xl:ml-32 5xl:ml-36 6xl:ml-44 -mt-5 lg:-mt-0 3xl:mt-0.5"
+                className="flex justify-start items-center ml-3 lg:ml-12 3xl:ml-24 4xl:ml-32 5xl:ml-36 6xl:ml-44 -mt-2 xl:-mt-7 3xl:-mt-5"
               >
-                <h1 className="text-[2.635rem] xxxxs:text-[2.75rem] xxxs:text-[3.1rem] xxs:text-[3.25rem] lg:text-7xl 2xl:text-[6.75rem] 4xl:text-8xl 6xl:text-9xl font-anton mr-0.5 lg:mr-1.5">
+                <h1 className="text-[2.55rem] xxxxs:text-[2.75rem] xsm:text-[2.85rem] lg:text-[5rem] xl:text-[6.5rem] font-anton mr-1 xxs:mr-1.5 lg:mr-3">
                   DRINK
                 </h1>
-                <div className="flex flex-col h-[3.3rem] lg:h-[4.5rem] xl:h-[4.75rem] 2xl:h-[6.25rem] 3xl:h-[6.5rem] 4xl:h-24 5xl:h-[6rem] 6xl:h-[8rem] items-start justify-evenly lg:justify-between">
-                  <h3 className="text-[0.48rem] xxxxs:text-[0.56rem] xxxs:text-[0.57rem] xxs:text-[0.59rem] xsm:text-[0.64rem] lg:text-[1.1rem] xl:text-[1.05rem] 3xl:text-[1.1rem] 4xl:text-[1.15rem] 5xl:text-[1.2rem] 6xl:text-[1.7rem]">PRESENTING PAKISTAN'S</h3>
-                  <h3 className="text-[0.48rem] xxxxs:text-[0.56rem] xxxs:text-[0.57rem] xxs:text-[0.59rem] xsm:text-[0.64rem] lg:text-[1.1rem] xl:text-[1.05rem] 3xl:text-[1.1rem] 4xl:text-[1.15rem] 5xl:text-[1.2rem] 6xl:text-[1.7rem]">FIRST EVER ZERO SUGAR ZERO CALORIES LIQUID ENHANCER.</h3>
-                  <h3 className="text-[0.48rem] xxxxs:text-[0.56rem] xxxs:text-[0.57rem] xxs:text-[0.59rem] xsm:text-[0.64rem] lg:text-[1.1rem] xl:text-[1.05rem] 3xl:text-[1.1rem] 4xl:text-[1.15rem] 5xl:text-[1.2rem] 6xl:text-[1.7rem]">WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING</h3>
+                <div className="flex flex-col justify-between xl:justify-center h-[2.65rem] xxxxs:h-[2.85rem] xxs:h-[2.9rem] xsm:h-[3rem] lg:h-[4.5rem] xl:h-20 text-[0.5rem] xxxxs:text-[0.55rem] xxxs:text-[0.59rem] xxs:text-[0.62rem] xsm:text-[0.65rem] lg:text-[1.125rem] xl:text-[1.4rem] 5xl:text-[1.5rem] lg:-mt-2 xl:-mt-0">
+                  <h3>PRESENTING PAKISTAN'S</h3>
+                  <h3 className="3xl:my-1 5xl:my-0">FIRST EVER ZERO SUGAR ZERO CALORIES LIQUID ENHANCER.</h3>
+                  <h3>WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING</h3>
                 </div>
               </motion.div>
               </Fade>
             </div>
 
-            <div className="self-center relative">
+            <div className="self-center relative 3xl:w-2/5">
               {showVideos && <JuusExplosionVideo />}
             </div>
           </div>
