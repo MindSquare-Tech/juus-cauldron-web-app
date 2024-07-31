@@ -13,6 +13,26 @@ const initialScales = {
   "6xl": 0.4,
 };
 
+const initialLeft = {
+  base: 50,
+  xxxs: 45,
+  lg: 0.7,
+  xl: 0.35,
+  "3xl": 0.3,
+  "6xl": 0.4,
+};
+
+const getInitialLeft = () => {
+  const width = window.innerWidth;
+  if (width >= 1920) return initialLeft["6xl"];
+  if (width >= 1280) return initialLeft["3xl"];
+  if (width >= 900) return initialLeft.xl;
+  if (width >= 768) return initialLeft.lg;
+  if (width >= 375) return initialLeft.xxxs;
+  return initialLeft.base;
+};
+
+
 const getInitialScale = () => {
   const width = window.innerWidth;
   if (width >= 1920) return initialScales["6xl"];
@@ -26,9 +46,11 @@ const getInitialScale = () => {
 const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
   const juusImgRef = useRef(null);
   const [imgScale, setImgScale] = useState(() => getInitialScale());
+  const [imgLeft, setImgLeft] = useState(() => getInitialLeft());
   const [previousSliderValue, setPreviousSliderValue] = useState(sliderValue);
   const [imgTranslateX, setImgTranslateX] = useState(-45); // Initial translation in X
 
+  useEffect(()=> console.log(imgLeft))
   useEffect(() => {
     if (sliderValue === 50) {
       setImgTranslateX(-45);
@@ -66,7 +88,7 @@ const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
           style={{
             position: "absolute",
             top: "46.5%",
-            left: "50%",
+            left: `${imgLeft}%`,
             transform: `scale(${imgScale}) translate(${imgTranslateX}%, -50%)`,
           }}
             loading="lazy"
