@@ -1,10 +1,50 @@
-import React, { memo } from "react";
+import React, { memo, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 import FullNovaSlide from "./FullNovaSlide";
 
+const initialScales = {
+  base: 1.1,
+  xxxs: 1,
+  lg: 0.7,
+  xl: 0.35,
+  "3xl": 0.3,
+  "6xl": 0.4,
+};
+
+const getInitialScale = () => {
+  const width = window.innerWidth;
+  if (width >= 1920) return initialScales["6xl"];
+  if (width >= 1280) return initialScales["3xl"];
+  if (width >= 900) return initialScales.xl;
+  if (width >= 768) return initialScales.lg;
+  if (width >= 375) return initialScales.xxxs;
+  return initialScales.base;
+};
+
 const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
+  const juusImgRef = useRef(null);
+  const [imgScale, setImgScale] = useState(() => getInitialScale());
+  const [previousSliderValue, setPreviousSliderValue] = useState(sliderValue);
+
+  useEffect(() => {
+    if (sliderValue === 50) {
+      setImgScale(getInitialScale());
+    }
+    if (sliderValue > 50 && sliderValue <= 80) {
+      if (sliderValue > previousSliderValue) {
+        // Increment the scale
+        setImgScale((prevImgScale) => prevImgScale + 0.002);
+      } else if (sliderValue < previousSliderValue) {
+        // Decrement the scale
+        setImgScale(prevImgScale => Math.max(prevImgScale - 0.002, getInitialScale()))
+      }
+      // Update the previous slider value
+      setPreviousSliderValue(sliderValue);
+    }
+  }, [sliderValue]);
+
   return (
     <div className="relative h-auto">
       <div
@@ -16,8 +56,15 @@ const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
       >
         <Fade triggerOnce={true}>
           <img
+          ref={juusImgRef}
+          style={{
+            position: "absolute",
+            transform: `scale(${imgScale}) translate(-50%, -50%)`,
+            top: "46.5%",
+            left: "55%",
+          }}
             loading="lazy"
-            className={`pointer-events-none select-none absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 transform transition-transform scale-110 xxxs:scale-100 lg:scale-75 xl:scale-[.4] 3xl:scale-[.35] 6xl:scale-[.42]`}
+            className={`pointer-events-none select-none transition-transform`}
             src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/green%20apple%20%20bottle%20new.png"
             alt="Juus Bottle"
           />
