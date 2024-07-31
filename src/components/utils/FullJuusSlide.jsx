@@ -27,18 +27,24 @@ const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
   const juusImgRef = useRef(null);
   const [imgScale, setImgScale] = useState(() => getInitialScale());
   const [previousSliderValue, setPreviousSliderValue] = useState(sliderValue);
+  const [imgTranslateX, setImgTranslateX] = useState(-45); // Initial translation in X
 
   useEffect(() => {
     if (sliderValue === 50) {
+      setImgTranslateX(-45);
       setImgScale(getInitialScale());
     }
     if (sliderValue > 50 && sliderValue <= 80) {
       if (sliderValue > previousSliderValue) {
         // Increment the scale
         setImgScale((prevImgScale) => prevImgScale + 0.002);
+        setImgTranslateX((prevTranslateX) => prevTranslateX + 0.1); // Increment translation value as needed
+
       } else if (sliderValue < previousSliderValue) {
         // Decrement the scale
         setImgScale(prevImgScale => Math.max(prevImgScale - 0.002, getInitialScale()))
+        setImgTranslateX((prevTranslateX) => prevTranslateX - 0.1); // Decrement translation value as needed
+
       }
       // Update the previous slider value
       setPreviousSliderValue(sliderValue);
@@ -59,9 +65,9 @@ const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
           ref={juusImgRef}
           style={{
             position: "absolute",
-            transform: `scale(${imgScale}) translate(-50%, -50%)`,
             top: "46.5%",
-            left: "55%",
+            left: "50%",
+            transform: `scale(${imgScale}) translate(${imgTranslateX}%, -50%)`,
           }}
             loading="lazy"
             className={`pointer-events-none select-none transition-transform`}
