@@ -4,74 +4,8 @@ import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 import FullNovaSlide from "./FullNovaSlide";
 
-const initialScales = {
-  base: 1.1,
-  xxxs: 1,
-  lg: 0.7,
-  xl: 0.35,
-  "3xl": 0.3,
-  "6xl": 0.4,
-};
-
-const initialLeft = {
-  base: 50,
-  xxxs: 45,
-  lg: 0.7,
-  xl: 0.35,
-  "3xl": 0.3,
-  "6xl": 0.4,
-};
-
-const getInitialLeft = () => {
-  const width = window.innerWidth;
-  if (width >= 1920) return initialLeft["6xl"];
-  if (width >= 1280) return initialLeft["3xl"];
-  if (width >= 900) return initialLeft.xl;
-  if (width >= 768) return initialLeft.lg;
-  if (width >= 375) return initialLeft.xxxs;
-  return initialLeft.base;
-};
-
-
-const getInitialScale = () => {
-  const width = window.innerWidth;
-  if (width >= 1920) return initialScales["6xl"];
-  if (width >= 1280) return initialScales["3xl"];
-  if (width >= 900) return initialScales.xl;
-  if (width >= 768) return initialScales.lg;
-  if (width >= 375) return initialScales.xxxs;
-  return initialScales.base;
-};
-
 const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
   const juusImgRef = useRef(null);
-  const [imgScale, setImgScale] = useState(() => getInitialScale());
-  const [imgLeft, setImgLeft] = useState(() => getInitialLeft());
-  const [previousSliderValue, setPreviousSliderValue] = useState(sliderValue);
-  const [imgTranslateX, setImgTranslateX] = useState(-45); // Initial translation in X
-
-  useEffect(()=> console.log(imgLeft))
-  useEffect(() => {
-    if (sliderValue === 50) {
-      setImgTranslateX(-45);
-      setImgScale(getInitialScale());
-    }
-    if (sliderValue > 50 && sliderValue <= 80) {
-      if (sliderValue > previousSliderValue) {
-        // Increment the scale
-        setImgScale((prevImgScale) => prevImgScale + 0.002);
-        setImgTranslateX((prevTranslateX) => prevTranslateX + 0.1); // Increment translation value as needed
-
-      } else if (sliderValue < previousSliderValue) {
-        // Decrement the scale
-        setImgScale(prevImgScale => Math.max(prevImgScale - 0.002, getInitialScale()))
-        setImgTranslateX((prevTranslateX) => prevTranslateX - 0.1); // Decrement translation value as needed
-
-      }
-      // Update the previous slider value
-      setPreviousSliderValue(sliderValue);
-    }
-  }, [sliderValue]);
 
   return (
     <div className="relative h-auto">
@@ -84,15 +18,45 @@ const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
       >
         <Fade triggerOnce={true}>
           <img
-          ref={juusImgRef}
-          style={{
-            position: "absolute",
-            top: "46.5%",
-            left: `${imgLeft}%`,
-            transform: `scale(${imgScale}) translate(${imgTranslateX}%, -50%)`,
-          }}
+            ref={juusImgRef}
             loading="lazy"
-            className={`pointer-events-none select-none transition-transform`}
+            className={`pointer-events-none absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 select-none transition-transform scale-110 ${
+              sliderValue >= 55 && "scale-[1.12]"
+            } ${sliderValue >= 60 && "scale-[1.14]"} ${
+              sliderValue >= 65 && "scale-[1.16]"
+            } ${sliderValue >= 70 && "scale-[1.18]"} ${
+              sliderValue >= 75 && "scale-[1.2]"
+            } ${sliderValue >= 80 && "scale-[1.22]"}  xxxs:scale-100 ${
+              sliderValue >= 55 && "xxxs:scale-[1.02]"
+            } ${sliderValue >= 60 && "xxxs:scale-[1.04]"} ${
+              sliderValue >= 65 && "xxxs:scale-[1.06]"
+            } ${sliderValue >= 70 && "xxxs:scale-[1.08]"} ${
+              sliderValue >= 75 && "xxxs:scale-[1.1]"
+            } ${sliderValue >= 80 && "xxxs:scale-[1.12]"}  lg:scale-[.7] ${
+              sliderValue >= 55 && "lg:scale-[.72]"
+            } ${sliderValue >= 60 && "lg:scale-[.74]"} ${
+              sliderValue >= 65 && "lg:scale-[.76]"
+            } ${sliderValue >= 70 && "lg:scale-[.78]"} ${
+              sliderValue >= 75 && "lg:scale-[.8]"
+            } ${sliderValue >= 80 && "lg:scale-[.82]"} xl:scale-[.35] ${
+              sliderValue >= 55 && "xl:scale-[.37]"
+            } ${sliderValue >= 60 && "xl:scale-[.39]"} ${
+              sliderValue >= 65 && "xl:scale-[.41]"
+            } ${sliderValue >= 70 && "xl:scale-[.43]"} ${
+              sliderValue >= 75 && "xl:scale-[.45]"
+            } ${sliderValue >= 80 && "xl:scale-[.47]"} 3xl:scale-[.3] ${
+              sliderValue >= 55 && "3xl:scale-[.315]"
+            } ${sliderValue >= 60 && "3xl:scale-[.33]"} ${
+              sliderValue >= 65 && "3xl:scale-[.345]"
+            } ${sliderValue >= 70 && "3xl:scale-[.36]"} ${
+              sliderValue >= 75 && "3xl:scale-[.375]"
+            } ${sliderValue >= 80 && "3xl:scale-[.39]"}  6xl:scale-[.4] ${
+              sliderValue >= 55 && "6xl:scale-[.415]"
+            } ${sliderValue >= 60 && "6xl:scale-[.43]"} ${
+              sliderValue >= 65 && "6xl:scale-[.445]"
+            } ${sliderValue >= 70 && "6xl:scale-[.46]"} ${
+              sliderValue >= 75 && "6xl:scale-[.475]"
+            } ${sliderValue >= 80 && "6xl:scale-[.49]"} `}
             src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/green%20apple%20%20bottle%20new.png"
             alt="Juus Bottle"
           />
