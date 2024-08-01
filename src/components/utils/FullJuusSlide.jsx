@@ -61,7 +61,7 @@ const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
             alt="Juus Bottle"
           />
         </Fade>
-        {sliderValue >= 80 ? (
+        {/* {sliderValue >= 80 ? (
           <motion.div
             initial={{ x: -300, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -108,7 +108,7 @@ const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
           //     <h1>THE</h1>
           //   </div>
           // </Fade>
-        )}
+        )} */}
       </div>
     </div>
   );

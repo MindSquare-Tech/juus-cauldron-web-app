@@ -71,7 +71,7 @@ function Home() {
         <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
       <main className={`h-screen w-full relative overflow-hidden ${isOpen && "brightness-95"}`} onClick={() => setIsOpen(false)}>
-        {slideValue>20 && slideValue<80 && <HomePageText />}
+        <HomePageText sliderValue={slideValue} setSliderValue={setSlideValue} />
         <div className="w-full h-full absolute">
           <FullNovaSlide isOpen={isOpen} sliderValue={slideValue} setSliderValue={setSlideValue} />
         </div>

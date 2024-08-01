@@ -74,7 +74,7 @@ const FullNovaSlide = memo(({ isOpen, sliderValue, setSliderValue }) => {
             alt="Nova Bottle"
           />
         </Fade>
-        {sliderValue <= 20 ? (
+        {/* {sliderValue <= 20 ? (
           <motion.div
             initial={{ x: 300, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -121,7 +121,7 @@ const FullNovaSlide = memo(({ isOpen, sliderValue, setSliderValue }) => {
           //     <h1>FUTURE</h1>
           //   </div>
           // </Fade>
-        )}
+        )} */}
       </div>
     </div>
   );
