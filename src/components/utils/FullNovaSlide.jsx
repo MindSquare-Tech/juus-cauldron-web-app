@@ -76,9 +76,9 @@ const FullNovaSlide = memo(({ isOpen, sliderValue, setSliderValue }) => {
         </Fade>
         {sliderValue <= 20 ? (
           <motion.div
-            initial={{ x: 200, opacity: 0 }}
+            initial={{ x: 300, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ type: "spring", stiffness: 150, damping: 9 }}
+            transition={{ type: "tween", duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="w-full lg:w-9/12 xl:w-1/2 3xl:w-[45%] 6xl:w-5/12 absolute flex flex-col bottom-[15%] xxxs:bottom-[8%] xxs:bottom-[14%] xsm:bottom-[9%] lg:bottom-[6%] xl:bottom-0 6xl:bottom-[1%] left-[4%] lg:left-[12%] xl:left-[25%] text-snow"
           >
             <div className="font-anton flex items-center">

@@ -76,7 +76,7 @@ function Home() {
           <FullNovaSlide isOpen={isOpen} sliderValue={slideValue} setSliderValue={setSlideValue} />
         </div>
         <div
-          className="w-full h-full absolute transition-[clip-path] duration-300 delay-0 ease-custom-ease"
+          className="w-full h-full absolute transition-[clip-path] duration-200 delay-0 ease-custom-ease"
           style={clipPathStyle}
         >
           <FullJuusSlide sliderValue={slideValue} setSliderValue={setSlideValue} />
