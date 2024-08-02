@@ -2,17 +2,18 @@ import React, { memo, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
-
-const initialScales = {
-  base: 1.1,
-  xxxs: 1,
-  lg: 0.7,
-  xl: 0.35,
-  "3xl": 0.3,
-  "6xl": 0.4,
-};
+import classNames from "classnames";
 
 const FullNovaSlide = memo(({ isOpen, sliderValue, setSliderValue }) => {
+  const scaleClass = classNames({
+    'scale-[1.1]': sliderValue > 45,
+    'scale-[1.12]': sliderValue <= 45 && sliderValue > 40,
+    'scale-[1.14]': sliderValue <= 40 && sliderValue > 35,
+    'scale-[1.16]': sliderValue <= 35 && sliderValue > 30,
+    'scale-[1.18]': sliderValue <= 30 && sliderValue > 25,
+    'scale-[1.2]': sliderValue <= 25 && sliderValue > 20,
+    'scale-[1.22]': sliderValue <= 20
+  });
   const novaImgRef = useRef(null);
 
   const handleRightHalfClick = () => {
@@ -33,43 +34,46 @@ const FullNovaSlide = memo(({ isOpen, sliderValue, setSliderValue }) => {
           <img
             ref={novaImgRef}
             loading="lazy"
-            className={`pointer-events-none select-none absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform scale-110 ${
-              sliderValue <= 45 && "scale-[1.12]"
-            } ${sliderValue <= 40 && "scale-[1.14]"} ${
-              sliderValue <= 35 && "scale-[1.16]"
-            } ${sliderValue <= 30 && "scale-[1.18]"} ${
-              sliderValue <= 25 && "scale-[1.2]"
-            } ${sliderValue <= 20 && "scale-[1.22]"}  xxxs:scale-100 ${
-              sliderValue <= 45 && "xxxs:scale-[1.02]"
-            } ${sliderValue <= 40 && "xxxs:scale-[1.04]"} ${
-              sliderValue <= 35 && "xxxs:scale-[1.06]"
-            } ${sliderValue <= 30 && "xxxs:scale-[1.08]"} ${
-              sliderValue <= 25 && "xxxs:scale-[1.1]"
-            } ${sliderValue <= 20 && "xxxs:scale-[1.12]"}  lg:scale-[.7] ${
-              sliderValue <= 45 && "lg:scale-[.72]"
-            } ${sliderValue <= 40 && "lg:scale-[.74]"} ${
-              sliderValue <= 35 && "lg:scale-[.76]"
-            } ${sliderValue <= 30 && "lg:scale-[.78]"} ${
-              sliderValue <= 25 && "lg:scale-[.8]"
-            } ${sliderValue <= 20 && "lg:scale-[.82]"} xl:scale-[.35] ${
-              sliderValue <= 45 && "xl:scale-[.37]"
-            } ${sliderValue <= 40 && "xl:scale-[.39]"} ${
-              sliderValue <= 35 && "xl:scale-[.41]"
-            } ${sliderValue <= 30 && "xl:scale-[.43]"} ${
-              sliderValue <= 25 && "xl:scale-[.45]"
-            } ${sliderValue <= 20 && "xl:scale-[.47]"} 3xl:scale-[.3] ${
-              sliderValue <= 45 && "3xl:scale-[.315]"
-            } ${sliderValue <= 40 && "3xl:scale-[.33]"} ${
-              sliderValue <= 35 && "3xl:scale-[.345]"
-            } ${sliderValue <= 30 && "3xl:scale-[.36]"} ${
-              sliderValue <= 25 && "3xl:scale-[.375]"
-            } ${sliderValue <= 20 && "3xl:scale-[.39]"}  6xl:scale-[.4] ${
-              sliderValue <= 45 && "6xl:scale-[.415]"
-            } ${sliderValue <= 40 && "6xl:scale-[.43]"} ${
-              sliderValue <= 35 && "6xl:scale-[.445]"
-            } ${sliderValue <= 30 && "6xl:scale-[.46]"} ${
-              sliderValue <= 25 && "6xl:scale-[.475]"
-            } ${sliderValue <= 20 && "6xl:scale-[.49]"} `}
+            className={`pointer-events-none select-none absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform ${classNames('xxxs:scale-100', scaleClass, {
+              'xxxs:scale-[1.02]': sliderValue <= 45 && sliderValue > 40,
+              'xxxs:scale-[1.04]': sliderValue <= 40 && sliderValue > 35,
+              'xxxs:scale-[1.06]': sliderValue <= 35 && sliderValue > 30,
+              'xxxs:scale-[1.08]': sliderValue <= 30 && sliderValue > 25,
+              'xxxs:scale-[1.1]': sliderValue <= 25 && sliderValue > 20,
+              'xxxs:scale-[1.12]': sliderValue <= 20,
+            }, {
+              'lg:scale-[.7]': sliderValue > 45,
+              'lg:scale-[.72]': sliderValue <= 45 && sliderValue > 40,
+              'lg:scale-[.74]': sliderValue <= 40 && sliderValue > 35,
+              'lg:scale-[.76]': sliderValue <= 35 && sliderValue > 30,
+              'lg:scale-[.78]': sliderValue <= 30 && sliderValue > 25,
+              'lg:scale-[.8]': sliderValue <= 25 && sliderValue > 20,
+              'lg:scale-[.82]': sliderValue <= 20,
+            }, {
+              'xl:scale-[.35]': sliderValue > 45,
+              'xl:scale-[.37]': sliderValue <= 45 && sliderValue > 40,
+              'xl:scale-[.39]': sliderValue <= 40 && sliderValue > 35,
+              'xl:scale-[.41]': sliderValue <= 35 && sliderValue > 30,
+              'xl:scale-[.43]': sliderValue <= 30 && sliderValue > 25,
+              'xl:scale-[.45]': sliderValue <= 25 && sliderValue > 20,
+              'xl:scale-[.47]': sliderValue <= 20,
+            }, {
+              '3xl:scale-[.3]': sliderValue > 45,
+              '3xl:scale-[.315]': sliderValue <= 45 && sliderValue > 40,
+              '3xl:scale-[.33]': sliderValue <= 40 && sliderValue > 35,
+              '3xl:scale-[.345]': sliderValue <= 35 && sliderValue > 30,
+              '3xl:scale-[.36]': sliderValue <= 30 && sliderValue > 25,
+              '3xl:scale-[.375]': sliderValue <= 25 && sliderValue > 20,
+              '3xl:scale-[.39]': sliderValue <= 20,
+            }, {
+              '6xl:scale-[.4]': sliderValue > 45,
+              '6xl:scale-[.415]': sliderValue <= 45 && sliderValue > 40,
+              '6xl:scale-[.43]': sliderValue <= 40 && sliderValue > 35,
+              '6xl:scale-[.445]': sliderValue <= 35 && sliderValue > 30,
+              '6xl:scale-[.46]': sliderValue <= 30 && sliderValue > 25,
+              '6xl:scale-[.475]': sliderValue <= 25 && sliderValue > 20,
+              '6xl:scale-[.49]': sliderValue <= 20,
+            })}`}
             src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/orignal%20bottle%20new%2014x14.png"
             alt="Nova Bottle"
           />

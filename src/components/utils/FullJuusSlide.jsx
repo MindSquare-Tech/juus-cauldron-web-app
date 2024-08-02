@@ -3,8 +3,19 @@ import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 import FullNovaSlide from "./FullNovaSlide";
+import classNames from 'classnames';
+
 
 const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
+  const scaleClass = classNames({
+    'scale-[1.1]': sliderValue < 55,
+    'scale-[1.12]': sliderValue >= 55 && sliderValue < 60,
+    'scale-[1.14]': sliderValue >= 60 && sliderValue < 65,
+    'scale-[1.16]': sliderValue >= 65 && sliderValue < 70,
+    'scale-[1.18]': sliderValue >= 70 && sliderValue < 75,
+    'scale-[1.2]': sliderValue >= 75 && sliderValue < 80,
+    'scale-[1.22]': sliderValue >= 80
+  });
   const juusImgRef = useRef(null);
 
   return (
@@ -20,43 +31,46 @@ const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
           <img
             ref={juusImgRef}
             loading="lazy"
-            className={`pointer-events-none absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 select-none transition-transform scale-110 ${
-              sliderValue >= 55 && "scale-[1.12]"
-            } ${sliderValue >= 60 && "scale-[1.14]"} ${
-              sliderValue >= 65 && "scale-[1.16]"
-            } ${sliderValue >= 70 && "scale-[1.18]"} ${
-              sliderValue >= 75 && "scale-[1.2]"
-            } ${sliderValue >= 80 && "scale-[1.22]"}  xxxs:scale-100 ${
-              sliderValue >= 55 && "xxxs:scale-[1.02]"
-            } ${sliderValue >= 60 && "xxxs:scale-[1.04]"} ${
-              sliderValue >= 65 && "xxxs:scale-[1.06]"
-            } ${sliderValue >= 70 && "xxxs:scale-[1.08]"} ${
-              sliderValue >= 75 && "xxxs:scale-[1.1]"
-            } ${sliderValue >= 80 && "xxxs:scale-[1.12]"}  lg:scale-[.7] ${
-              sliderValue >= 55 && "lg:scale-[.72]"
-            } ${sliderValue >= 60 && "lg:scale-[.74]"} ${
-              sliderValue >= 65 && "lg:scale-[.76]"
-            } ${sliderValue >= 70 && "lg:scale-[.78]"} ${
-              sliderValue >= 75 && "lg:scale-[.8]"
-            } ${sliderValue >= 80 && "lg:scale-[.82]"} xl:scale-[.35] ${
-              sliderValue >= 55 && "xl:scale-[.37]"
-            } ${sliderValue >= 60 && "xl:scale-[.39]"} ${
-              sliderValue >= 65 && "xl:scale-[.41]"
-            } ${sliderValue >= 70 && "xl:scale-[.43]"} ${
-              sliderValue >= 75 && "xl:scale-[.45]"
-            } ${sliderValue >= 80 && "xl:scale-[.47]"} 3xl:scale-[.3] ${
-              sliderValue >= 55 && "3xl:scale-[.315]"
-            } ${sliderValue >= 60 && "3xl:scale-[.33]"} ${
-              sliderValue >= 65 && "3xl:scale-[.345]"
-            } ${sliderValue >= 70 && "3xl:scale-[.36]"} ${
-              sliderValue >= 75 && "3xl:scale-[.375]"
-            } ${sliderValue >= 80 && "3xl:scale-[.39]"}  6xl:scale-[.4] ${
-              sliderValue >= 55 && "6xl:scale-[.415]"
-            } ${sliderValue >= 60 && "6xl:scale-[.43]"} ${
-              sliderValue >= 65 && "6xl:scale-[.445]"
-            } ${sliderValue >= 70 && "6xl:scale-[.46]"} ${
-              sliderValue >= 75 && "6xl:scale-[.475]"
-            } ${sliderValue >= 80 && "6xl:scale-[.49]"} `}
+            className={`pointer-events-none absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 select-none transition-transform ${classNames('xxxs:scale-100', scaleClass, {
+              'xxxs:scale-[1.02]': sliderValue >= 55 && sliderValue < 60,
+              'xxxs:scale-[1.04]': sliderValue >= 60 && sliderValue < 65,
+              'xxxs:scale-[1.06]': sliderValue >= 65 && sliderValue < 70,
+              'xxxs:scale-[1.08]': sliderValue >= 70 && sliderValue < 75,
+              'xxxs:scale-[1.1]': sliderValue >= 75 && sliderValue < 80,
+              'xxxs:scale-[1.12]': sliderValue >= 80,
+            }, {
+              'lg:scale-[.7]': sliderValue < 55,
+              'lg:scale-[.72]': sliderValue >= 55 && sliderValue < 60,
+              'lg:scale-[.74]': sliderValue >= 60 && sliderValue < 65,
+              'lg:scale-[.76]': sliderValue >= 65 && sliderValue < 70,
+              'lg:scale-[.78]': sliderValue >= 70 && sliderValue < 75,
+              'lg:scale-[.8]': sliderValue >= 75 && sliderValue < 80,
+              'lg:scale-[.82]': sliderValue >= 80,
+            }, {
+              'xl:scale-[.35]': sliderValue < 55,
+              'xl:scale-[.37]': sliderValue >= 55 && sliderValue < 60,
+              'xl:scale-[.39]': sliderValue >= 60 && sliderValue < 65,
+              'xl:scale-[.41]': sliderValue >= 65 && sliderValue < 70,
+              'xl:scale-[.43]': sliderValue >= 70 && sliderValue < 75,
+              'xl:scale-[.45]': sliderValue >= 75 && sliderValue < 80,
+              'xl:scale-[.47]': sliderValue >= 80,
+            }, {
+              '3xl:scale-[.3]': sliderValue < 55,
+              '3xl:scale-[.315]': sliderValue >= 55 && sliderValue < 60,
+              '3xl:scale-[.33]': sliderValue >= 60 && sliderValue < 65,
+              '3xl:scale-[.345]': sliderValue >= 65 && sliderValue < 70,
+              '3xl:scale-[.36]': sliderValue >= 70 && sliderValue < 75,
+              '3xl:scale-[.375]': sliderValue >= 75 && sliderValue < 80,
+              '3xl:scale-[.39]': sliderValue >= 80,
+            }, {
+              '6xl:scale-[.4]': sliderValue < 55,
+              '6xl:scale-[.415]': sliderValue >= 55 && sliderValue < 60,
+              '6xl:scale-[.43]': sliderValue >= 60 && sliderValue < 65,
+              '6xl:scale-[.445]': sliderValue >= 65 && sliderValue < 70,
+              '6xl:scale-[.46]': sliderValue >= 70 && sliderValue < 75,
+              '6xl:scale-[.475]': sliderValue >= 75 && sliderValue < 80,
+              '6xl:scale-[.49]': sliderValue >= 80,
+            })}`}
             src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/green%20apple%20%20bottle%20new.png"
             alt="Juus Bottle"
           />
