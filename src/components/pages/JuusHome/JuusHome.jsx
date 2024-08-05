@@ -7,6 +7,7 @@ const JuusVideo = lazy(() => import("../../utils/JuusVideo.jsx"));
 const Footer = lazy(() => import("../../utils/Footer.jsx"));
 const JuusHeader = lazy(() => import("../../utils/JuusHeader.jsx"));
 import { setIsOpen } from "../../../redux/isOpenSlice.js";
+import Footerv2 from "../../utils/Footerv2.jsx";
 const JuusExplosionVideo = lazy(() => import("../../utils/JuusExplosionVideo.jsx"));
 
 const JuusHome = memo(() => {
@@ -40,14 +41,14 @@ const JuusHome = memo(() => {
               <motion.div
                 className="flex font-anton justify-start items-center ml-3 lg:ml-12 3xl:ml-24 4xl:ml-32 5xl:ml-36 6xl:ml-44"
               >
-                <h1 className="text-6xl lg:text-8xl xl:text-9xl mr-1 xxs:mr-1.5">
+                <h1 className="select-text text-6xl lg:text-8xl xl:text-9xl mr-1 xxs:mr-1.5">
                   JUUST
                 </h1>
                 <div className="flex flex-col justify-center">
-                  <h2 className="text-[1.75rem] lg:text-[2.5rem] xl:text-[3.4rem] -mb-1.5">
+                  <h2 className="select-text text-[1.75rem] lg:text-[2.5rem] xl:text-[3.4rem] -mb-1.5">
                     YOUR
                   </h2>
-                  <h2 className="text-[1.75rem] lg:text-[2.5rem] xl:text-[3.4rem] -mt-1.5 xl:-mt-3">
+                  <h2 className="select-text text-[1.75rem] lg:text-[2.5rem] xl:text-[3.4rem] -mt-1.5 xl:-mt-3">
                     ULTIMATE
                   </h2>
                 </div>
@@ -55,13 +56,13 @@ const JuusHome = memo(() => {
               <motion.div
                 className="flex justify-start items-center ml-3 lg:ml-12 3xl:ml-24 4xl:ml-32 5xl:ml-36 6xl:ml-44 -mt-2 xl:-mt-7 3xl:-mt-5"
               >
-                <h1 className="text-[2.55rem] xxxxs:text-[2.75rem] xsm:text-[2.85rem] lg:text-[5rem] xl:text-[6.5rem] font-anton mr-1 xxs:mr-1.5 lg:mr-3">
+                <h1 className="select-text text-[2.55rem] xxxxs:text-[2.75rem] xsm:text-[2.85rem] lg:text-[5rem] xl:text-[6.5rem] font-anton mr-1 xxs:mr-1.5 lg:mr-3">
                   DRINK
                 </h1>
                 <div className="flex flex-col justify-between xl:justify-center h-[2.65rem] xxxxs:h-[2.85rem] xxs:h-[2.9rem] xsm:h-[3rem] lg:h-[4.5rem] xl:h-20 text-[0.5rem] xxxxs:text-[0.55rem] xxxs:text-[0.59rem] xxs:text-[0.62rem] xsm:text-[0.65rem] lg:text-[1.125rem] xl:text-[1.4rem] 5xl:text-[1.5rem] lg:-mt-2 xl:-mt-0">
-                  <h3>PRESENTING PAKISTAN'S</h3>
-                  <h3 className="3xl:my-1 5xl:my-0">FIRST EVER ZERO SUGAR ZERO CALORIES LIQUID ENHANCER.</h3>
-                  <h3>WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING</h3>
+                  <h3 className="select-text">PRESENTING PAKISTAN'S</h3>
+                  <h3 className="select-text 3xl:my-1 5xl:my-0">FIRST EVER ZERO SUGAR ZERO CALORIES LIQUID ENHANCER.</h3>
+                  <h3 className="select-text">WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING</h3>
                 </div>
               </motion.div>
               </Fade>
@@ -93,7 +94,7 @@ const JuusHome = memo(() => {
         />
       </main>
       <div>
-        <Footer />
+        <Footerv2 />
       </div>
     </motion.div>
   );

@@ -1,6 +1,7 @@
 import React, { lazy, memo, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
+import Footerv2 from "../../utils/Footerv2.jsx";
 const Header = lazy(() => import("../../utils/Header.jsx"));
 const FaqAccordion = lazy(() => import("../../utils/FaqAccordion.jsx"));
 const QueryForm = lazy(() => import("../../utils/QueryForm.jsx"));
@@ -158,7 +159,7 @@ const FAQs = memo(() => {
         </div>
       </main>
       <div>
-        <Footer />
+        <Footerv2 />
       </div>
     </motion.div>
   );

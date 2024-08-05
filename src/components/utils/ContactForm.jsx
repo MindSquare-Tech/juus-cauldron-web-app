@@ -152,7 +152,7 @@ function ContactForm() {
           type="text"
         ></textarea>
       </div>
-      <div className="flex justify-center w-28 h-11 shadow-primary-shadow rounded-lg mx-3 lg:mx-5 xl:mx-7 3xl:mx-9 4xl:mx-8 5xl:mx-7 6xl:mx-8 mt-7 3xl:mt-10 mb-10 3xl:mb-14 bg-black ">
+      <div className="hover:scale-105 transition-transform active:scale-95 flex justify-center w-28 h-11 shadow-primary-shadow rounded-lg mx-3 lg:mx-5 xl:mx-7 3xl:mx-9 4xl:mx-8 5xl:mx-7 6xl:mx-8 mt-7 3xl:mt-10 mb-10 3xl:mb-14 bg-black ">
         <button
           onClick={handleSubmit}
           className="text-snow text-sm h-full w-full"

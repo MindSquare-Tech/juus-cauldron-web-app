@@ -2,6 +2,7 @@ import React, { lazy, memo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
+import Footerv2 from "../../utils/Footerv2";
 const Footer = lazy(() => import("../../utils/Footer"));
 const NovaHeader = lazy(() => import("../../utils/NovaHeader"));
 
@@ -301,7 +302,7 @@ const NovaHome = memo(() => {
         </Link>
       </main>
       <div>
-        <Footer theme="nova" />
+        <Footerv2 theme="nova" />
       </div>
     </motion.div>
   );
