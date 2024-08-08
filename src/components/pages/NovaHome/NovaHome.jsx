@@ -135,7 +135,7 @@ const NovaHome = memo(() => {
             </div>
           </div>
           <div className="flex my-20 lg:my-10 4xl:my-0 w-full">
-            <div className="text-white pl-4 xxxxs:pl-5 xxs:pl-6 xsm:pl-7 lg:pl-16 xl:pl-20 3xl:pl-28 4xl:pl-32 6xl:pl-40 flex-1 flex flex-col text-left justify-start">
+            <div className="w-1/2 text-white pl-4 xxxxs:pl-5 xxs:pl-6 xsm:pl-7 lg:pl-16 xl:pl-20 3xl:pl-28 4xl:pl-32 6xl:pl-40 flex-1 flex flex-col text-left justify-start">
               <motion.h1
                 viewport={{ once: true }}
                 initial={{ x: "-100%", opacity: 0 }}
@@ -161,7 +161,7 @@ const NovaHome = memo(() => {
                 </p>
               </Fade>
             </div>
-            <div className="w-3/5 xsm:w-[45%] lg:w-1/2">
+            <div className="w-1/2 -z-10 xsm:w-[45%] lg:w-1/2">
               <motion.img
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: "100%" }}
@@ -177,7 +177,7 @@ const NovaHome = memo(() => {
                     (window.innerWidth > 767 && 1) ||
                     (window.innerWidth > 429 && 1.15) ||
                     (window.innerWidth > 389 && 1.05) ||
-                    0.95,
+                    1.1 ,
                 }}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
                 className="flex-1 pr-3"
