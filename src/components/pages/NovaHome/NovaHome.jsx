@@ -75,8 +75,12 @@ const NovaHome = memo(() => {
               </h1>
               <div className="flex flex-col justify-between xl:justify-center h-[2.65rem] xxxxs:h-[2.85rem] xxs:h-[2.9rem] xsm:h-[3rem] lg:h-[4.5rem] xl:h-20 text-[0.5rem] xxxxs:text-[0.55rem] xxxs:text-[0.59rem] xxs:text-[0.62rem] xsm:text-[0.65rem] lg:text-[1.125rem] xl:text-[1.4rem] 5xl:text-[1.5rem] lg:-mt-2 xl:-mt-0">
                 <h3 className="select-text">PRESENTING PAKISTAN'S</h3>
-                <h3 className="select-text">FIRST EVER ZERO SUGAR ZERO CALORIES LIQUID ENHANCER.</h3>
-                <h3 className="select-text">WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING</h3>
+                <h3 className="select-text">
+                  FIRST EVER ZERO SUGAR ZERO CALORIES LIQUID ENHANCER.
+                </h3>
+                <h3 className="select-text">
+                  WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING
+                </h3>
               </div>
             </motion.div>
           </div>
@@ -122,14 +126,14 @@ const NovaHome = memo(() => {
                 <h2 className="select-text text-[0.78125rem] lg:text-[1.5rem] 3xl:text-[2.23em]  4xl:text-[2.7rem] 6xl:text-[3.7em] ">
                   GOES BEST WITH TEA
                 </h2>
-                <p className="select-text text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
-                  A MATCH MADE IN HEAVEN, A FLAVOR FUSION THAT'S SIMPLY DIVINE
-                  TO TASTE.
+                <p className="select-text text-[0.65rem] xxxs:text-[0.7rem] xsm:text-[0.75rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
+                  A match made in heaven, a flavor fusion that's simply divine
+                  to taste.
                 </p>
-                <p className="select-text text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
-                  THE AROMATIC ZEST OF CARDAMOM ELEVATES TEA TO NEW HEIGHTS,
-                  TOGETHER, THEY CREATES A DELIGHTFUL BREW THAT'S A TRUE
-                  CULINARY DELIGHT."
+                <p className="select-text text-[0.65rem] xxxs:text-[0.7rem] xsm:text-[0.75rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
+                  The aromatic zest of cardamom elevates tea to new heights,
+                  together, they create a delightful brew that's a true culinary
+                  delight."
                 </p>
               </Fade>
             </div>
@@ -149,12 +153,12 @@ const NovaHome = memo(() => {
                 <h2 className="select-text text-[0.78125rem] lg:text-[1.5rem] 3xl:text-[2.3rem] 4xl:text-[2.7rem]  6xl:text-[3.7rem]">
                   GOES BEST WITH COFFEE
                 </h2>
-                <p className="select-text text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
-                  VANILLA'S SWEET, VELVETY SOFTNESS COMPLEMENTS COFFEE'S RICH,
-                  BOLD FLAIR, A PERFECT PAIRING THAT AWAKENS SENSES AND BANISHES
-                  ALL CARE. THE CREAMY ESSENCE OF VANILLA HARMONIZES WITH COFFEE'S DEEP,
-                  DARK TONE, TOGETHER, THEY CREATE A DELIGHTFUL BLEND THAT'S A
-                  TRUE FLAVOR THRONE."
+                <p className="select-text text-[0.65rem] xsm:text-[0.75rem] xxxs:text-[0.7rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
+                  Vanilla's sweet, velvety softness complements coffee's rich,
+                  bold flair, a perfect pairing that awakens senses and banishes
+                  all care. The creamy essence of vanilla harmonizes with
+                  coffee's deep, dark tone, together, they create a delightful
+                  blend that's a true flavor throne."
                 </p>
               </Fade>
             </div>
@@ -224,13 +228,13 @@ const NovaHome = memo(() => {
                 <h2 className="select-text text-[0.78125rem] lg:text-[1.5rem] 3xl:text-[2.3rem] 4xl:text-[2.7rem]  6xl:text-[3.7rem]">
                   SWEETENS EVERYTHING
                 </h2>
-                <p className="select-text text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
-                  SWEETNESS WITHOUT THE GUILT, ZERO SUGAR, ZERO CALORIES, A
-                  HEALTHY SIGN.
+                <p className="select-text text-[0.65rem] xxxs:text-[0.7rem] xsm:text-[0.75rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
+                  "Sweetness without the guilt, zero sugar, zero calories, a
+                  healthy sign.
                 </p>
-                <p className="select-text text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
-                  INDULGE IN THE SWEETNESS, WITHOUT ANY FLAVOR THE WEIGHT, A
-                  SWEET DELIGHT, THAT'S HEALTHY AND GREAT!"
+                <p className="select-text text-[0.65rem] xxxs:text-[0.7rem] xsm:text-[0.75rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
+                  Indulge in the sweetness, without any flavor the weight, a
+                  sweet delight, that's healthy and great!"
                 </p>
               </Fade>
             </div>
