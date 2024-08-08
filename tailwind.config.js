@@ -45,5 +45,14 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities}) {
+      const newUtilities = {
+        ".small-caps": {
+          fontVariant: "small-caps"
+        },
+      }
+      addUtilities(newUtilities, ["responsive", "hover"])
+    }
+  ],
 };

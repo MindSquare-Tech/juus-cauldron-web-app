@@ -152,10 +152,7 @@ const NovaHome = memo(() => {
                 <p className="select-text text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
                   VANILLA'S SWEET, VELVETY SOFTNESS COMPLEMENTS COFFEE'S RICH,
                   BOLD FLAIR, A PERFECT PAIRING THAT AWAKENS SENSES AND BANISHES
-                  ALL CARE.
-                </p>
-                <p className="select-text text-[0.55rem] xxxxs:text-[0.6rem] xsm:text-[0.65rem] lg:text-[1rem] 3xl:text-[1.65rem] 4xl:text-[1.9rem] 6xl:text-[2.2rem]">
-                  THE CREAMY ESSENCE OF VANILLA HARMONIZES WITH COFFEE'S DEEP,
+                  ALL CARE. THE CREAMY ESSENCE OF VANILLA HARMONIZES WITH COFFEE'S DEEP,
                   DARK TONE, TOGETHER, THEY CREATE A DELIGHTFUL BLEND THAT'S A
                   TRUE FLAVOR THRONE."
                 </p>
@@ -175,9 +172,10 @@ const NovaHome = memo(() => {
                     (window.innerWidth > 1279 && 0.8) ||
                     (window.innerWidth > 899 && 0.9) ||
                     (window.innerWidth > 767 && 1) ||
-                    (window.innerWidth > 429 && 1.15) ||
-                    (window.innerWidth > 389 && 1.05) ||
-                    1.1 ,
+                    (window.innerWidth > 429 && 1.2) ||
+                    (window.innerWidth > 409 && 1.2) ||
+                    (window.innerWidth > 389 && 1.15) ||
+                    1.15,
                 }}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
                 className="flex-1 pr-3"
@@ -201,7 +199,8 @@ const NovaHome = memo(() => {
                     (window.innerWidth > 1279 && 0.8) ||
                     (window.innerWidth > 899 && 0.9) ||
                     (window.innerWidth > 767 && 1) ||
-                    (window.innerWidth > 429 && 1.15) ||
+                    (window.innerWidth > 429 && 1.2) ||
+                    (window.innerWidth > 409 && 1.2) ||
                     (window.innerWidth > 389 && 1.05) ||
                     0.95,
                 }}
