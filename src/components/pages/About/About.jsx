@@ -25,28 +25,24 @@ const About = memo(() => {
           <AboutVideo />
           <article className="px-5 lg:px-24 xl:px-28 3xl:px-40 4xl:px-52 6xl:px-80 font-light lg:font-normal lg:text-xl 3xl:text-3xl text-about">
             <Fade delay={500} cascade triggerOnce={true}>
-            <p className="select-text my-4 3xl:my-9 4xl:my-16 text-left xsm:leading-8 lg:leading-9 xl:leading-10 3xl:leading-[4.5rem] 6xl:leading-[5.5rem]">
-              Our journey started in the research facilities of New Zealand. It
-              was a never-ending storm of difficulties.
-            
-          
-              But in these difficult times, we were clear about the vision to
-              bring the highest quality to our consumers.
-          
-         
-              We involved the best scientists from around the world, with the
-              sole purpose of creating the best flavours, in accordance with
-              Pakistan's audience.
-           
-              Finally we came home with the best there can be offered, flavours
-              custom made for you.
-            </p>
+              <p className="select-text my-4 3xl:my-9 4xl:my-16 text-left xsm:leading-8 lg:leading-9 xl:leading-10 3xl:leading-[4.5rem] 6xl:leading-[5.5rem]">
+                Our journey started in the research facilities of New Zealand. A
+                never-ending storm of difficulties but in these difficult times,
+                we were clear about the vision to bring the highest quality to
+                our consumers. 
+                <br />
+                <br />
+                We involved the best scientists from around the
+                world, with the sole purpose of creating products, in accordance
+                with Pakistan's audience. Finally we came home with the best
+                that can be offered: Flavors custom made for you!
+              </p>
             </Fade>
           </article>
         </div>
         <div className="6xl:flex 6xl:flex-col">
           <img
-            className="lg:scale-90 xl:scale-75 6xl:scale-[.65] my-5 lg:my-0 3xl:mb-0 3xl:w-full 6xl:self-center"
+            className="lg:scale-90 xl:scale-75 6xl:scale-[.65] my-5 lg:my-0 xl:-mb-16 3xl:-mb-28 4xl:-mb-36 6xl:-mb-40 3xl:-mt-16 6xl:-mt-40 3xl:w-full 6xl:self-center"
             src="https://juusstorage.blob.core.windows.net/website/images/about/about-main.png"
             alt=""
           />
