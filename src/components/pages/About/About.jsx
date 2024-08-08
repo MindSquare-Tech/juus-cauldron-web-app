@@ -2,6 +2,7 @@ import React, { lazy, memo, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 import Footerv2 from "../../utils/Footerv2.jsx";
+import Footerv3 from "../../utils/Footerv3.jsx";
 const AboutVideo = lazy(() => import("../../utils/AboutVideo.jsx"));
 const Header = lazy(() => import("../../utils/Header.jsx"));
 const Certification = lazy(() => import("../../utils/Certification.jsx"));
@@ -98,7 +99,7 @@ const About = memo(() => {
         </div>
       </main>
       <div>
-        <Footerv2 />
+        <Footerv3 />
       </div>
     </motion.div>
   );

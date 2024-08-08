@@ -60,9 +60,9 @@ const JuusHome = memo(() => {
                   DRINK
                 </h1>
                 <div className="flex flex-col justify-between xl:justify-center h-[2.65rem] xxxxs:h-[2.85rem] xxs:h-[2.9rem] xsm:h-[3rem] lg:h-[4.5rem] xl:h-20 text-[0.5rem] xxxxs:text-[0.55rem] xxxs:text-[0.59rem] xxs:text-[0.62rem] xsm:text-[0.65rem] lg:text-[1.125rem] xl:text-[1.4rem] 5xl:text-[1.5rem] lg:-mt-2 xl:-mt-0">
-                  <h3 className="select-text">PRESENTING PAKISTAN'S</h3>
-                  <h3 className="select-text 3xl:my-1 5xl:my-0">FIRST EVER ZERO SUGAR ZERO CALORIES LIQUID ENHANCER.</h3>
-                  <h3 className="select-text">WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING</h3>
+                  <h3 className="select-text">Step into a world of indulgence with Juus, Pakistan’s premier Zero Sugar, Zero Calorie liquid enhancer!</h3>
+                  <h3 className="select-text 3xl:my-1 5xl:my-0"> Available in 9 exquisite flavors in a chic, pocket-sized bottle, each serving delivers a burst of delight.</h3>
+                  <h3 className="select-text">Juus is your ultimate companion for a glamorous, guilt-free flavor experience wherever you go!</h3>
                 </div>
               </motion.div>
               </Fade>
