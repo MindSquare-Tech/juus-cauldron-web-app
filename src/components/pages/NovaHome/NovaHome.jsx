@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 import Footerv2 from "../../utils/Footerv2";
+import Footerv3 from "../../utils/Footerv3";
 const Footer = lazy(() => import("../../utils/Footer"));
 const NovaHeader = lazy(() => import("../../utils/NovaHeader"));
 
@@ -33,7 +34,7 @@ const NovaHome = memo(() => {
           />
         </div>
         <div className="flex mb-12 xxs:mb-16 lg:mb-32 3xl:mb-44 5xl:mb-52 6xl:mb-60 text-white xl:mt-5">
-          <div className="flex flex-col">
+          <div className="flex flex-col lg:mt-5 px-3 lg:px-12 xl:pr-28 3xl:pr-96 4xl:pr-[35rem] 3xl:pl-24 4xl:pl-32">
             <motion.div
               viewport={{ once: true }}
               transition={{
@@ -44,18 +45,18 @@ const NovaHome = memo(() => {
               }}
               initial={{ x: "-100%", opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              className="flex font-anton justify-start items-center ml-3 lg:ml-8 3xl:ml-16 4xl:ml-24 5xl:ml-28 lg:mt-5 3xl:mb-0.5"
+              className="flex font-anton"
             >
-              <h1 className="select-text text-6xl lg:text-8xl xl:text-9xl mr-1 xxs:mr-1.5">
+              <h1 className="text-[3.75rem] lg:text-[5.75rem] 6xl:text-[7rem] leading-none mr-1 6xl:mr-2">
                 FUTURE
               </h1>
-              <div className="flex flex-col justify-center">
-                <h2 className="select-text text-[1.75rem] lg:text-[2.5rem] xl:text-[3.4rem] -mb-1.5">
+              <div className="flex flex-col xxxxs:relative xxxxs:translate-y-0.5 xsm:translate-y-0 lg:translate-y-1">
+                <h1 className="text-[1.875rem] lg:text-[2.875rem] 6xl:text-[3.25rem] leading-none">
                   IS
-                </h2>
-                <h2 className="select-text text-[1.75rem] lg:text-[2.5rem] xl:text-[3.4rem] -mt-1.5 xl:-mt-3">
+                </h1>
+                <h1 className="text-[1.875rem] lg:text-[2.875rem] 6xl:text-[3.25rem] leading-none">
                   SUGAR
-                </h2>
+                </h1>
               </div>
             </motion.div>
             <motion.div
@@ -68,20 +69,38 @@ const NovaHome = memo(() => {
               }}
               initial={{ x: "-100%", opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              className="flex justify-start items-center ml-3 lg:ml-8 3xl:ml-16 4xl:ml-24 5xl:ml-28 -mt-3 xl:-mt-5"
+              className="flex w-full items-center mt-1"
             >
-              <h1 className="select-text text-[2.55rem] xxxxs:text-[2.75rem] xsm:text-[2.85rem] lg:text-[5rem] xl:text-[6.5rem] font-anton mr-1 xxs:mr-1.5 lg:mr-3">
+              <h1 className="font-anton text-[2.55rem] lg:text-[4rem] 6xl:text-[5rem] leading-none mr-2 6xl:mr-3">
                 FREE
               </h1>
-              <div className="flex flex-col justify-between xl:justify-center h-[2.65rem] xxxxs:h-[2.85rem] xxs:h-[2.9rem] xsm:h-[3rem] lg:h-[4.5rem] xl:h-20 text-[0.5rem] xxxxs:text-[0.55rem] xxxs:text-[0.59rem] xxs:text-[0.62rem] xsm:text-[0.65rem] lg:text-[1.125rem] xl:text-[1.4rem] 5xl:text-[1.5rem] lg:-mt-2 xl:-mt-0">
-                <h3 className="select-text">PRESENTING PAKISTAN'S</h3>
-                <h3 className="select-text">
-                  FIRST EVER ZERO SUGAR ZERO CALORIES LIQUID ENHANCER.
-                </h3>
-                <h3 className="select-text">
-                  WITH 9 EXCITING FLAVORS JUUS IS QUICKLY BECOMING
-                </h3>
+              <div className="flex flex-col">
+                <p className="text-[0.6rem] xxxxs:text-[0.69rem] xxxs:text-[0.72rem] xxs:text-[0.75rem] xsm:text-[0.8125rem] lg:text-[1rem] 6xl:text-[1.5rem] italic">
+                  Unveil the allure of Nova: the quintessential liquid sweetener
+                  for you.
+                </p>
+                <p className="text-[0.6rem] xxxxs:text-[0.69rem] xxxs:text-[0.72rem] xxs:text-[0.75rem] xsm:text-[0.8125rem] lg:text-[1rem] 6xl:text-[1.5rem] italic">
+                  With three mesmerizing flavors and absolutely zero sugar or
+                  calories,
+                </p>
               </div>
+            </motion.div>
+            <motion.div
+              viewport={{ once: true }}
+              transition={{
+                delay: 1.6,
+                duration: 0.5,
+                ease: [0.37, 0, 0.63, 1],
+              }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="mt-3 3xl:mt-5"
+            >
+              <p className="text-[0.6rem] xxxxs:text-[0.69rem] xxxs:text-[0.72rem] xxs:text-[0.75rem] xsm:text-[0.8125rem] lg:text-[1rem] 6xl:text-[1.5rem]">
+                Nova transforms every cup into a magical experience. Indulge in
+                sweetness without a hint of guilt and make every moment
+                extraordinary!
+              </p>
             </motion.div>
           </div>
         </div>
@@ -305,7 +324,7 @@ const NovaHome = memo(() => {
         </Link>
       </main>
       <div>
-        <Footerv2 theme="nova" />
+        <Footerv3 theme="nova" />
       </div>
     </motion.div>
   );

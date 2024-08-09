@@ -8,7 +8,10 @@ const Footer = lazy(() => import("../../utils/Footer.jsx"));
 const JuusHeader = lazy(() => import("../../utils/JuusHeader.jsx"));
 import { setIsOpen } from "../../../redux/isOpenSlice.js";
 import Footerv2 from "../../utils/Footerv2.jsx";
-const JuusExplosionVideo = lazy(() => import("../../utils/JuusExplosionVideo.jsx"));
+import Footerv3 from "../../utils/Footerv3.jsx";
+const JuusExplosionVideo = lazy(() =>
+  import("../../utils/JuusExplosionVideo.jsx")
+);
 
 const JuusHome = memo(() => {
   const dispatch = useDispatch();
@@ -16,7 +19,7 @@ const JuusHome = memo(() => {
 
   useEffect(() => {
     setShowVideos(true);
-  }, [])
+  }, []);
   // const isOpen = useSelector(state => state.isOpen);
 
   return (
@@ -36,36 +39,61 @@ const JuusHome = memo(() => {
         <div className="">
           {showVideos && <JuusVideo />}
           <div className="flex flex-col 3xl:w-full 2xl:flex-row 2xl:mt-10 text-white lg:justify-between xl:mt-5">
-            <div className="flex flex-col 3xl:w-full">
-              <Fade direction="left" cascade triggerOnce={true}>
-              <motion.div
-                className="flex font-anton justify-start items-center ml-3 lg:ml-12 3xl:ml-24 4xl:ml-32 5xl:ml-36 6xl:ml-44"
-              >
-                <h1 className="select-text text-6xl lg:text-8xl xl:text-9xl mr-1 xxs:mr-1.5">
-                  JUUST
-                </h1>
-                <div className="flex flex-col justify-center">
-                  <h2 className="select-text text-[1.75rem] lg:text-[2.5rem] xl:text-[3.4rem] -mb-1.5">
-                    YOUR
-                  </h2>
-                  <h2 className="select-text text-[1.75rem] lg:text-[2.5rem] xl:text-[3.4rem] -mt-1.5 xl:-mt-3">
-                    ULTIMATE
-                  </h2>
+            <div className="flex flex-col px-3 lg:px-12 3xl:pl-24 4xl:pl-32 5xl:pl-36 3xl:pr-0 3xl:w-1/2">
+              <motion.div viewport={{ once: true }}
+              transition={{
+                type: "tween",
+                delay: 0.3,
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              initial={{ x: "-100%", opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+               className="flex font-anton">
+                <h1 className="text-[3.75rem] lg:text-[5.75rem] 6xl:text-[7rem] leading-none mr-1 6xl:mr-2">JUUST</h1>
+                <div className="flex flex-col xxxxs:relative xxxxs:translate-y-0.5 xsm:translate-y-0 lg:translate-y-1">
+                  <h1 className="text-[1.875rem] lg:text-[2.875rem] 6xl:text-[3.25rem] leading-none">YOUR</h1>
+                  <h1 className="text-[1.875rem] lg:text-[2.875rem] 6xl:text-[3.25rem] leading-none">ULTIMATE</h1>
                 </div>
               </motion.div>
               <motion.div
-                className="flex justify-start items-center ml-3 lg:ml-12 3xl:ml-24 4xl:ml-32 5xl:ml-36 6xl:ml-44 -mt-2 xl:-mt-7 3xl:-mt-5"
-              >
-                <h1 className="select-text text-[2.55rem] xxxxs:text-[2.75rem] xsm:text-[2.85rem] lg:text-[5rem] xl:text-[6.5rem] font-anton mr-1 xxs:mr-1.5 lg:mr-3">
-                  DRINK
-                </h1>
-                <div className="flex flex-col justify-between xl:justify-center h-[2.65rem] xxxxs:h-[2.85rem] xxs:h-[2.9rem] xsm:h-[3rem] lg:h-[4.5rem] xl:h-20 text-[0.5rem] xxxxs:text-[0.55rem] xxxs:text-[0.59rem] xxs:text-[0.62rem] xsm:text-[0.65rem] lg:text-[1.125rem] xl:text-[1.4rem] 5xl:text-[1.5rem] lg:-mt-2 xl:-mt-0">
-                  <h3 className="select-text">Step into a world of indulgence with Juus, Pakistan’s premier Zero Sugar, Zero Calorie liquid enhancer!</h3>
-                  <h3 className="select-text 3xl:my-1 5xl:my-0"> Available in 9 exquisite flavors in a chic, pocket-sized bottle, each serving delivers a burst of delight.</h3>
-                  <h3 className="select-text">Juus is your ultimate companion for a glamorous, guilt-free flavor experience wherever you go!</h3>
+              viewport={{ once: true }}
+              transition={{
+                delay: 0.8,
+                type: "tween",
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              initial={{ x: "-100%", opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+               className="flex w-full items-center mt-1">
+                <h1 className="font-anton text-[2.55rem] lg:text-[4rem] 6xl:text-[5rem] leading-none mr-2 6xl:mr-3">DRINK</h1>
+                <div className="flex flex-col">
+                  <p className="text-[0.6rem] xxxxs:text-[0.69rem] xxxs:text-[0.72rem] xxs:text-[0.75rem] xsm:text-[0.8125rem] lg:text-[1rem] 6xl:text-[1.5rem] italic">
+                    Step into a world of indulgence with Juus, Pakistan’s
+                  </p>
+                  <p className="text-[0.6rem] xxxxs:text-[0.69rem] xxxs:text-[0.72rem] xxs:text-[0.75rem] xsm:text-[0.8125rem] lg:text-[1rem] 6xl:text-[1.5rem] italic">
+                    premier Zero Sugar, Zero Calorie liquid enhancer!
+                  </p>
                 </div>
               </motion.div>
-              </Fade>
+              <motion.div
+              viewport={{ once: true }}
+              transition={{
+                delay: 1.6,
+                duration: 0.5,
+                ease: [0.37, 0, 0.63, 1],
+              }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+               className="mt-3 3xl:mt-5">
+                <p className="text-[0.6rem] xxxxs:text-[0.69rem] xxxs:text-[0.72rem] xxs:text-[0.75rem] xsm:text-[0.8125rem] lg:text-[1rem] 6xl:text-[1.5rem]">
+                  Available in 9 exquisite flavors in a chic, pocket-sized
+                  bottle, each serving delivers a burst of delight. Juus is your
+                  ultimate companion for a glamorous, guilt-free flavor
+                  experience wherever you go!
+                </p>
+              </motion.div>
             </div>
 
             <div className="self-center relative 3xl:w-2/5">
@@ -94,7 +122,7 @@ const JuusHome = memo(() => {
         />
       </main>
       <div>
-        <Footerv2 />
+        <Footerv3 />
       </div>
     </motion.div>
   );

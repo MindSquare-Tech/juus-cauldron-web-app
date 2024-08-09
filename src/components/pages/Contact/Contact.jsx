@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import ContactCards from "../../utils/ContactCards.jsx";
 import ContactForm from "../../utils/ContactForm.jsx";
 import Footerv2 from "../../utils/Footerv2.jsx";
+import Footerv3 from "../../utils/Footerv3.jsx";
 
 function Contact() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +25,7 @@ function Contact() {
         <ContactCards />
       </main>
       <div>
-        <Footerv2 />
+        <Footerv3 />
       </div>
     </motion.div>
   );
