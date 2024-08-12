@@ -45,7 +45,7 @@ const NovaHome = memo(() => {
               }}
               initial={{ x: "-100%", opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              className="flex font-anton"
+              className="flex font-anton mt-2.5"
             >
               <h1 className="text-[3.75rem] lg:text-[5.75rem] 6xl:text-[7rem] leading-none mr-1 6xl:mr-2">
                 FUTURE
@@ -75,11 +75,11 @@ const NovaHome = memo(() => {
                 FREE
               </h1>
               <div className="flex flex-col">
-                <p className="text-[0.6rem] xxxxs:text-[0.69rem] xxxs:text-[0.72rem] xxs:text-[0.75rem] xsm:text-[0.8125rem] lg:text-[1rem] 6xl:text-[1.5rem] italic">
+                <p className="text-[0.48rem] xxxxs:text-[0.55rem] xxxs:text-[0.59rem] xxs:text-[0.62rem] xsm:text-[0.67rem] lg:text-[1rem] 6xl:text-[1.5rem] italic">
                   Unveil the allure of Nova: the quintessential liquid sweetener
                   for you.
                 </p>
-                <p className="text-[0.6rem] xxxxs:text-[0.69rem] xxxs:text-[0.72rem] xxs:text-[0.75rem] xsm:text-[0.8125rem] lg:text-[1rem] 6xl:text-[1.5rem] italic">
+                <p className="text-[0.48rem] xxxxs:text-[0.55rem] xxxs:text-[0.59rem] xxs:text-[0.62rem] xsm:text-[0.67rem] lg:text-[1rem] 6xl:text-[1.5rem] italic">
                   With three mesmerizing flavors and absolutely zero sugar or
                   calories,
                 </p>
@@ -96,7 +96,7 @@ const NovaHome = memo(() => {
               whileInView={{ opacity: 1 }}
               className="mt-3 3xl:mt-5"
             >
-              <p className="text-[0.6rem] xxxxs:text-[0.69rem] xxxs:text-[0.72rem] xxs:text-[0.75rem] xsm:text-[0.8125rem] lg:text-[1rem] 6xl:text-[1.5rem]">
+              <p className="text-[0.48rem] xxxxs:text-[0.55rem] xxxs:text-[0.59rem] xxs:text-[0.62rem] xsm:text-[0.67rem] lg:text-[1rem] 6xl:text-[1.5rem]">
                 Nova transforms every cup into a magical experience. Indulge in
                 sweetness without a hint of guilt and make every moment
                 extraordinary!
@@ -105,7 +105,7 @@ const NovaHome = memo(() => {
           </div>
         </div>
         {/* Product images and the text */}
-        <div className="flex flex-col justify-between mb-16 relative -mt-5 3xl:mt-12 z-10">
+        <div className="flex flex-col justify-between mb-16 relative 3xl:mt-12 z-10">
           <div className="flex w-full">
             <div className="relative z-50 w-3/5 xsm:w-[45%] lg:w-1/2">
               <motion.img

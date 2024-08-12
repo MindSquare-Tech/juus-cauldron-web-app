@@ -92,7 +92,7 @@ function Home() {
             type="range"
             min={0}
             max={100}
-            step={0.001}
+            step={1}
           />
         </div>
       </main>

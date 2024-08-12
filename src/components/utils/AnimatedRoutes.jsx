@@ -23,9 +23,9 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route index path="/" element={<Suspense fallback={<PageFallback />}><Home /></Suspense>}/>
-        <Route path="/home" element={<Suspense fallback={<PageFallback />}><Homee /></Suspense>} />
-        <Route path="/juus" element={<Suspense fallback={<PageFallback />}><JuusHome /></Suspense>} />
-        <Route path="/nova" element={<Suspense fallback={<PageFallback />}><NovaHome /></Suspense>} />
+        <Route path="home" element={<Suspense fallback={<PageFallback />}><Homee /></Suspense>} />
+        <Route path="juus" element={<Suspense fallback={<PageFallback />}><JuusHome /></Suspense>} />
+        <Route path="nova" element={<Suspense fallback={<PageFallback />}><NovaHome /></Suspense>} />
         <Route path="about" element={<Suspense fallback={<PageFallback />}><About /></Suspense>} />
         <Route path="shop" element={<Suspense fallback={<PageFallback />}><Shop /></Suspense>} />
         <Route path="faqs" element={<Suspense fallback={<PageFallback />}><FAQs /></Suspense>} />
