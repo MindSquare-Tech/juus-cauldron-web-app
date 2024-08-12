@@ -40,13 +40,14 @@ function Home() {
     let timer;
     if (showFullJuusSlide) {
       timer = setTimeout(() => {
-        navigator("/juus", { replace: true });
+        navigator("/juus");
       }, 1000);
     } else if (showFullNovaSlide) {
       timer = setTimeout(() => {
-        navigator("/nova", { replace: true });
+        navigator("/nova");
       }, 1000);
     }
+
     return () => clearTimeout(timer); // Cleanup timeout if dependencies change
   }, [showFullJuusSlide, showFullNovaSlide, navigator]);
 
