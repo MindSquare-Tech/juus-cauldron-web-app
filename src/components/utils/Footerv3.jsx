@@ -98,7 +98,7 @@ function Footerv3({ theme }) {
                 ></path>
               </svg>
             </a>
-            <a href="">
+            <a href="https://wa.me/923111155887" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="2em"

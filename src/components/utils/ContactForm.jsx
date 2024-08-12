@@ -22,7 +22,7 @@ function ContactForm() {
       };
 
       try {
-        const response = await fetch("https://juus-cauldron-web-backend-production.up.railway.app/contact", {
+        const response = await fetch("http://localhost:5000/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
