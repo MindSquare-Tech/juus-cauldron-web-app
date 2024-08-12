@@ -9,6 +9,7 @@ const JuusHeader = lazy(() => import("../../utils/JuusHeader.jsx"));
 import { setIsOpen } from "../../../redux/isOpenSlice.js";
 import Footerv2 from "../../utils/Footerv2.jsx";
 import Footerv3 from "../../utils/Footerv3.jsx";
+import JuusClosingBanners from "../../utils/JuusClosingBanners.jsx";
 const JuusExplosionVideo = lazy(() =>
   import("../../utils/JuusExplosionVideo.jsx")
 );
@@ -111,7 +112,8 @@ const JuusHome = memo(() => {
             </button>
           </Fade>
         </Link>
-        <motion.img
+        <JuusClosingBanners />
+        {/* <motion.img
           initial={{ x: "100%" }}
           whileInView={{ x: 0 }}
           transition={{ type: "spring", stiffness: 20, damping: 6 }}
@@ -119,7 +121,7 @@ const JuusHome = memo(() => {
           className=""
           src="https://juusstorage.blob.core.windows.net/creatives/Juus%20Home/home%20page%20banner.jpg"
           alt=""
-        />
+        /> */}
       </main>
       <div>
         <Footerv3 />

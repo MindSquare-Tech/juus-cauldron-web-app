@@ -16,6 +16,7 @@ const NovaShop = lazy(() => import("../pages/NovaShop/NovaShop.jsx"));
 const JuusShop = lazy(() => import("../pages/JuusShop/JuusShop.jsx"));
 const NovaHome = lazy(() => import("../pages/NovaHome/NovaHome.jsx"));
 const JuusHome = lazy(() => import("../pages/JuusHome/JuusHome.jsx"));
+const JuusClosingBanners = lazy(() => import("./JuusClosingBanners.jsx"));
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -30,7 +31,7 @@ function AnimatedRoutes() {
         <Route path="shop" element={<Suspense fallback={<PageFallback />}><Shop /></Suspense>} />
         <Route path="faqs" element={<Suspense fallback={<PageFallback />}><FAQs /></Suspense>} />
         <Route path="contact" element={<Suspense fallback={<PageFallback />}><Contact /></Suspense>} />
-        <Route path="test" element={<NovaSlide />}/>
+        <Route path="test" element={<JuusClosingBanners />}/>
         <Route path="nova/shop" element={<NovaShop />} />
         <Route path="juus/shop" element={<JuusShop />} />
         <Route path="*" element={<NotFound />} />

@@ -1,4 +1,4 @@
-import React, { lazy, memo, useState } from "react";
+import React, { lazy, memo, useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 import Footerv2 from "../../utils/Footerv2.jsx";
@@ -8,8 +8,22 @@ const Header = lazy(() => import("../../utils/Header.jsx"));
 const Certification = lazy(() => import("../../utils/Certification.jsx"));
 const Footer = lazy(() => import("../../utils/Footer.jsx"));
 
+const images = [
+  "https://juusstorage.blob.core.windows.net/website/images/about/about-main.png",
+  "https://juusstorage.blob.core.windows.net/website/images/about/about-main.png"
+];
+
 const About = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, []);
 
   return (
     <motion.div
@@ -42,11 +56,26 @@ const About = memo(() => {
           </article>
         </div>
         <div className="6xl:flex 6xl:flex-col">
-          <img
+          <div className="relative w-full h-60 xxxxs:h-64 xxxs:h-[17rem] xsm:h-[19rem] lg:h-[28rem] xl:h-[30rem] 3xl:h-[44rem] 4xl:h-[45rem] 5xl:h-[48rem] 6xl:h-[54rem]">
+          {images.map((image, index) => (
+            <motion.img
+            key={index}
+            className="absolute lg:scale-90 xl:scale-75 6xl:scale-[.65] my-5 lg:my-0 xl:-mb-16 3xl:-mb-28 4xl:-mb-36 6xl:-mb-40 3xl:-mt-16 6xl:-mt-40 3xl:w-full 6xl:self-center"
+            src={image}
+            initial={{ opacity: 0 }}
+          animate={{
+            opacity: currentIndex === index ? 1 : 0,
+            transition: { duration: 1, ease: 'easeInOut' },
+          }}
+          exit={{ opacity: 0 }}
+          />
+          ))}
+          </div>
+          {/* <img
             className="lg:scale-90 xl:scale-75 6xl:scale-[.65] my-5 lg:my-0 xl:-mb-16 3xl:-mb-28 4xl:-mb-36 6xl:-mb-40 3xl:-mt-16 6xl:-mt-40 3xl:w-full 6xl:self-center"
             src="https://juusstorage.blob.core.windows.net/website/images/about/about-main.png"
             alt=""
-          />
+          /> */}
           <Fade triggerOnce={true} direction="left">
             <img
               className="scale-75 lg:scale-[.65] xl:scale-[.55] 3xl:scale-[.55] 4xl:scale-50 6xl:scale-[.45] -ml-5 xxxxs:-ml-8 lg:-ml-24 xl:-ml-[10.5rem] 3xl:-ml-[13.5rem] 4xl:-ml-[16.75rem] 5xl:-ml-72 6xl:-ml-[26.75rem] -mb-3 lg:-mb-10 xl:-mb-16 3xl:-mb-24 4xl:-mb-32 6xl:-mb-16 3xl:-mt-20 6xl:-mt-40"
