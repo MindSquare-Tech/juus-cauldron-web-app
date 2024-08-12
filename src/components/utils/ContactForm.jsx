@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function ContactForm() {
   const [isNameInputFocused, setIsNameInputFocused] = useState(false);
   const [isEmailInputFocused, setIsEmailInputFocused] = useState(false);
+  const [buttonText, setButtontext] = useState("Send");
   const [isPhoneNumberInputFocused, setIsPhoneNumberInputFocused] =
     useState(false);
   const [isCommentInputFocused, setIsCommentInputFocused] = useState(false);
@@ -11,6 +12,21 @@ function ContactForm() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [comment, setComment] = useState("");
 
+  useEffect(() => {
+    if (name !== "") {
+      setIsNameInputFocused(true);
+    }
+    if (email !== "") {
+      setIsEmailInputFocused(true);
+    }
+    if (phoneNumber!== "") {
+      setIsPhoneNumberInputFocused(true);
+    }
+    if (comment!== "") {
+      setIsCommentInputFocused(true);
+    }
+  }, [name, email, phoneNumber, comment])
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (name !== "" && email !== "" && phoneNumber !== "" && comment !== "") {
@@ -20,6 +36,8 @@ function ContactForm() {
         phoneNumber,
         comment,
       };
+
+      setButtontext("Sending...");
 
       try {
         const response = await fetch("http://localhost:5000/contact", {
@@ -38,6 +56,11 @@ function ContactForm() {
           setPhoneNumber("");
           setComment("");
           alert("Query sent successfully!");
+          setButtontext("Send");
+          setIsNameInputFocused(false);
+          setIsEmailInputFocused(false);
+          setIsPhoneNumberInputFocused(false);
+          setIsCommentInputFocused(false);
         } else {
           // Handle error response
           // console.error("Error sending email");
@@ -61,13 +84,14 @@ function ContactForm() {
       <div className="my-4 3xl:my-6 flex justify-center items-center relative">
         <label
           className={`${
-            isNameInputFocused ? "-translate-y-3.5 text-[0.625rem]" : ""
+            isNameInputFocused ? "-translate-y-3.5 text-[0.6rem]" : ""
           } transition-transform absolute left-7 lg:left-12 text-sm text-zinc-500`}
           htmlFor="name"
         >
           Name
         </label>
         <input
+          value={name}
           onChange={(e) => setName(e.target.value)}
           onFocus={() => setIsNameInputFocused(true)}
           onBlur={(e) => {
@@ -84,13 +108,14 @@ function ContactForm() {
       <div className="my-4 3xl:my-6 flex justify-center items-center relative">
         <label
           className={`${
-            isEmailInputFocused ? "-translate-y-3.5 text-[0.625rem]" : ""
+            isEmailInputFocused ? "-translate-y-3.5 text-[0.6rem]" : ""
           } transition-transform absolute left-7 lg:left-12 text-sm text-zinc-500`}
           htmlFor="email"
         >
           Email
         </label>
         <input
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
           onFocus={() => setIsEmailInputFocused(true)}
           onBlur={(e) => {
@@ -107,13 +132,14 @@ function ContactForm() {
       <div className="my-4 3xl:my-6 flex justify-center items-center relative">
         <label
           className={`${
-            isPhoneNumberInputFocused ? "-translate-y-3.5 text-[0.625rem]" : ""
+            isPhoneNumberInputFocused ? "-translate-y-3.5 text-[0.6rem]" : ""
           } transition-transform absolute left-7 lg:left-12 text-sm text-zinc-500`}
           htmlFor="phone"
         >
           Phone No.
         </label>
         <input
+          value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
           onFocus={() => setIsPhoneNumberInputFocused(true)}
           onBlur={(e) => {
@@ -130,13 +156,14 @@ function ContactForm() {
       <div className="my-4 3xl:my-6 flex justify-center items-center relative">
         <label
           className={`${
-            isCommentInputFocused ? "-translate-y-3.5 text-[0.625rem]" : ""
+            isCommentInputFocused ? "-translate-y-3.5 text-[0.6rem]" : ""
           } transition-transform absolute top-3 left-7 lg:left-12 text-sm text-zinc-500`}
           htmlFor="comment"
         >
           Comment
         </label>
         <textarea
+          value={comment}
           onChange={(e) => setComment(e.target.value)}
           onFocus={() => setIsCommentInputFocused(true)}
           onBlur={(e) => {
@@ -157,7 +184,7 @@ function ContactForm() {
           onClick={handleSubmit}
           className="text-snow text-sm h-full w-full"
         >
-          Send
+          {buttonText}
         </button>
       </div>
     </form>

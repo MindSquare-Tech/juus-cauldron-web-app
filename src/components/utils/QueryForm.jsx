@@ -10,6 +10,19 @@ function QueryForm() {
   const [subject, setSubject] = useState("");
   const [description, setDescription] = useState("");
   const [email, setEmail] = useState("");
+  const [buttonText, setButtontext] = useState("Send");
+
+  useEffect(() => {
+    if (subject !== "") {
+      setTitleInputFocused(true);
+    }
+    if (description !== "") {
+      setTextareaFocused(true);
+    }
+    if (email!== "") {
+      setEmailInputFocused(true);
+    }
+  }, [subject, description, email])
 
   useEffect(() => {
     if (titleInputRef.current.value !== "") setTitleInputFocused(true);
@@ -45,6 +58,7 @@ function QueryForm() {
         description: description,
       };
 
+      setButtontext("Sending...");
       try {
         const response = await fetch("http://localhost:5000/faqs", {
           method: "POST",
@@ -61,6 +75,10 @@ function QueryForm() {
           setSubject("");
           setEmail("");
           setDescription("");
+          setButtontext("Send");
+          setEmailInputFocused(false);
+          setTextareaFocused(false);
+          setTitleInputFocused(false);
         } else {
           // Handle error response
           // console.error("Error sending email");
@@ -152,9 +170,9 @@ function QueryForm() {
       <div className="shadow-primary-shadow relative top-7 mt-4 bg-[#ff3333] rounded-xl w-32 h-12 flex justify-center items-center">
         <button
           onClick={handleSubmit}
-          className="text-white text-3xl bg-[#ff3333] w-full rounded-xl"
+          className="text-white text-2xl bg-[#ff3333] w-full rounded-xl"
         >
-          SEND
+          {buttonText}
         </button>
       </div>
     </form>
