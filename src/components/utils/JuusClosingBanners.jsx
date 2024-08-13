@@ -73,7 +73,7 @@ const JuusClosingBanners = () => {
                   className="w-full h-full object-contain"
                 />
               ) : (
-                <div className="relative object-contain">
+                <div className="object-contain">
                   {videoLoading && (
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                       <Spinner />
