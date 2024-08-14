@@ -1,63 +1,38 @@
-.swiper-button-prev {
-  color: snow !important;
-  top: 50% !important;
-  left: 40% !important;
-
-}
-.swiper-button-next {
-  color: snow !important;
-  top: 50% !important;
-  right: 40% !important;
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(0px);}
 }
 
-/* .swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
-  visibility: hidden;
-} */
-
-.swiper-button-next::after, .swiper-button-prev::after {
-  font-size: 24px !important;
+#slider {
+  width: calc(100% + 40px);
+  transition: transform 1s ease-in-out; /* Smooth transition */
+  animation: shake 0.8s infinite; /* Infinite shake animation */
 }
 
-.swiper-pagination-bullet-active, .swiper-pagination-bullet {
-  background-color: snow !important;
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 40px;
+  width: 40px;
+  background: url("../../../assets/arrows%20homepage.png");
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-size: contain;
+  cursor: pointer;
 }
-
-.swiper-pagination-bullet {
-  width: 6px !important;
-  height: 6px !important;
+/* The runnable track is not clcikable now and only the drag will change the value of the slide */
+#slider::-webkit-slider-runnable-track{
+  height: 0;
+  background-color: transparent;
 }
-
-.juus-component, .nova-component {
-  transition: all 10s ease-in-out 5s;
-}
-
-/* Slider Styles */
-
-:root {
-  --image-comparison-slider-width: 100vw;
-  --image-comparison-slider-handle-width: 50px;
-}
-
-#image-comparison-slider {
-  width: var(--image-comparison-slider-width);
+@media (min-width: 768px) {
+  #slider {
+    width: calc(100% + 54px);
+  }
+  #slider::-webkit-slider-thumb {
+    height: 54px;
+    width: 54px;
+  }
 
 }
-
-#image-comparison-slider .handle {
-  left: calc(50% - var(--image-comparison-slider-handle-width)/2);
-  width: var(--image-comparison-slider-handle-width);
-  /* transition: 0.25s cubic-bezier(.03,.98,.52,.99); */
-}
-
-#image-comparison-slider .handle-circle {
-  width: var(--image-comparison-slider-handle-width);
-  height: var(--image-comparison-slider-handle-width);
-}
-
-#image-comparison-slider .slide {
-  width: var(--image-comparison-slider-width);
-}
-
-/* #image-comparison-slider .img-wrapper {
-transform: translateZ(0);
-} */

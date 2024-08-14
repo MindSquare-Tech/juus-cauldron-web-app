@@ -1,12 +1,18 @@
-import { Outlet } from "react-router-dom";
-import Header from "./components/utils/Header";
+import React from "react";
+import AnimatedRoutes from "./components/utils/AnimatedRoutes.jsx";
+import ScrollToTop from "./components/utils/ScrollToTop.jsx";
+import { Provider } from "react-redux";
+import { store } from "./redux/store.js";
 
 function App() {
+
   return (
-    <div className="relative">
-      {/* <Header /> */}
-      <Outlet />
+    <Provider store={store}>
+    <div className="relative font-jost">
+        <ScrollToTop />
+        <AnimatedRoutes />
     </div>
+    </Provider>
   );
 }
 

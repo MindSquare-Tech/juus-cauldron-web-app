@@ -1,138 +1,103 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./Home.css";
-import SplitJuusSlide from "../../utils/SplitJuusSlide.jsx";
-import SplitNovaSlide from "../../utils/SplitNovaSlide.jsx";
+import Header from "../../utils/Header.jsx";
 import FullJuusSlide from "../../utils/FullJuusSlide.jsx";
 import FullNovaSlide from "../../utils/FullNovaSlide.jsx";
-import Header from "../../utils/Header.jsx";
+
+import "./Home.css";
+import "../../../index.css";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import HomePageText from "../../utils/HomePageText.jsx";
 
 function Home() {
-  let isSliderLocked = false;
-  const sliderRef = useRef(null);
-  const sliderHandleRef = useRef(null);
-  const sliderImgWrapperRef = useRef(null);
-  const [showSlideA, setShowSlideA] = useState(false);
-  const [showSlideB, setShowSlideB] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [slideValue, setSlideValue] = useState(50);
+  const [showFullJuusSlide, setShowFullJuusSlide] = useState(false);
+  const [showFullNovaSlide, setShowFullNovaSlide] = useState(false);
+  const navigator = useNavigate();
 
-  const checkWidth = () => {
-    if (sliderImgWrapperRef.current) {
-      const elementWidth = sliderImgWrapperRef.current.offsetWidth;
-      const parentWidth = sliderImgWrapperRef.current.parentElement.offsetWidth;
-      const widthPercentage = (elementWidth / parentWidth) * 100;
-
-      if (widthPercentage <= 20) {
-        setShowSlideA(true);
-        setShowSlideB(false);
-      } else if (widthPercentage >= 80) {
-        setShowSlideA(false);
-        setShowSlideB(true);
-      } else {
-        setShowSlideA(false);
-        setShowSlideB(false);
-      }
+  const handleSliderDragEnd = () => {
+    console.log("drag ended");
+    if (slideValue > 20 && slideValue < 80) {
+      setSlideValue(50);
     }
   };
 
-  function sliderMouseMove(event) {
-    checkWidth();
-    if (isSliderLocked) return;
-    // console.log(event);
-    const sliderLeftX = sliderRef.current.offsetLeft;
-    const sliderWidth = sliderRef.current.clientWidth;
-    const sliderHandleWidth = sliderHandleRef.current.clientWidth;
+  useEffect(() => {
+    if (slideValue >= 80) {
+      setShowFullJuusSlide(true);
+      setShowFullNovaSlide(false);
+    } else if (slideValue <= 20) {
+      setShowFullJuusSlide(false);
+      setShowFullNovaSlide(true);
+    } else {
+      setShowFullJuusSlide(false);
+      setShowFullNovaSlide(false);
+    }
+  }, [slideValue]);
 
-    let mouseX = (event.clientX || event.touches[0].clientX) - sliderLeftX;
-    if (mouseX < 0) mouseX = 0;
-    else if (mouseX > sliderWidth) mouseX = sliderWidth;
+  useEffect(() => {
+    let timer;
+    if (showFullJuusSlide) {
+      timer = setTimeout(() => {
+        navigator("/juus");
+      }, 1000);
+    } else if (showFullNovaSlide) {
+      timer = setTimeout(() => {
+        navigator("/nova");
+      }, 1000);
+    }
 
-    sliderImgWrapperRef.current.style.width = `${(
-      (1 - mouseX / sliderWidth) *
-      100
-    ).toFixed(4)}%`;
-    sliderHandleRef.current.style.left = `calc(${(
-      (mouseX / sliderWidth) *
-      100
-    ).toFixed(4)}% - ${sliderHandleWidth / 2}px)`;
-  }
+    return () => clearTimeout(timer); // Cleanup timeout if dependencies change
+  }, [showFullJuusSlide, showFullNovaSlide, navigator]);
 
-  function sliderMouseDown(event) {
-    checkWidth();
-    if (isSliderLocked) isSliderLocked = false;
-    sliderMouseMove(event);
-  }
+  const handleSliderDrag = (e) => {
+    console.log(slideValue);
+    setSlideValue(e.target.value);
+  };
 
-  function sliderMouseUp() {
-    if (!isSliderLocked) isSliderLocked = true;
-  }
+  const clipPathStyle = {
+    clipPath: `polygon(0 0, ${slideValue}% 0, ${slideValue}% 100%, 0 100%)`,
+  };
 
-  function sliderMouseLeave() {
-    if (isSliderLocked) isSliderLocked = false;
-  }
   return (
-    <>
-      <Header />
-      <div className="w-full h-screen flex items-center justify-center">
-        <div
-          ref={sliderRef}
-          onMouseMove={sliderMouseMove}
-          onTouchMove={sliderMouseMove}
-          
-          onTouchStart={sliderMouseDown}
-          onMouseUp={sliderMouseUp}
-          onTouchEnd={sliderMouseUp}
-          onMouseLeave={sliderMouseLeave}
-          id="image-comparison-slider"
-          className="relative overflow-hidden"
-        >
-          <div className="slide block h-auto object-cover">
-            {showSlideA ? <FullJuusSlide /> : <SplitJuusSlide />}
-          </div>
-          <div
-            ref={sliderImgWrapperRef}
-            className="img-wrapper absolute top-0 right-0 w-1/2 h-full overflow-hidden"
-          >
-            <div className="slide absolute top-0 right-0 h-full object-cover">
-              {showSlideB ? <FullNovaSlide /> : <SplitNovaSlide />}
-            </div>
-          </div>
-          <div
-            ref={sliderHandleRef}
-            className="handle absolute top-0 h-full flex flex-col justify-center items-center z-20"
-            onMouseEnter={sliderMouseLeave}
-          >
-            <div className="handle-line w-0.5 grow bg-white"></div>
-            <div className="handle-circle text-white shadow-primary-shadow bg-yellow-400 rounded-[50%] flex items-center justify-evenly">
-              <svg
-                className={``}
-                xmlns="http://www.w3.org/2000/svg"
-                width="1em"
-                height="1em"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill="white"
-                  d="M2.786 11.318c-1.048-.567-1.048-2.07 0-2.638l11.998-6.5A1.5 1.5 0 0 1 17 3.5v12.999a1.5 1.5 0 0 1-2.215 1.319zm.476-1.758a.5.5 0 0 0 0 .879l11.998 6.5a.5.5 0 0 0 .739-.44v-13a.5.5 0 0 0-.739-.439z"
-                ></path>
-              </svg>
-              <svg
-                className={``}
-                xmlns="http://www.w3.org/2000/svg"
-                width="1em"
-                height="1em"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill="white"
-                  d="M17.215 11.318c1.047-.567 1.047-2.07 0-2.638L5.216 2.18A1.5 1.5 0 0 0 3.002 3.5v12.999a1.5 1.5 0 0 0 2.214 1.319zm-.476-1.758a.5.5 0 0 1 0 .879l-11.999 6.5a.5.5 0 0 1-.738-.44v-13a.5.5 0 0 1 .738-.439z"
-                ></path>
-              </svg>
-            </div>
-            <div className="handle-line w-0.5 grow bg-white"></div>
-          </div>
-        </div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      <div>
+        <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
-    </>
+      <main className={`h-screen w-full relative overflow-hidden ${isOpen && "brightness-95"}`} onClick={() => setIsOpen(false)}>
+        <HomePageText sliderValue={slideValue} setSliderValue={setSlideValue} />
+        <div className="w-full h-full absolute">
+          <FullNovaSlide isOpen={isOpen} sliderValue={slideValue} setSliderValue={setSlideValue} />
+        </div>
+        <div
+          className="w-full h-full absolute transition-[clip-path] duration-200 delay-0 ease-custom-ease"
+          style={clipPathStyle}
+        >
+          <FullJuusSlide sliderValue={slideValue} setSliderValue={setSlideValue} />
+        </div>
+        <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
+          <input
+            value={slideValue}
+            onChange={handleSliderDrag}
+            onMouseUp={handleSliderDragEnd}
+            onTouchEnd={handleSliderDragEnd}
+            id="slider"
+            className="h-0 appearance-none -ml-5 lg:-ml-[27px] outline-none bg-transparent"
+            type="range"
+            min={0}
+            max={100}
+            step={1}
+          />
+        </div>
+      </main>
+    </motion.div>
   );
 }
-// onMouseDown={sliderMouseDown}
+
 export default Home;
