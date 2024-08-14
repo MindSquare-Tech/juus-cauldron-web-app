@@ -1,16 +1,14 @@
 import React, { lazy, memo, useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
-import Footerv2 from "../../utils/Footerv2.jsx";
-import Footerv3 from "../../utils/Footerv3.jsx";
-const AboutVideo = lazy(() => import("../../utils/AboutVideo.jsx"));
 const Header = lazy(() => import("../../utils/Header.jsx"));
+const AboutVideo = lazy(() => import("../../utils/AboutVideo.jsx"));
 const Certification = lazy(() => import("../../utils/Certification.jsx"));
-const Footer = lazy(() => import("../../utils/Footer.jsx"));
+const Footerv3 = lazy(() => import("../../utils/Footerv3.jsx"));
 
 const images = [
   "https://juusstorage.blob.core.windows.net/website/images/about/about-main.png",
-  "https://juusstorage.blob.core.windows.net/website/images/about/about-main.png"
+  "https://juusstorage.blob.core.windows.net/website/images/about/about-main.png",
 ];
 
 const About = memo(() => {
@@ -44,32 +42,32 @@ const About = memo(() => {
                 Our journey started in the research facilities of New Zealand. A
                 never-ending storm of difficulties but in these difficult times,
                 we were clear about the vision to bring the highest quality to
-                our consumers. 
+                our consumers.
                 <br />
                 <br />
-                We involved the best scientists from around the
-                world, with the sole purpose of creating products, in accordance
-                with Pakistan's audience. Finally we came home with the best
-                that can be offered: Flavors custom made for you!
+                We involved the best scientists from around the world, with the
+                sole purpose of creating products, in accordance with Pakistan's
+                audience. Finally we came home with the best that can be
+                offered: Flavors custom made for you!
               </p>
             </Fade>
           </article>
         </div>
         <div className="6xl:flex 6xl:flex-col">
           <div className="relative w-full h-60 xxxxs:h-64 xxxs:h-[17rem] xsm:h-[19rem] lg:h-[28rem] xl:h-[30rem] 3xl:h-[44rem] 4xl:h-[45rem] 5xl:h-[48rem] 6xl:h-[54rem]">
-          {images.map((image, index) => (
-            <motion.img
-            key={index}
-            className="absolute lg:scale-90 xl:scale-75 6xl:scale-[.65] my-5 lg:my-0 xl:-mb-16 3xl:-mb-28 4xl:-mb-36 6xl:-mb-40 3xl:-mt-16 6xl:-mt-40 3xl:w-full 6xl:self-center"
-            src={image}
-            initial={{ opacity: 0 }}
-          animate={{
-            opacity: currentIndex === index ? 1 : 0,
-            transition: { duration: 1, ease: 'easeInOut' },
-          }}
-          exit={{ opacity: 0 }}
-          />
-          ))}
+            {images.map((image, index) => (
+              <motion.img
+                key={index}
+                className="absolute lg:scale-90 xl:scale-75 6xl:scale-[.65] my-5 lg:my-0 xl:-mb-16 3xl:-mb-28 4xl:-mb-36 6xl:-mb-40 3xl:-mt-16 6xl:-mt-40 3xl:w-full 6xl:self-center"
+                src={image}
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: currentIndex === index ? 1 : 0,
+                  transition: { duration: 1, ease: "easeInOut" },
+                }}
+                exit={{ opacity: 0 }}
+              />
+            ))}
           </div>
           {/* <img
             className="lg:scale-90 xl:scale-75 6xl:scale-[.65] my-5 lg:my-0 xl:-mb-16 3xl:-mb-28 4xl:-mb-36 6xl:-mb-40 3xl:-mt-16 6xl:-mt-40 3xl:w-full 6xl:self-center"

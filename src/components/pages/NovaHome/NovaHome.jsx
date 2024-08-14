@@ -2,10 +2,8 @@ import React, { lazy, memo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
-import Footerv2 from "../../utils/Footerv2";
-import Footerv3 from "../../utils/Footerv3";
-const Footer = lazy(() => import("../../utils/Footer"));
 const NovaHeader = lazy(() => import("../../utils/NovaHeader"));
+const Footerv3 = lazy(() => import("../../utils/Footerv3.jsx"));
 
 const NovaHome = memo(() => {
   const [isOpen, setIsOpen] = useState(false);

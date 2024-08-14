@@ -2,7 +2,11 @@ import React from "react";
 
 function Spinner() {
   return (
-    <svg className="w-14 h-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <svg
+      className="w-14 h-14"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 200 200"
+    >
       <radialGradient
         id="a12"
         cx=".66"

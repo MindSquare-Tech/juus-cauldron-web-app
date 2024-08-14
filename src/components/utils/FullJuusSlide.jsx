@@ -1,8 +1,5 @@
-import React, { memo, useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { memo, useRef } from "react";
 import { Fade } from "react-awesome-reveal";
-import { motion } from "framer-motion";
-import FullNovaSlide from "./FullNovaSlide";
 import classNames from 'classnames';
 
 

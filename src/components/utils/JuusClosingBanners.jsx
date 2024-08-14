@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Spinner from "./Spinner"; // Import your Spinner component
+import Spinner from "./Spinner";
 
 const JuusClosingBanners = () => {
   const [isPlaying, setIsPlaying] = useState(false);

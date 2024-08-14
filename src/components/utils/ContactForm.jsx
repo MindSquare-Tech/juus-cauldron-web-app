@@ -19,14 +19,14 @@ function ContactForm() {
     if (email !== "") {
       setIsEmailInputFocused(true);
     }
-    if (phoneNumber!== "") {
+    if (phoneNumber !== "") {
       setIsPhoneNumberInputFocused(true);
     }
-    if (comment!== "") {
+    if (comment !== "") {
       setIsCommentInputFocused(true);
     }
-  }, [name, email, phoneNumber, comment])
-  
+  }, [name, email, phoneNumber, comment]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (name !== "" && email !== "" && phoneNumber !== "" && comment !== "") {

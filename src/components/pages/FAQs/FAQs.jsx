@@ -1,12 +1,10 @@
 import React, { lazy, memo, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
-import Footerv2 from "../../utils/Footerv2.jsx";
-import Footerv3 from "../../utils/Footerv3.jsx";
 const Header = lazy(() => import("../../utils/Header.jsx"));
-const FaqAccordion = lazy(() => import("../../utils/FaqAccordion.jsx"));
 const QueryForm = lazy(() => import("../../utils/QueryForm.jsx"));
-const Footer = lazy(() => import("../../utils/Footer.jsx"));
+const FaqAccordion = lazy(() => import("../../utils/FaqAccordion.jsx"));
+const Footerv3 = lazy(() => import("../../utils/Footerv3.jsx"));
 
 const FAQsArr = [
   {
@@ -116,9 +114,13 @@ const FAQs = memo(() => {
       <div>
         <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
-      <section style={{
-        backgroundImage: `url(${"https://juusstorage.blob.core.windows.net/creatives/FAQs%20Page/background%20(1).png"})`,
-      }} className="pt-20" onClick={() => setIsOpen(false)}>
+      <section
+        style={{
+          backgroundImage: `url(${"https://juusstorage.blob.core.windows.net/creatives/FAQs%20Page/background%20(1).png"})`,
+        }}
+        className="pt-20"
+        onClick={() => setIsOpen(false)}
+      >
         <img
           className="-mt-5 lg:mb-3 xl:mb-5 3xl:mb-8 w-full lg:scale-y-105 3xl:scale-y-110 3xl:h-[30rem] 4xl:h-[31.25rem] 6xl:h-[33.75rem]"
           rel="preload"
@@ -160,7 +162,7 @@ const FAQs = memo(() => {
         </div>
       </main>
       <div>
-        <Footerv3  />
+        <Footerv3 />
       </div>
     </motion.div>
   );

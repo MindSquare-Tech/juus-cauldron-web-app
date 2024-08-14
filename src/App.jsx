@@ -5,13 +5,12 @@ import { Provider } from "react-redux";
 import { store } from "./redux/store.js";
 
 function App() {
-
   return (
     <Provider store={store}>
-    <div className="relative font-jost">
+      <div className="relative font-jost">
         <ScrollToTop />
         <AnimatedRoutes />
-    </div>
+      </div>
     </Provider>
   );
 }

@@ -1,13 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
-import Header from "../../utils/Header.jsx";
-import FullJuusSlide from "../../utils/FullJuusSlide.jsx";
-import FullNovaSlide from "../../utils/FullNovaSlide.jsx";
-
-import "./Home.css";
-import "../../../index.css";
+import React, { useState, useEffect, lazy } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import HomePageText from "../../utils/HomePageText.jsx";
+const Header = lazy(() => import("../../utils/Header.jsx"));
+const FullJuusSlide = lazy(() => import("../../utils/FullJuusSlide.jsx"));
+const FullNovaSlide = lazy(() => import("../../utils/FullNovaSlide.jsx"));
+const HomePageText = lazy(() => import("../../utils/HomePageText.jsx"));
+import "../../../index.css";
+import "./Home.css";
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,16 +69,28 @@ function Home() {
       <div>
         <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
-      <main className={`h-screen w-full relative overflow-hidden ${isOpen && "brightness-95"}`} onClick={() => setIsOpen(false)}>
+      <main
+        className={`h-screen w-full relative overflow-hidden ${
+          isOpen && "brightness-95"
+        }`}
+        onClick={() => setIsOpen(false)}
+      >
         <HomePageText sliderValue={slideValue} setSliderValue={setSlideValue} />
         <div className="w-full h-full absolute">
-          <FullNovaSlide isOpen={isOpen} sliderValue={slideValue} setSliderValue={setSlideValue} />
+          <FullNovaSlide
+            isOpen={isOpen}
+            sliderValue={slideValue}
+            setSliderValue={setSlideValue}
+          />
         </div>
         <div
           className="w-full h-full absolute transition-[clip-path] duration-200 delay-0 ease-custom-ease"
           style={clipPathStyle}
         >
-          <FullJuusSlide sliderValue={slideValue} setSliderValue={setSlideValue} />
+          <FullJuusSlide
+            sliderValue={slideValue}
+            setSliderValue={setSlideValue}
+          />
         </div>
         <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
           <input

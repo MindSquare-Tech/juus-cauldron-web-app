@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
-import { Fade } from "react-awesome-reveal";
-import { Link, useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 function Footerv3({ theme }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -35,7 +34,6 @@ function Footerv3({ theme }) {
   return (
     <footer
       style={{
-        background: "rgb(222,224,226)",
         background: backgroundStyle,
       }}
       className={`text-white w-full h-52 lg:h-auto overflow-hidden ${
@@ -72,7 +70,11 @@ function Footerv3({ theme }) {
                 ></path>
               </svg>
             </a>
-            <a className="xsm:px-1" target="_blank" href={"https://www.instagram.com/official.juus"}>
+            <a
+              className="xsm:px-1"
+              target="_blank"
+              href={"https://www.instagram.com/official.juus"}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="2em"
@@ -85,7 +87,11 @@ function Footerv3({ theme }) {
                 ></path>
               </svg>
             </a>
-            <a className="xsm:px-1" target="_blank" href="https://www.youtube.com/@JuusPakistan">
+            <a
+              className="xsm:px-1"
+              target="_blank"
+              href="https://www.youtube.com/@JuusPakistan"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="2em"

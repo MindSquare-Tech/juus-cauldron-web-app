@@ -19,10 +19,10 @@ function QueryForm() {
     if (description !== "") {
       setTextareaFocused(true);
     }
-    if (email!== "") {
+    if (email !== "") {
       setEmailInputFocused(true);
     }
-  }, [subject, description, email])
+  }, [subject, description, email]);
 
   useEffect(() => {
     if (titleInputRef.current.value !== "") setTitleInputFocused(true);

@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Fade } from "react-awesome-reveal";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Footer({ theme }) {
   const [isEmailFieldFocused, setIsEmailFieldFocused] = useState(false);
@@ -65,7 +65,10 @@ function Footer({ theme }) {
             </svg>
           </div>
           <div className="flex items-center justify-center h-5">
-            <a target="_blank" href={"https://www.facebook.com/profile.php?id=61550934897741"}>
+            <a
+              target="_blank"
+              href={"https://www.facebook.com/profile.php?id=61550934897741"}
+            >
               <img
                 className="h-5"
                 src="https://juusstorage.blob.core.windows.net/website/images/general/facebook-white.png"

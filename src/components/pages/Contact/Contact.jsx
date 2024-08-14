@@ -1,11 +1,9 @@
-import React, {useState} from "react";
+import React, { lazy, useState } from "react";
 import Header from "../../utils/Header.jsx";
-import Footer from "../../utils/Footer";
 import { motion } from "framer-motion";
-import ContactCards from "../../utils/ContactCards.jsx";
-import ContactForm from "../../utils/ContactForm.jsx";
-import Footerv2 from "../../utils/Footerv2.jsx";
-import Footerv3 from "../../utils/Footerv3.jsx";
+const ContactCards = lazy(() => import("../../utils/ContactCards.jsx"));
+const ContactForm = lazy(() => import("../../utils/ContactForm.jsx"));
+const Footerv3 = lazy(() => import("../../utils/Footerv3.jsx"));
 
 function Contact() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +18,9 @@ function Contact() {
         <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
       <main className="pt-32" onClick={() => setIsOpen(false)}>
-        <h1 className="text-center text-3xl lg:text-4xl font-light lg:font-normal">Get In Touch</h1>
+        <h1 className="text-center text-3xl lg:text-4xl font-light lg:font-normal">
+          Get In Touch
+        </h1>
         <ContactForm />
         <ContactCards />
       </main>

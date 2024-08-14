@@ -3,13 +3,12 @@ import React, { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 
-
-  const calculateJump = () => {
-    if (window.innerWidth >= 1920) return 10;
-    if (window.innerWidth >= 1280) return 6;
-    if (window.innerWidth >= 768) return 3;
-    return 1;
-  }
+const calculateJump = () => {
+  if (window.innerWidth >= 1920) return 10;
+  if (window.innerWidth >= 1280) return 6;
+  if (window.innerWidth >= 768) return 3;
+  return 1;
+};
 function HomePageText({ sliderValue, setSliderValue }) {
   const [previousSliderValue, setPreviousSliderValue] = useState(50);
   const [leftPosition, setLeftPosition] = useState(0);

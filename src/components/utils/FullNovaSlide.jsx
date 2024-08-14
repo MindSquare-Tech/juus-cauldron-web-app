@@ -1,7 +1,5 @@
-import React, { memo, useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { memo, useRef } from "react";
 import { Fade } from "react-awesome-reveal";
-import { motion } from "framer-motion";
 import classNames from "classnames";
 
 const FullNovaSlide = memo(({ isOpen, sliderValue, setSliderValue }) => {
