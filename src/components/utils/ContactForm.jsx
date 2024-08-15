@@ -40,7 +40,7 @@ function ContactForm() {
       setButtontext("Sending...");
 
       try {
-        const response = await fetch("http://localhost:5000/contact", {
+        const response = await fetch("http://localhost:4000/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -64,15 +64,18 @@ function ContactForm() {
         } else {
           // Handle error response
           // console.error("Error sending email");
+          setButtontext("Send");
           alert("Error sending email.1");
         }
       } catch (error) {
         // Handle network error
         // console.error("Network error:", error);
+        setButtontext("Send");
         alert("Error sending email", error);
       }
     } else {
       // console.error("Please fill in all fields");
+      setButtontext("Send");
       alert("Please fill in all fields.");
     }
   };

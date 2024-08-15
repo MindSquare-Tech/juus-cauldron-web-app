@@ -312,7 +312,7 @@ const NovaHome = memo(() => {
         </div>
         <Link
           className="self-center mt-36 lg:mt-60"
-          to={"https://juus.pk/pages/shop"}
+          to={"https://shop.juus.pk/"}
         >
           <Fade direction="down" duration={500} delay={150}>
             <button className="select-none cursor-pointer flex items-center justify-between p-2 w-40 lg:w-56 xl:w-72 h-7 lg:h-11 text-white text-sm lg border-2 rounded-xl hover:bg-snow hover:text-rich-black hover:shadow-primary-shadow hover:shadow-snow transition shadow-primary-shadow relative z-20">
