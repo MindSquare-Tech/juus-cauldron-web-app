@@ -67,7 +67,7 @@ const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
               '6xl:scale-[.475]': sliderValue >= 75 && sliderValue < 80,
               '6xl:scale-[.49]': sliderValue >= 80,
             })}`}
-            src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/green%20apple%20%20bottle%20new.png"
+            src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/greenAppleBottleSmall.png"
             alt="Juus Bottle"
           />
         </Fade>

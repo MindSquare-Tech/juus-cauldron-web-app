@@ -69,7 +69,7 @@ const FullNovaSlide = memo(({ isOpen, sliderValue, setSliderValue }) => {
               '6xl:scale-[.475]': sliderValue <= 25 && sliderValue > 20,
               '6xl:scale-[.49]': sliderValue <= 20,
             })}`}
-            src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/orignal%20bottle%20new%2014x14.png"
+            src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/originalNovaBottle.png"
             alt="Nova Bottle"
           />
         </Fade>

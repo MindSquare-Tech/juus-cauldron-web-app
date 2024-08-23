@@ -11,8 +11,9 @@ function PageFallback() {
     >
       <div className="w-16 h-16 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse">
         <img
-          src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/Juus%20cauldron%20logo%20white.png"
-          alt=""
+          loading="lazy"
+          src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/juusCauldronLogo.png"
+          alt="Juus Cauldron Logo"
         />
       </div>
     </motion.div>

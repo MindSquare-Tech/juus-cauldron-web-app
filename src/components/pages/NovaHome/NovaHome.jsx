@@ -28,7 +28,7 @@ const NovaHome = memo(() => {
           <img
             loading="lazy"
             className="6xl:w-full"
-            src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/nova main banner.jpg"
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/novaMainBannerSmall.jpg"
             alt=""
           />
         </div>
@@ -127,7 +127,7 @@ const NovaHome = memo(() => {
                 }}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
                 className="flex-1 z-50 relative"
-                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Cardamom%20bottle.png"
+                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/cardamomNovaSmall.png"
                 alt="Cardamom Bottle"
               />
             </div>
@@ -203,7 +203,7 @@ const NovaHome = memo(() => {
                 }}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
                 className="flex-1 pr-3"
-                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/final%20vnl%20(1).png"
+                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/vanillaNovaSmall.png"
                 alt="Vanilla Bottle"
               />
             </div>
@@ -231,7 +231,7 @@ const NovaHome = memo(() => {
                 }}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
                 className="flex-1 pl-3 xxxxs:pl-4"
-                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/final%20org.png"
+                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/originalNovaSmall.png"
                 alt="Original Bottle"
               />
             </div>
@@ -272,7 +272,7 @@ const NovaHome = memo(() => {
           <img
             loading="lazy"
             className="absolute z-0 opacity-40 -rotate-90 top-0 left-0 -translate-x-[40%]"
-            src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Doodle%20art.png"
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/doodleArtNovaSmall.png"
             alt="Upper doodle"
           />
           <img
@@ -290,8 +290,8 @@ const NovaHome = memo(() => {
           <img
             loading="lazy"
             className="pointer-events-none absolute -bottom-60 translate-y-3/4 xxxxs:translate-y-[70.5%] xxxs:translate-y-[69%] xxs:translate-y-[67.5%] xsm:translate-y-[65.3%] lg:translate-y-[69.7%] xl:translate-y-[63.75%] 3xl:translate-y-[51%] 4xl:translate-y-[50.25%] 5xl:translate-y-[49.1%] 6xl:translate-y-[44%]"
-            src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/brush.png"
-            alt="ending gradient"
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/brushSmall.png"
+            alt="ending brush gradient"
           />
         </div>
         {/* <Fade direction="up" delay={1000} triggerOnce={true}> */}
@@ -304,7 +304,7 @@ const NovaHome = memo(() => {
           <img
             loading="lazy"
             className="relative z-50 mt-10 3xl:mt-0 6xl:-mt-10 xl:scale-[.85] 3xl:scale-75 4xl:scale-[.7] 6xl:scale-[.6]"
-            src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/calories.png"
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/caloriesNovaSmall.png"
             alt=""
           />
         </motion.div>
@@ -317,7 +317,7 @@ const NovaHome = memo(() => {
           <img
             loading="lazy"
             className={`-z-50 opacity-40`}
-            src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Doodle%20art.png"
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/doodleArtNovaSmall.png"
             alt=""
           />
         </div>

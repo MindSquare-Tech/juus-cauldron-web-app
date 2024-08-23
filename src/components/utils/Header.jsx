@@ -99,9 +99,10 @@ function Header({ isOpen, setIsOpen }) {
             to={"/"}
           >
             <img
+              loading="lazy"
               className="scale-[.85] h-16 cursor-pointer select-none lg:mr-0.5 xl:mr-9"
-              src="https://juusstorage.blob.core.windows.net/creatives/Homepage JC/Juus cauldron logo white.png"
-              alt=""
+              src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/juusCauldronLogo.png"
+              alt="Juus Cauldron Logo"
             />
           </Link>
           {!isMobile && <NavLinks />}
