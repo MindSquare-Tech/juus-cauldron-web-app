@@ -26,6 +26,7 @@ const NovaHome = memo(() => {
       >
         <div className="">
           <img
+            loading="lazy"
             className="6xl:w-full"
             src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/nova main banner.jpg"
             alt=""
@@ -107,6 +108,7 @@ const NovaHome = memo(() => {
           <div className="flex w-full">
             <div className="relative z-50 w-3/5 xsm:w-[45%] lg:w-1/2">
               <motion.img
+                loading="lazy"
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: "-100%" }}
                 whileInView={{
@@ -181,6 +183,7 @@ const NovaHome = memo(() => {
             </div>
             <div className="w-1/2 -z-10 xsm:w-[45%] lg:w-1/2">
               <motion.img
+                loading="lazy"
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: "100%" }}
                 whileInView={{
@@ -208,6 +211,7 @@ const NovaHome = memo(() => {
           <div className="flex w-full">
             <div className="w-3/5 xsm:w-[45%] lg:w-1/2">
               <motion.img
+                loading="lazy"
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: "-100%" }}
                 whileInView={{
@@ -259,27 +263,32 @@ const NovaHome = memo(() => {
           {/* upper doodle and right and left placed wave */}
 
           <img
+            loading="lazy"
             className="absolute top-0 -translate-y-2/3 scale-x-105 z-20"
             src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/center%20color.png"
             alt=""
           />
 
           <img
+            loading="lazy"
             className="absolute z-0 opacity-40 -rotate-90 top-0 left-0 -translate-x-[40%]"
             src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Doodle%20art.png"
             alt="Upper doodle"
           />
           <img
+            loading="lazy"
             className="absolute rotate-[88deg] scale-y-125 translate-x-1/2 -right-2"
             src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/center%20color.png"
             alt=""
           />
           <img
+            loading="lazy"
             className="absolute -rotate-[95deg] scale-y-150 top-[40%] -translate-x-1/2 -left-3.5"
             src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/center%20color.png"
             alt=""
           />
           <img
+            loading="lazy"
             className="pointer-events-none absolute -bottom-60 translate-y-3/4 xxxxs:translate-y-[70.5%] xxxs:translate-y-[69%] xxs:translate-y-[67.5%] xsm:translate-y-[65.3%] lg:translate-y-[69.7%] xl:translate-y-[63.75%] 3xl:translate-y-[51%] 4xl:translate-y-[50.25%] 5xl:translate-y-[49.1%] 6xl:translate-y-[44%]"
             src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/brush.png"
             alt="ending gradient"
@@ -293,6 +302,7 @@ const NovaHome = memo(() => {
           viewport={{ once: true }}
         >
           <img
+            loading="lazy"
             className="relative z-50 mt-10 3xl:mt-0 6xl:-mt-10 xl:scale-[.85] 3xl:scale-75 4xl:scale-[.7] 6xl:scale-[.6]"
             src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/calories.png"
             alt=""
@@ -305,6 +315,7 @@ const NovaHome = memo(() => {
           } pointer-events-none rotate-90 -bottom-5 -right-32`}
         >
           <img
+            loading="lazy"
             className={`-z-50 opacity-40`}
             src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Doodle%20art.png"
             alt=""

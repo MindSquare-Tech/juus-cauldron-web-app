@@ -2,7 +2,6 @@ import React, { memo, useRef } from "react";
 import { Fade } from "react-awesome-reveal";
 import classNames from 'classnames';
 
-
 const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
   const scaleClass = classNames({
     'scale-[1.1]': sliderValue < 55,
@@ -14,7 +13,7 @@ const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
     'scale-[1.22]': sliderValue >= 80
   });
   const juusImgRef = useRef(null);
-
+  
   return (
     <div className="relative h-auto">
       <div
