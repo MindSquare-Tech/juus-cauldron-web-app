@@ -22,11 +22,8 @@ const FullNovaSlide = memo(({ isOpen, sliderValue, setSliderValue }) => {
   return (
     <div className="relative h-auto">
       <div
-        style={{
-          backgroundImage: `url(${"https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/Nova%20background.png"})`,
-        }}
         onClick={handleRightHalfClick}
-        className={`flex flex-col justify-evenly sm:justify-evenly lg:justify-around 2xl:justify-evenly items-center relative overflow-hidden h-screen max-h-screen w-full max-w-full bg-cover bg-center xl:bg-top`}
+        className={`from-[#3df2f0] via-[#44f7f4] to-[#1fdbd9] bg-gradient-to-tl flex flex-col justify-evenly sm:justify-evenly lg:justify-around 2xl:justify-evenly items-center relative overflow-hidden h-screen max-h-screen w-full max-w-full bg-cover bg-center xl:bg-top`}
       >
         <Fade triggerOnce={true}>
           <img

@@ -19,10 +19,10 @@ const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
     <div className="relative h-auto">
       <div
         style={{
-          backgroundImage: `url(${"https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/Background%20Greenapple.png"})`,
+          background: `radial-gradient(circle, rgba(247,248,203,1) 10%, rgba(50,162,26,1) 85%)`,
         }}
         onClick={() => setSliderValue(95)}
-        className={`flex flex-col justify-evenly sm:justify-evenly lg:justify-around 2xl:justify-evenly items-center relative overflow-hidden h-screen bg-cover bg-center xl:bg-bottom`}
+        className={` flex flex-col justify-evenly sm:justify-evenly lg:justify-around 2xl:justify-evenly items-center relative overflow-hidden h-screen bg-cover bg-center xl:bg-bottom`}
       >
         <Fade triggerOnce={true}>
           <img
