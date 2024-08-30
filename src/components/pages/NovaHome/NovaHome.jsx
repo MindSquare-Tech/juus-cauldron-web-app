@@ -155,6 +155,13 @@ const NovaHome = memo(() => {
                   delight."
                 </p>
               </Fade>
+              <Link className="self-end mt-2 lg:mt-5 3xl:mt-8 6xl:mt-12" to="https://juus.pk/products/nova-liquid-sweetner-vanilla-copy">
+                <Fade delay={1500} triggerOnce={true} direction="down">
+                <button className="select-none cursor-pointer flex items-center justify-between p-2 w-24 lg:w-32 4xl:w-36 5xl:w-40 h-6 lg:h-7 3xl:h-8 4xl:h-9 text-white text-sm 3xl:text-base 5xl:text-lg lg border-2 rounded-xl hover:bg-snow hover:text-rich-black hover:shadow-primary-shadow hover:shadow-snow transition shadow-primary-shadow relative z-20">
+                  <span className="mx-auto">Add to Cart</span>
+                </button>
+                </Fade>
+              </Link>
             </div>
           </div>
           <div className="flex my-20 lg:my-10 4xl:my-0 w-full">
@@ -180,6 +187,13 @@ const NovaHome = memo(() => {
                   blend that's a true flavor throne."
                 </p>
               </Fade>
+              <Link className="mt-2 lg:mt-5 3xl:mt-8 6xl:mt-12" to="https://juus.pk/products/nova-liquid-sweetner-copy">
+                <Fade delay={1500} triggerOnce={true} direction="down">
+                <button className="select-none cursor-pointer flex items-center justify-between p-2 w-24 lg:w-32 4xl:w-36 5xl:w-40 h-6 lg:h-7 3xl:h-8 4xl:h-9 text-white text-sm 3xl:text-base 5xl:text-lg lg border-2 rounded-xl hover:bg-snow hover:text-rich-black hover:shadow-primary-shadow hover:shadow-snow transition shadow-primary-shadow relative z-20">
+                  <span className="mx-auto">Add to Cart</span>
+                </button>
+                </Fade>
+              </Link>
             </div>
             <div className="w-1/2 -z-10 xsm:w-[45%] lg:w-1/2">
               <motion.img
@@ -258,6 +272,13 @@ const NovaHome = memo(() => {
                   sweet delight, that's healthy and great!"
                 </p>
               </Fade>
+              <Link className="self-end mt-2 lg:mt-5 3xl:mt-8 6xl:mt-12" to="https://juus.pk/products/nova-liquid-sweetner">
+                <Fade delay={1500} triggerOnce={true} direction="down">
+                <button className="select-none cursor-pointer flex items-center justify-between p-2 w-24 lg:w-32 4xl:w-36 5xl:w-40 h-6 lg:h-7 3xl:h-8 4xl:h-9 text-white text-sm 3xl:text-base 5xl:text-lg lg border-2 rounded-xl hover:bg-snow hover:text-rich-black hover:shadow-primary-shadow hover:shadow-snow transition shadow-primary-shadow relative z-20">
+                  <span className="mx-auto">Add to Cart</span>
+                </button>
+                </Fade>
+              </Link>
             </div>
           </div>
           {/* upper doodle and right and left placed wave */}
