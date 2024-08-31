@@ -11,7 +11,12 @@ const ScrollToTop = () => {
     console.log(pathname);
     dispatch(setIsOpen(false));
     window.scrollTo(0, 0);
-    if (pathname === "/") document.body.style.overflow = "hidden";
+    if (pathname === "/") {
+      document.body.style.overflow = "hidden";
+      setTimeout(() => {
+        body.style.overflow = "";
+      }, 50);
+    }
   }, [pathname]);
 
   return null;
