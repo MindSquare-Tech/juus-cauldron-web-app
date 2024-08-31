@@ -2,7 +2,6 @@ import React, { memo, useRef } from "react";
 import { Fade } from "react-awesome-reveal";
 import classNames from 'classnames';
 
-
 const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
   const scaleClass = classNames({
     'scale-[1.1]': sliderValue < 55,
@@ -14,15 +13,15 @@ const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
     'scale-[1.22]': sliderValue >= 80
   });
   const juusImgRef = useRef(null);
-
+  
   return (
     <div className="relative h-auto">
       <div
         style={{
-          backgroundImage: `url(${"https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/Background%20Greenapple.png"})`,
+          background: `radial-gradient(circle, rgba(247,248,203,1) 10%, rgba(50,162,26,1) 85%)`,
         }}
         onClick={() => setSliderValue(95)}
-        className={`flex flex-col justify-evenly sm:justify-evenly lg:justify-around 2xl:justify-evenly items-center relative overflow-hidden h-screen bg-cover bg-center xl:bg-bottom`}
+        className={` flex flex-col justify-evenly sm:justify-evenly lg:justify-around 2xl:justify-evenly items-center relative overflow-hidden h-screen bg-cover bg-center xl:bg-bottom`}
       >
         <Fade triggerOnce={true}>
           <img
@@ -68,7 +67,7 @@ const FullJuusSlide = memo(({ sliderValue, setSliderValue }) => {
               '6xl:scale-[.475]': sliderValue >= 75 && sliderValue < 80,
               '6xl:scale-[.49]': sliderValue >= 80,
             })}`}
-            src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/green%20apple%20%20bottle%20new.png"
+            src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/greenAppleBottleSmall.png"
             alt="Juus Bottle"
           />
         </Fade>

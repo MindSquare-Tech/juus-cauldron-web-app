@@ -57,10 +57,10 @@ function QueryForm() {
         email: email,
         description: description,
       };
-
       setButtontext("Sending...");
+
       try {
-        const response = await fetch("http://localhost:5000/faqs", {
+        const response = await fetch("http://localhost:4000/faqs", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -83,15 +83,18 @@ function QueryForm() {
           // Handle error response
           // console.error("Error sending email");
           alert("Error sending email.");
+          setButtontext("Send");
         }
       } catch (error) {
         // Handle network error
         // console.error("Network error:", error);
         alert("Error sending email", error);
+        setButtontext("Send");
       }
     } else {
       // console.error("Please fill in all fields");
       alert("Please fill in all fields.");
+      setButtontext("Send");
     }
   };
 

@@ -30,12 +30,12 @@ function NavLinks() {
           Shop
         </h1>
       </Link>
-      <Link to={"/faqs"}>
+      <Link to={"https://juus.pk/apps/faqs"}>
         <h1 className="my-4 lg:my-5 select-none text-snow text-lg lg:text-sm cursor-pointer lg:pt-1.5 lg:px-3.5 hover:underline-offset-4 active:underline hover:underline">
           FAQs
         </h1>
       </Link>
-      <Link to={"/contact"}>
+      <Link to={"https://juus.pk/pages/contact"}>
         <h1 className="my-4 lg:my-5 select-none text-snow text-lg lg:text-sm cursor-pointer lg:pt-1.5 lg:px-3.5 hover:underline-offset-4 active:underline hover:underline">
           Contact Us
         </h1>

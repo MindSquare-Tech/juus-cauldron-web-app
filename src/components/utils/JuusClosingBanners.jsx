@@ -12,7 +12,7 @@ const JuusClosingBanners = () => {
   const imageAndVideo = [
     {
       type: "image",
-      src: "https://juusstorage.blob.core.windows.net/creatives/Juus%20Home/home%20page%20banner.jpg",
+      src: "https://juusstorage.blob.core.windows.net/creatives/Juus Home/juusBannerSmall.jpg",
     },
     {
       type: "video",

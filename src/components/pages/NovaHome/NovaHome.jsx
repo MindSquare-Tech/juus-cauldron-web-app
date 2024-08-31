@@ -26,8 +26,9 @@ const NovaHome = memo(() => {
       >
         <div className="">
           <img
+            loading="lazy"
             className="6xl:w-full"
-            src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/nova main banner.jpg"
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/novaMainBannerSmall.jpg"
             alt=""
           />
         </div>
@@ -107,6 +108,7 @@ const NovaHome = memo(() => {
           <div className="flex w-full">
             <div className="relative z-50 w-3/5 xsm:w-[45%] lg:w-1/2">
               <motion.img
+                loading="lazy"
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: "-100%" }}
                 whileInView={{
@@ -125,7 +127,7 @@ const NovaHome = memo(() => {
                 }}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
                 className="flex-1 z-50 relative"
-                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Cardamom%20bottle.png"
+                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/cardamomNovaSmall.png"
                 alt="Cardamom Bottle"
               />
             </div>
@@ -153,6 +155,13 @@ const NovaHome = memo(() => {
                   delight."
                 </p>
               </Fade>
+              <Link className="self-end mt-2 lg:mt-5 3xl:mt-8 6xl:mt-12 z-10" to="https://juus.pk/products/nova-liquid-sweetner-vanilla-copy">
+                <Fade delay={1500} triggerOnce={true} direction="down">
+                <button className="select-none cursor-pointer flex items-center justify-between p-2 w-24 lg:w-32 4xl:w-36 5xl:w-40 h-6 lg:h-7 3xl:h-8 4xl:h-9 text-white text-sm 3xl:text-base 5xl:text-lg lg border-2 rounded-xl hover:bg-snow hover:text-rich-black hover:shadow-primary-shadow hover:shadow-snow transition shadow-primary-shadow relative z-20">
+                  <span className="mx-auto">Add to Cart</span>
+                </button>
+                </Fade>
+              </Link>
             </div>
           </div>
           <div className="flex my-20 lg:my-10 4xl:my-0 w-full">
@@ -178,9 +187,17 @@ const NovaHome = memo(() => {
                   blend that's a true flavor throne."
                 </p>
               </Fade>
+              <Link className="mt-2 lg:mt-5 3xl:mt-8 6xl:mt-12 z-10" to="https://juus.pk/products/nova-liquid-sweetner-copy">
+                <Fade delay={1500} triggerOnce={true} direction="down">
+                <button className="select-none cursor-pointer flex items-center justify-between p-2 w-24 lg:w-32 4xl:w-36 5xl:w-40 h-6 lg:h-7 3xl:h-8 4xl:h-9 text-white text-sm 3xl:text-base 5xl:text-lg lg border-2 rounded-xl hover:bg-snow hover:text-rich-black hover:shadow-primary-shadow hover:shadow-snow transition shadow-primary-shadow relative z-20">
+                  <span className="mx-auto">Add to Cart</span>
+                </button>
+                </Fade>
+              </Link>
             </div>
             <div className="w-1/2 -z-10 xsm:w-[45%] lg:w-1/2">
               <motion.img
+                loading="lazy"
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: "100%" }}
                 whileInView={{
@@ -200,7 +217,7 @@ const NovaHome = memo(() => {
                 }}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
                 className="flex-1 pr-3"
-                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/final%20vnl%20(1).png"
+                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/vanillaNovaSmall.png"
                 alt="Vanilla Bottle"
               />
             </div>
@@ -208,6 +225,7 @@ const NovaHome = memo(() => {
           <div className="flex w-full">
             <div className="w-3/5 xsm:w-[45%] lg:w-1/2">
               <motion.img
+                loading="lazy"
                 viewport={{ once: true }}
                 initial={{ opacity: 0, x: "-100%" }}
                 whileInView={{
@@ -227,7 +245,7 @@ const NovaHome = memo(() => {
                 }}
                 transition={{ type: "tween", delay: 1.1, duration: 0.5 }}
                 className="flex-1 pl-3 xxxxs:pl-4"
-                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/final%20org.png"
+                src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/originalNovaSmall.png"
                 alt="Original Bottle"
               />
             </div>
@@ -254,35 +272,47 @@ const NovaHome = memo(() => {
                   sweet delight, that's healthy and great!"
                 </p>
               </Fade>
+              <Link className="self-end mt-2 lg:mt-5 3xl:mt-8 6xl:mt-12 z-10" to="https://juus.pk/products/nova-liquid-sweetner">
+                <Fade delay={1500} triggerOnce={true} direction="down">
+                <button className="select-none cursor-pointer flex items-center justify-between p-2 w-24 lg:w-32 4xl:w-36 5xl:w-40 h-6 lg:h-7 3xl:h-8 4xl:h-9 text-white text-sm 3xl:text-base 5xl:text-lg lg border-2 rounded-xl hover:bg-snow hover:text-rich-black hover:shadow-primary-shadow hover:shadow-snow transition shadow-primary-shadow relative z-20">
+                  <span className="mx-auto">Add to Cart</span>
+                </button>
+                </Fade>
+              </Link>
             </div>
           </div>
           {/* upper doodle and right and left placed wave */}
 
           <img
+            loading="lazy"
             className="absolute top-0 -translate-y-2/3 scale-x-105 z-20"
             src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/center%20color.png"
             alt=""
           />
 
           <img
+            loading="lazy"
             className="absolute z-0 opacity-40 -rotate-90 top-0 left-0 -translate-x-[40%]"
-            src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Doodle%20art.png"
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/doodleArtNovaSmall.png"
             alt="Upper doodle"
           />
           <img
+            loading="lazy"
             className="absolute rotate-[88deg] scale-y-125 translate-x-1/2 -right-2"
             src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/center%20color.png"
             alt=""
           />
           <img
+            loading="lazy"
             className="absolute -rotate-[95deg] scale-y-150 top-[40%] -translate-x-1/2 -left-3.5"
             src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/center%20color.png"
             alt=""
           />
           <img
+            loading="lazy"
             className="pointer-events-none absolute -bottom-60 translate-y-3/4 xxxxs:translate-y-[70.5%] xxxs:translate-y-[69%] xxs:translate-y-[67.5%] xsm:translate-y-[65.3%] lg:translate-y-[69.7%] xl:translate-y-[63.75%] 3xl:translate-y-[51%] 4xl:translate-y-[50.25%] 5xl:translate-y-[49.1%] 6xl:translate-y-[44%]"
-            src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/brush.png"
-            alt="ending gradient"
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/brushSmall.png"
+            alt="ending brush gradient"
           />
         </div>
         {/* <Fade direction="up" delay={1000} triggerOnce={true}> */}
@@ -293,8 +323,9 @@ const NovaHome = memo(() => {
           viewport={{ once: true }}
         >
           <img
+            loading="lazy"
             className="relative z-50 mt-10 3xl:mt-0 6xl:-mt-10 xl:scale-[.85] 3xl:scale-75 4xl:scale-[.7] 6xl:scale-[.6]"
-            src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/calories.png"
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/caloriesNovaSmall.png"
             alt=""
           />
         </motion.div>
@@ -305,8 +336,9 @@ const NovaHome = memo(() => {
           } pointer-events-none rotate-90 -bottom-5 -right-32`}
         >
           <img
+            loading="lazy"
             className={`-z-50 opacity-40`}
-            src="https://juusstorage.blob.core.windows.net/creatives/Nova%20Home/Doodle%20art.png"
+            src="https://juusstorage.blob.core.windows.net/creatives/Nova Home/doodleArtNovaSmall.png"
             alt=""
           />
         </div>
