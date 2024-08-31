@@ -101,7 +101,7 @@ function Header({ isOpen, setIsOpen }) {
             <img
               loading="lazy"
               className="scale-[.85] h-16 cursor-pointer select-none lg:mr-0.5 xl:mr-9"
-              src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/juusCauldronLogo.png"
+              src="https://juusstorage.blob.core.windows.net/creatives/Homepage%20JC/juus%20cauldron%20logo.png"
               alt="Juus Cauldron Logo"
             />
           </Link>
