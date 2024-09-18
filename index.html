@@ -22,6 +22,15 @@
     gtag('js', new Date());
 
     gtag('config', 'AW-11123615408');
+
+    // Track homepage visit
+    if (window.location.pathname === '/') {
+    gtag('event', 'homepage_visit', {
+      'event_category': 'Page Views',
+      'event_label': 'Homepage'
+    });
+  }
+    
   </script>
 
   <!-- Google tag (gtag.js) -->
@@ -32,6 +41,13 @@
     gtag('js', new Date());
 
     gtag('config', 'G-2WNJXSW8TV');
+    // Track homepage visit
+    if (window.location.pathname === '/') {
+      gtag('event', 'homepage_visit', {
+        'event_category': 'Page Views',
+        'event_label': 'Homepage'
+      });
+  }
   </script>
 
   <!-- Snap Pixel Code -->
